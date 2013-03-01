@@ -1,0 +1,7 @@
+Första föreläsningen är tänkt att introducera kursen.
+Dels gå igenom kurshemsida, planering och hur kursen bedrivs
+Viktigt att ge studneterna en bild av vad målet med kursen är:
+ - Ni ska kunna....
+
+Börja med en introduktion till webben och hur dynamiska webbapplikationer fungerar
+.
