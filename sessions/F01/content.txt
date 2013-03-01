@@ -1,7 +1,11 @@
 Första föreläsningen är tänkt att introducera kursen.
 Dels gå igenom kurshemsida, planering och hur kursen bedrivs
 Viktigt att ge studneterna en bild av vad målet med kursen är:
- - Ni ska kunna....
+ - Ni ska kunna bygga en dynamisk webbplats
+
+Hur ska vi lära oss detta
+- Gå igenom planering och upplägg, kurshemsida
+
 
 Börja med en introduktion till webben och hur dynamiska webbapplikationer fungerar
-.
+Förklara server vs. klient (vad är serverscriptspråk i förhållande till javascript)
