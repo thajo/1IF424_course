@@ -1,7 +1,8 @@
 Första föreläsningen är tänkt att introducera kursen.
 Dels gå igenom kurshemsida, planering och hur kursen bedrivs
-Viktigt att ge studneterna en bild av vad målet med kursen är:
- - Ni ska kunna bygga en dynamisk webbplats
+Viktigt att ge studenterna får en bild av vad målet med kursen är, varför man är här:
+- Ni ska kunna bygga en dynamisk webbplats via WordPress
+
 
 Hur ska vi lära oss detta
 - Gå igenom planering och upplägg, kurshemsida
