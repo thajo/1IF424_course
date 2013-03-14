@@ -12,252 +12,7 @@
 
 /* Framework */
 
-/* Johns tillägg */
- 	.small_footer {
-		font-size: 9pt;
-		position: absolute;
-	  	overflow: hidden;
-		margin-left: -40px;
-		padding-right: 14px;
-	  	top: 90%;
-		background: white;
-		padding: 8px;
-	}
-	.white-background {
-		background: white;
-		padding: 3px;
-		
-	}
-	
-	article.grey {
-		background-color: #333333;
-	}
-	
-	.big_point {
-		font-size: 45pt;
-		margin-bottom: 100px;
-		line-height:120%
-	}
-	
-	.small_italic {
-		font-style: italic;
-		font-size: 17pt;
-		padding-left: 20px;
-	}
-	
-	q.white-background {
-		padding-left: 40px;
-	}
-	
-	
-	article.fill p {
-		font-size: 30px;
-	  	background: rgba(255, 255, 255, .85);
-	  	padding: 10px;
-		color: black;
-	}
-	
-	
-	.top_right {
-		position: absolute;
-		left: 900px;
-		top: 30px;
-	}
-	
-	.bottom_right_bigger {
-		position: absolute;
-		left: 700px;
-		top: 300px;
-		max-width: 300px;
-		max-height: 300px;
-	}
-	
-	.top_right_bigger {
-		position: absolute;
-		left: 600px;
-		top: 20px;
-		max-width: 300px;
-		max-height: 300px;
-	}
-	
-	.padding_top {
-		padding-top: 10px;
-	}
-	
-	.headlined {
-		font-size: 70px;
-	  background: rgba(255, 255, 255, .75);
-	  padding-top: .4em;
-	  padding-bottom: .5em;
-	  margin-top: -.2em;
-	  margin-left: -60px;
-	  padding-left: 60px;
-	  margin-right: -60px;
-	  padding-right: 60px;
-	}
-	
-	dt {
-		font-weight: bold;
-		margin-bottom: 15px;
-	}
-	
-	dd {
-		margin-bottom: 40px;
-	}
-	
-.big {
-	font-size: 3.3em;
-	font-weight: bold;
-	
-}
 
-.medium_big {
-	font-size: 2.5em;
-	font-weight: bold;
-}
-
-.medium_small {
-	font-size: 1.5em;
-}
-
-.medium {
-	font-size: 2.5em;
-}
-
-.small {
-	font-size: 0.5em;
-}
-
-.pretty_small {
-	font-size: 0.4em;
-}
-
-.very_small {
-	font-size: 0.3em;
-}
-
-.righty {
-	float: right;
-}
-.lefty {
-	float:left;
-}
-.s {
-	font-weight: bold;
-}
-
-.c {
-text-align: center;	
-}
-
-.bi {
-max-height: 90%;
-}
-
-.bii {
-	min-width: 60%;
-	max-width: 70%;
-}
-
-.biii {
-max-width: 300px;
-max-height: 190px;	
-}
-
-.bg {
-	background-color: #EEE;
-	padding: 8px;
-}
-
-article.fill ul {
-	font-size: 30px;
-background: rgba(255, 255, 255, .85);
-padding: 40px;
-color: black;
-}
-
-
-.bgy {
- background-color: #FFC;	
-}
-
-.bgr {
-	background-color: #FCC;
-}
-
-.bgg {
-	background-color: #DDDDD5;
-	border-bottom: 1px solid black;	
-	border-top: 1px solid black;	
-	
-}
-
-.top {
-	margin: 0;
-	padding:0;
-	vertical-align: top;
-}
-
-.spaced {
-	padding: 10px;
-	margin: 10px;
-	
-}
-
-.tight {
-	margin: 0 !important;
-	padding:0 !important;
-	line-height: 0 !important;
-}
-
-.r {
-text-align: right;	
-}
-
-.b {
-	font-weight: bold;
-}
-
-.l {
-text-align: left;	
-}
-
-.u {
-	border-bottom: 1px solid black;	
-}
-
-dt {
-	font-weight: bold;
-	margin-top: 40px;	
-}
-
-dd {
-	text-indent: 50px;
-}
-.lnu_bg {
-
-background: url('../images/lnu.png') no-repeat;
-background-position: 100% 85%;
-background-size: 30% Auto;
-
-}
-.note 
-    {
-        display: none;
-    }
-
-.middle_white {
-background-color: rgba(255, 255, 255, 0.8);
-padding: 60px;
-color: black;
- position: absolute;
-    top: 40%;
-    left: 25%;
-    height: 40%;
-    width: 70%;
-    margin: -15% 0 0 -15%;
-	
-}
 	
 /*********
 GOOGLE
@@ -666,6 +421,7 @@ li {
 
   margin-bottom: .5em;
 }
+/*
 li::before {
   content: '·';
 
@@ -673,7 +429,7 @@ li::before {
   margin-left: -.75em;
 
   position: absolute;
-}
+}*/
 
 pre {
   font-family: 'Droid Sans Mono', 'Courier New', monospace;
@@ -876,6 +632,256 @@ article.smaller q::after {
 .to-build {
   opacity: 0;
 }
+
+/* Johns tillägg */
+ 	.small_footer {
+		font-size: 9pt;
+		position: absolute;
+	  	overflow: hidden;
+		margin-left: -40px;
+		padding-right: 14px;
+	  	top: 90%;
+		background: white;
+		padding: 8px;
+	}
+	.white-background {
+		background: white;
+		padding: 3px;
+		
+	}
+	
+	article.grey {
+		background-color: #333333;
+	}
+	
+	.big_point {
+		font-size: 45pt;
+		margin-bottom: 100px;
+		line-height:120%
+	}
+	
+	.small_italic {
+		font-style: italic;
+		font-size: 17pt;
+		padding-left: 20px;
+	}
+	
+	q.white-background {
+		padding-left: 40px;
+	}
+	
+	
+	article.fill p {
+		font-size: 30px;
+	  	background: rgba(255, 255, 255, .85);
+	  	padding: 10px;
+		color: black;
+	}
+	
+	
+	.top_right {
+		position: absolute;
+		left: 900px;
+		top: 30px;
+	}
+	
+	.bottom_right_bigger {
+		position: absolute;
+		left: 700px;
+		top: 300px;
+		max-width: 300px;
+		max-height: 300px;
+	}
+	
+	.top_right_bigger {
+		position: absolute;
+		left: 600px;
+		top: 20px;
+		max-width: 300px;
+		max-height: 300px;
+	}
+	
+	.padding_top {
+		padding-top: 10px;
+	}
+	
+	.headlined {
+		font-size: 70px;
+	  background: rgba(255, 255, 255, .75);
+	  padding-top: .4em;
+	  padding-bottom: .5em;
+	  margin-top: -.2em;
+	  margin-left: -60px;
+	  padding-left: 60px;
+	  margin-right: -60px;
+	  padding-right: 60px;
+	}
+	
+	dt {
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+	
+	dd {
+		margin-bottom: 40px;
+	}
+	
+.big {
+	font-size: 3.3em;
+	font-weight: bold;
+	
+}
+
+.medium_big {
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+.medium_small {
+	font-size: 1.5em;
+}
+
+.medium {
+	font-size: 2.5em;
+}
+
+.small {
+	font-size: 0.5em;
+}
+
+.pretty_small {
+	font-size: 0.4em;
+}
+
+.very_small {
+	font-size: 0.3em;
+}
+
+.righty {
+	float: right;
+}
+.lefty {
+	float:left;
+}
+.s {
+	font-weight: bold;
+}
+
+.c {
+text-align: center;	
+}
+
+.bi {
+max-height: 90%;
+}
+
+.bii {
+	min-width: 60%;
+	max-width: 70%;
+}
+
+.biii {
+max-width: 300px;
+max-height: 190px;	
+}
+
+.bg {
+	background-color: #EEE;
+	padding: 8px;
+}
+
+article.fill ul {
+	font-size: 30px;
+background: rgba(255, 255, 255, .85);
+padding: 40px;
+color: black;
+}
+
+
+.bgy {
+ background-color: #FFC;	
+}
+
+.bgr {
+	background-color: #FCC;
+}
+
+.bgg {
+	background-color: #DDDDD5;
+	border-bottom: 1px solid black;	
+	border-top: 1px solid black;	
+	
+}
+
+.top {
+	margin: 0;
+	padding:0;
+	vertical-align: top;
+}
+
+.spaced {
+	padding: 10px;
+	margin: 10px;
+	
+}
+
+.tight {
+	margin: 0 !important;
+	padding:0 !important;
+	line-height: 0 !important;
+}
+
+.r {
+text-align: right;	
+}
+
+.b {
+	font-weight: bold;
+}
+
+.l {
+text-align: left;	
+}
+
+.u {
+	border-bottom: 1px solid black;	
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 40px;	
+}
+
+dd {
+	text-indent: 50px;
+}
+.lnu_bg {
+
+background: url('../images/lnu.png') no-repeat;
+background-position: 100% 85%;
+background-size: 30% Auto;
+
+}
+.note 
+    {
+        display: none;
+    }
+
+.middle_white {
+background-color: rgba(255, 255, 255, 0.8);
+padding: 60px;
+color: black;
+ position: absolute;
+    top: 40%;
+    left: 25%;
+    height: 40%;
+    width: 70%;
+    margin: -15% 0 0 -15%;
+	
+}
+
+ul.n {list-style-type:none !important;}
+
 
 /* Pretty print */
 
