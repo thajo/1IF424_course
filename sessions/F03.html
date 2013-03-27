@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+
+  <head>
+    <title>Föreläsning 3 - 1IF424</title>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Föreläsning 1 i kursen webbramverk, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src='slides.js' media="screen"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style media="print">
+	         @page {
+	            size: A4 landscape;
+	             @top-right {
+	                content: "Page " counter(page);
+	             }
+	         }
+	          article {
+	            page-break-after: always;
+	            margin: auto;
+	          }
+	          article.next, article.past {
+	            display: block;    
+	          }
+	
+				iframe {
+					display: none;
+				}
+				article img {
+					display: none;
+				}
+	          body {
+	              display: block !important;
+	              font-family: 'Open Sans', Arial, sans-serif;
+	              font-size: 1.5em;
+	          }
+	</style>
+  </head>
+  
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-default'>
+      
+	<!-- Första sidan -->
+    <article>
+       	<h1>
+          Web Management, 1IK424
+          <br />
+          <span class="small">Linnéuniversitetet, VT2013</span>
+        </h1>
+       
+		
+		<br /><br />
+		<h1 class="big c">Fortsättning PHP, arrayer, funktioner</h1>
+		<p class="reference spaced">
+		
+			http://orion.lnu.se/pub/education/course/1IK424/VT13/sessions/F01.html
+		</p>
+		
+		<p class="small_footer">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
+					<img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>&nbsp;&nbsp;Detta verk är licensierat under en 
+					
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">Creative Commons Erkännande-IckeKommersiell-DelaLika 3.0 Unported Licens</a>.<br />
+		</p>
+ 	</article>
+
+	<!-- Repetition -->
+	<article>
+		<h1>Repetition</h1>
+		<p>
+			Repetera...
+		</p>
+	</article>
+
+	<!-- PHP - arrayer -->
+	<article>
+			<h3>Array</h3>
+			<p>En variabel kan spara ett värde, en array innehåller en lista med flera variabler/värden</p>
+			<p>En lista med nummer, En lista med alla blogginlägg, en lista med inmatade meddelanden...</p>
+			<p>Du kan spara alla typer av värden i en array - i PHP</p>
+
+			<p>
+				<img src="images/array.png" />
+			</p>		
+		</article>
+
+	<!-- När kommer vi stöta på arrayer -->
+	<article>
+			<h1>När förekommer arrayer och vad behöver man kunna göra med dem?</h1>
+			<p>
+				Arrayer är listor. Oftast vet man inte hur många element (värden) listan har.
+				Antal blogposter, antal svar från servern
+				Vi behöver kunna ta reda på hur många element som finns och hur man går igenom del för del.
+			</p>
+		</article>
+
+	<!-- PHP - arrayer SKAPA -->
+	<article>
+			<h3>Array - i PHP</h3>
+			<pre>
+$array = array(); // skapa en tom array
+$array[0] = 13;
+$array[1] = 231;
+$array[2] = "hejsan";
+			</pre>		
+			VISA BILD PÅ LÅDAN
+			<pre>
+
+echo($array[2]);
+echo($array[3]); // Felsida?
+
+			</pre>
+		</article>
+
+	<!-- PHP - arrayer SKAPA 2 -->
+	<article>
+			<h1>Om array</h1>
+			<p>
+				I PHP finns det ett antal metoder som man kan använda.
+			</p>
+			<pre>
+	$tal = 123;
+	$array = array(); // skapa en tom array
+	array_push($array, $tal); // läggs sist 
+
+	// Hur många element finns det i arrayen
+	$nr_of_elements = sizeof($array); // 1
+			</pre>	
+		</article>
+
+	<!-- PHP - arrayer associativ skapande -->
+	<article>
+			<h1>Associativa arrayer</h1>
+			<p>
+				Istället för att hålla reda på index, nummren,
+				kan man använda namngivning med textsträngar.
+				Key and value
+			</p>
+	<pre>
+	  $array = array(
+	   "name" => "John",
+	   "message" => "Hello!",
+	   );
+	</pre>
+		<p>
+			BILD på låda
+		</p>
+	<pre>
+	var_dump($_POST);
+	$_POST["name"]
+	</pre>	
+	</article>
+
+	<!-- Multipla arrayer -->
+	<article>
+			<h1>Multidimensional Arrays</h1>
+			<p>Ibland behöver man beskriva lite mer komplex data</p>
+			<p>
+				<table border="1">
+					<thead>
+						<td>Produkt</td>
+						<td>Pris</td>
+						<td>Antal</td>
+					</thead>
+					<tr>
+						<td>Bultbtäda</td>
+						<td>499</td>
+						<td>12</td>
+					</tr>
+					<tr>
+						<td>Sprakcykel</td>
+						<td>876</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>Modellera</td>
+						<td>39.90</td>
+						<td>124</td>
+					</tr>
+				</table>
+			</p>
+			<p>Det går att spara arrayer i arrayer</p>
+	<pre>
+	$shop = array( array("Bultbräda", 499, 12),
+	               array("Sparkcykel", 876 , 2),
+	               array("Modellera", 39.90 , 124) 
+	             ); 	
+	</pre>
+	<pre>
+	echo $shop[0][0]." costs ".$shop[0][1]." and you get ".$shop[0][2]."<br />";
+	echo $shop[1][0]." costs ".$shop[1][1]." and you get ".$shop[1][2]."<br />";
+	echo $shop[2][0]." costs ".$shop[2][1]." and you get ".$shop[2][2]."<br />";
+	</pre>
+		</article>
+
+	<!-- Skriva ut en array -->
+	<article>
+			<h3>Att skriva ut en array...lite snyggare</h3>
+			<p>
+				Säg att vi har en array/lista med värden.
+				Hur kan jag på något smidigt sätt skriva ut dessa i min HTML-kod?
+			</p>
+			BILD PÅ EN TABELL MED VÄRDEN
+		</article>
+
+	<!-- PHP - loopa en array -->
+	<article>
+			<h3>Att loopa igenom en array</h3>
+
+			<pre>
+	// for-loop
+	$array = array(1, 20, 4);
+
+	// Hur många element/lådor finns det i arrayen
+	$length_on_array = count($array);
+
+	// loopen körs lika många gånger
+	for($i = 0; $i < $length_on_array; $i++) {
+	  $current_value = $array[$i];
+	  echo($current_value ."&lt;br />");
+	}
+			</pre>		
+		</article>
+
+	<!-- PHP - foreach -->
+	<article>
+			<h3>Itterationer</h3>
+			<p>Ett annat sätt är att använda en foreach-loop</p>
+			<pre>
+	foreach($array as $current_value) {
+	  echo($current_value ."<br />");
+	}
+			</pre>		
+		</article>
+
+	<!-- PHP - funktioner -->
+	<article>
+			<h3>Att strukturera upp sin kod</h3>
+			<p>
+				Uppdelning av kod i mer översiktliga delar<br />
+				Kan anropas flera gånger = mindre kod
+				En funktion kan ta emot parametrar för att styra koden innanför
+				En funktion kan returnera ett värde (integer, string, boolean...)
+			</p>
+
+		</article>
+
+	<!-- Utgå från DUM kod -->
+	<article>
+		
+
+	</article>
+	</section>
+	
+	<!-- Bryt ut kod i funktioner -->
+	<article>
+		
+	</article>
+	
+	<!-- Exempel på funktioner -->
+	<article>
+		<pre>
+	// deklaration av funktion
+	function sayHello($name) {
+	echo("Hello " .$name ."!");
+	}
+
+	// anrop av funktion
+	sayHello("Ellen"); // "Hello Ellen!" skrivs ut
+	sayHello("Nils"); // "Hello Nils!" skrivs ut
+		</pre>
+		</article>
+
+	<!-- Default deklarerade parametrar-->
+	<article>
+
+	</article>
+
+	<!-- PHP - funktioner -->
+	<article>
+			<h3>DEMO - funktioner</h3>
+			<p>
+
+			</p>
+		</article>
+
+	<!-- Att lösa problem -->
+	<article>
+			<h1>Att lösa problem</h1>
+			<p>
+				Under utevcklingsfasen kommer man stöta på problem<br />
+			</p>
+			<h1>Hur gör man då?</h1>
+		</article>
+
+	<!-- Att lösa problem -->
+	<article>
+			<h1>Att lösa problem</h1>
+			<p>
+				Problem 1: Hur räknar jag antal tecken i en sträng?
+
+			</p>
+			<h1>Hur gör man då?</h1>
+		</article>
+
+	</section>
+  </body>
+</html>

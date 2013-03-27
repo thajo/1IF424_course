@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+
+  <head>
+    <title>Föreläsning 2 - 1K424</title>
+     <meta charset="utf-8" />
+     <meta name="apple-mobile-web-app-capable" content="yes" />
+     <meta name="description" content="Föreläsning 1 i kursen webbramverk, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
+     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src='slides.js' media="screen"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style media="print">
+	         @page {
+	            size: A4 landscape;
+	             @top-right {
+	                content: "Page " counter(page);
+	             }
+	         }
+	          article {
+	            page-break-after: always;
+	            margin: auto;
+	          }
+	          article.next, article.past {
+	            display: block;    
+	          }
+	
+				iframe {
+					display: none;
+				}
+				article img {
+					display: none;
+				}
+	          body {
+	              display: block !important;
+	              font-family: 'Open Sans', Arial, sans-serif;
+	              font-size: 1.5em;
+	          }
+	</style>
+  </head>
+  
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-default'>
+      
+	<!-- Första sidan -->
+    <article>
+       	<h1>
+          Web Management, 1IK424
+          <br />
+          <span class="small">Linnéuniversitetet, VT2013</span>
+        </h1>
+       
+		
+		<br /><br />
+		<h1 class="big c">PHP 1</h1>
+		<p class="reference spaced">
+		
+			http://orion.lnu.se/pub/education/course/1IK424/VT13/sessions/F02.html
+		</p>
+		
+		<p class="small_footer">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
+					<img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>&nbsp;&nbsp;Detta verk är licensierat under en 
+					
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">Creative Commons Erkännande-IckeKommersiell-DelaLika 3.0 Unported Licens</a>.<br />
+		</p>
+ 	</article>
+
+	<!-- Repetition -->
+	<article>
+		<h3>Att börja programmera med PHP</h3>
+		<p>
+			Repetition: Serverscriptspråk
+			BILD
+		</p>
+	</article>
+	
+	<!-- PHP - Variabel-->
+	<article>
+		<h3>
+			Programmeringsrepetition - Variabel
+		</h3>
+		<p>
+			En variabel ses som en tillfällig lagringsplats för ett värde<br />
+			Variablerna	ges	unika namn så att man kan referera till dem senare i sin kod<br />	
+			casesensitive d.v.s. message != Message
+			
+			BILD på ice creame stand?
+		</p>
+		<pre>
+// Variabel i javascript
+var number = 10;
+number = number + 20;
+alert(number); // Vad innehåller tal för värde?
+
+// Variabel i PHP
+$tal = 10;
+$tal = $tal + 10;
+echo($tal); // Vad kommer skrivas ut?
+		</pre>
+		
+	</article>
+	
+	<!-- PHP - Vad gör koden? -->
+	<article>
+		<h3>
+			Vad kommer skrivas ut?
+		</h3>
+		<pre>
+// Variabel i PHP
+$tal_x = 10;
+$tal_y = $tal_x;
+$tal_z = 100;
+
+$resultat = ($tal_x * $tal_y) - $tal_z;
+echo($resultat);
+		</pre>
+		
+	</article>
+
+	<!-- PHP - Datatyper-->
+	<article>
+		<h3>
+			Olika typer av variabler
+		</h3>
+		<p>
+
+			En variabel kan vara av olika <strong>datatyper</strong><br />
+			
+			<ul>
+				<li>integer - heltal</li>
+				<li>double - decimaltal</li>
+				<li>string - text / tecken</li>
+				<li>boolean - sant eller falsk, true eller false, 1 eller 0</li>
+				<li>array - en lista med värden</li>
+				<li>...finns fler</li>
+			</ul>
+				
+		</p>
+	</article>
+	
+	<!-- string -->
+	<article>
+		<h1>Textsträngar</h1>
+		<p>
+			Textsträngar eller string kan bestå av noll eller flera tecken<br />
+			Det finns enkla sätt att slå ihop (konkatenering), räkna antal tecken, m.m.
+		</p>
+		<pre>
+// textsträngar
+$sport = "fotboll";
+$team = "Tottenham Hotspur";
+
+
+// I php använder man punkttecken för att slå ihop strängar
+$complete_message = $team ." är bra på " .$sport;
+echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll
+
+// i Javascript använder man plustecken för att slå ihop strängar, i PHP punkttecken
+alert("Hejsan" +" " +"Kerstin");
+		
+	</pre>
+	
+	<!-- Vad kommer skrivas ut-->
+	<article>
+		<h3>Vad kommer skrivas ut.</h3>
+	
+		<pre>
+$pris = 400;
+$enhet = "kronor"
+$moms = 0.25
+
+echo("Varan kostar " .($pris + ($pris * $moms)) .$enhet)	
+		</pre>
+	</article>
+	
+	<!-- HTML - Formulär-->
+	<article>
+			<h3>
+				HTML-formulär - Att låta användaren påverka applikationen
+			</h3>
+			<p>
+				För att låta användare "Posta" data till en webbapplikation (din php-skript)
+				använder man HTML-formulär
+			</p>
+			BILD på olika typer av formulär 
+			BILD på htmlkod
+
+
+	</article>
+
+	<!-- PHP - Formulär-->
+	<article>
+			BILD PÅ HUR ETT FORMULÄR ARBETAR
+	</article>
+	
+	<!-- PHP - Formulär DEMO-->
+	<article>
+			<h1>DEMO</h1>
+			<p>
+				- Skapa ett HTML-formulär<br />
+				- Använd PHP för att skriva ut det användaren matar in<br />
+			</p>
+			
+			<p class="note">
+				1) Skapa ett HTML-formulär
+				2) Visa några olika kontroller - Koncentrera sig till ett textfield
+				3) $_POST, posta till en annan sida
+				4) Skillnad mellan GET och POST
+				5) Posta till samma sida - Problem ? Vi måste titta OM värdet är satt = Selection
+			</p>
+			
+	</article>
+
+	<!-- PHP - selection -->
+	<article>
+		<h1>Selectioner - PHP</h1>
+		<p>
+			Låta användaren styra hur vår webbapplikation ska bete sig.<br />
+			"<strong>OM</strong> användaren matar in ett matematiskt uttryck ska en miniräknare visas"
+		</p>
+		<p>
+			<img src="images/calc.png" />
+		</p>
+		<p class="to-build">
+			OM == IF
+		</p>
+	</article>
+	
+	<!-- IF-sats -->
+	<article>
+		<h1>IF-SATS</h1>
+		<p>
+			if-sats används för att kontroller om något är sant eller falskt
+		</p>
+		<pre>
+$tal = 3;
+			
+if($tal == 10) {
+  echo("Talet är tio");		
+}
+elseif($tal == 5) {
+  echo("Talet är fem");
+}
+else {
+  echo("Talet är varken fem eller tio");
+}
+		</pre>
+		
+	</article>
+
+	<!-- if-sats med POST -->
+	<article>
+		<h1>$_POST och IF</h1>
+		<pre>
+
+$text = $_POST["text"];			
+if($text != "") {
+  // $text är satt
+}			
+else {
+ // $text är INTE satt 
+	echo "Text är inte satt";
+}
+		</pre>
+		BILD PÅ HTML-kod		
+		
+	</article>
+
+	<!-- PHP - selectioner DEMO-->
+	<article>
+		<h1>DEMO</h1>
+		<p>
+			Addera två av användaren inskrivna tal
+		</p>
+		<p class="note">
+			1) Två input fält - (använd ej && -- Ge ett felmeddelande om inputen är tom annars lägg ihop dem
+			2) vad händer om användaren skriver en sträng? - Kolla av om det är ett nummer (visa hur jag hittar det via google)
+		</p>
+		<p>
+			3) utöka med isset och == ""
+			4) vad händer om användaren skriver en sträng? - Kolla av om det är en sträng is_numeric
+			5) Men om jag vill kolla flera saker OM detta och OM detta...			
+		</p>
+	</article>
+
+
+	<!-- Logiska uttryck -->
+	<article>
+		<h1>Logiska uttryck</h1>
+		<ul>
+			<li>&gt; - Större än</li>
+			<li>&gt;= - Större än, lika med</li>
+			<li>&lt; - Mindre än</li>
+			<li>&lt;= - Mindre än, lika med</li>
+			<li>== - Lika med</li>
+			<li>!= - Ej lika med, skilt från</li>
+		</ul>
+	</article>
+	
+	<!-- Demo - Logiska uttryck - gissa -->
+	<article>
+		<h1>Du gissar</h1>
+		<pre>
+$tal1 = 10;
+$tal2 = 15
+$tal2 = 10;
+
+if($tal1 &lt;= $tal2) {
+  echo("Första vilkoret stämmer");
+  if($tal2 != $tal3) {
+	echo("Andra vilkoret stämmer");
+  }	
+}			
+		</pre>
+	</article>
+	
+	<!-- Logiska operatorer -->
+	<article>
+		<h1>Logiska operatorer</h1>
+		<pre>
+// Kombinera flera vilkor
+if ($tal > $tal2 &amp;&amp; $tal < $tal3)
+if ($tal > $tal2 || $tal < $tal3)
+		</pre>	
+	</article>
+	
+	<!-- Demo - Logiska operatorer -->
+	<article>
+		<h1>Du gissar</h1>
+		<pre>
+GÖT TAL			
+		</pre>
+	</article>
+	
+	<!-- Itterationer -->
+	<article>
+			<h1>itteration - om och om och om igen</h1>
+			<p>
+				När man skriver kod är det vanligt att man vill göra något flera gånger.
+				T.ex. skapa en tabell med 10 rader och 5 kolumner
+				T.ex. skriva ut saker i en lista/array
+				T.ex. göra någonting till ett visst tillstånd uppnås
+			</p>
+			<p>
+				Man pratar om loopar. Vi ska titta på tre olika varianter:
+				<ul>
+					<li>for-loop</li>
+					<li>foreach-loop</li>
+					<li>while-loop</li>
+				</ul>
+			</p>
+		</article>
+
+	<!-- Om for-loop -->
+	<article>
+			<h1>Vanligast är for-loopen</h1>
+			<p>for-loopen har man till att upprepa kod ett visst antal gånger</p>
+			<p>Vi vill skriva ut "hello World!" 10 ggr</p>
+			<p>Vi vill bara skriva koden echo("Hello World!") en gång</p>
+
+			<pre>
+	// for-loop
+	// loopen körs lika många gånger
+	// 1. Vi skapar en variabel $i och sätter den till 0
+	// 2. Vi skapar ett vilkor (så läng $i är mindre än 10)
+	// 3. För varje gång loopen går öka $i med 1
+
+
+	for($i = 0; $i < $10; $i++) {
+	  echo("Hello World!");
+	}
+			</pre>
+		</article>
+
+	<!-- Forloop demo -->
+	<article>
+			<h1>DEMO</h1>
+			<p>
+				Jag vill skapa en tabell i HTML med 100 rader via en for-loop
+			</p>
+		</article>
+
+	<!-- While-loop -->
+	<article>
+			<h1>while-loop</h1>
+			<p>
+				while-loopen är egentligen en enklare variant av loop.
+				Du kommer stöta på den när vi börjar jobba med wordpress
+			</p>
+			<p>
+				Jag vill skapa en tabell i HTML med 100 rader via en while-loop
+			</p>
+		</article>
+
+	<!-- Sammanfattande DEMO-->
+	<article>
+			<h1>DEMO</h1>
+			Se inspelat demo som tar upp många av de delar vi pratat om	
+		</article>
+
+	</section>
+  </body>
+</html>
+	
+
