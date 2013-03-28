@@ -97,7 +97,7 @@
 		</h3>
 		<img src="images/thajo.jpg" class="lefty spaced" />
 		<ul class="n r">
-			<li>Universitetsadjunkt i datavetenskap, HIK 2003</li>
+			<li>Universitetsadjunkt i datavetenska</li>
 			<li>Kursansvarig, examinator, föreläsare, laborationshandledare</li>
 			<li class="s">Skype: john-hik, john.haggerud@lnu.se</li>
 		</ul>
@@ -117,8 +117,8 @@
     <article class="fill">
 		<h1 class="c">VARFÖR ÄR VI HÄR?</h1>
 		<ul class="small">
+			<li class="to-build spaced">Få grundläggande kännedom om webben och webbutveckling</li>
 			<li class="to-build spaced">Få förståelse för hur en dynamisk webbapplikation är uppbygd och fungerar</li>
-			<li class="to-build spaced">Få grundläggande för webbutveckling</li>
 			<li class="to-build spaced">Få grundläggande kännedom om serverscriptspråket PHP</li>
 			<li class="to-build spaced">Lära er skapa en dynamisk webbapplikation med hjälp av publiceringssystemet Wordpress</li>
 		</ul>
@@ -142,10 +142,11 @@
 			Vad som förväntas av dig
 		</h1>
 		<br /><br />
-		<p>Är här för att du vill lära dig!</p>
-		<p>Erfarenhet av HTML + CSS</p>
+		<p>Att du är här för att du vill lära dig!</p>
+		<p>Kunskap om HTML + CSS</p>
 		<p>Känner igen programatiska termer (variabel, array, if-sats, for-loop ect.)</p>
-		<p>Klarar av självstudier</p>
+		<p>Självstudier</p>
+		<p>20 timmar i veckan</p>
 	</article>
 		
 	<!-- Treveckorsreglen -->
@@ -194,30 +195,30 @@
 		<iframe src="https://coursepress.lnu.se/kurs/web-management"></iframe>
 	</article>
 	
-	<!-- OK hur börjar vi?-->
-	<article>
-		<h1 class="big c">FRÅGOR???</h1>
-		<p class="spaced">
-		<h3 class="to-build">OK, då kör vi!</h3>
-		</p>
+	
+	<!-- Frågor?-->
+	<article class="fill">
+		<img src="images/questionmarks.jpg" />
+		<h3 class="big c">FRÅGOR???</h3>
 	</article>
 		
 	<!-- Begrepp att reda ut -->
 	<article>
 		<h3>Begrepp att reda ut</h3>
 		<br /><br />
-		<div class="c">
+		<div class="lefty">
 		<ul class="spaced l">
 			<li>Webben och webbapplikationer</li>
 			<li>En dynamisk webbapplikations arkitektur</li>
 			<li>Klientsida (frontend)</li>
 			<li>Serversida (backend)</li>
-			<li>Serverscriptspråket PHP</li>
-			<li>Skillnad mellan javascript och PHP</li>
+			<li>Skillnad mellan JavaScript och PHP</li>
 			<li>HTTP request och response</li>
 			<li>HTML-formulär och "postad" data<li>
 		</ul>
 		</div>
+		<div class="righty">
+			<img src="images/little_question.png" class="biii"/>
 	</article>
 	
 	<!-- Om webben -->
@@ -231,207 +232,188 @@
 	</p>
 	</article>
 	
-	<!-- Vad är en webbapplikation-->
+	
+	<!-- Server - klient -->
 	<article>
-		<h3>
-			Vad är menas med en dynamisk webbapplikation?
-		</h3>
-		<p class="c">
-			<img src="images/dynamic_webapps.png" />
+		<h3>Statiska webbsidor (Server/Klient)</h3>
+		<p>
+			<ul>
+				<li>Du skriver informationen i HTML lägger dem på webbservern</li>
+				<li>Ska informationen ändras skriver du om HTML-koden i sidorna.</li>
+			</ul>
 		</p>
-		<p class="note">
-			EN sida som kan påverkas.
-			Webbsida - En specifik sida du kommer åt via en URL<br />
-		Webbplats - En samling webbsidor<br />
-		Webbtjänst - En tjänst som erbjuds via webbplatsen (blocket, recept o.s.v.)<br />
-		Webbapplikation - 
+		<img src="images/static_web.png" class="bi"/>
+	</article>
+	
+	
+	<!-- Vem skapar HTML i en dynamisk webbapplikation -->
+	<article>
+		<h3>Men hur funkar merparten av webbplatserna?</h3>
+		<p class="c spaced">
+			<img src="images/blocket_search.png" class="bii"/>
+		</p>
+		<p>
+			<ul>
+				<li>Vem skriver all HTML, CSS och javascript för att visa denna lista?</li>
+				<li>Finns det en sida för VARJE tänkbart sökord?</li>
+				<li>Vart sparas informationen?</li>
+			</ul>
 		</p>
 		
 	</article>
 	
-	<!-- En webbapplikations arkitektur -->
+	
+	<!-- Något saknas för dynamasika webbsidor -->
+	<article class="fill">
+		<img src="images/missing.jpg" />
+		<h3 class="c">Något saknas!</h3>
+	</article>
+	
+	<!-- Något saknas förklaring -->
 	<article>
-		<h3>Vad är det som händer när vi "facebookar"?</h3>
-		<p class="c spaced">
+		<p>
+			Kod som kör i webbservern kan skapa HTML-kod beroende på vad webbläsaren skickar in
+		</p>
+		<p>
+			<img src="images/wordpress_code.png" />
+		</p>
+	</article>
+
+	<!-- Server - klient - Dynamisk applikation -->
+	<article>
+		<h3>Dynamisk webbapplikation</h3>
+		<p>
+			Dynamisk webbapplikation.
+			Du skriver kodfiler (PHP) som läggs på servern
+			Server exekverar dessa och HTML skapas på olika sätt beroende på vilka
+			HTTP
+		</p>
+		<img src="images/dynamic_request.png" class="bi"/>
+	</article>
+	
+	<!-- webbserver - Backend -->
+	<article>
+		<h3>Beslut som tas på servern (backend)</h3>
+		<p>
 			<img src="images/facebooka.png" />
 		</p>
-		
-	</article>
-	
-	<!-- Hur ser det ut för webbläsaren -->
-	<article>
-		<h3>Vad webbläsaren tolkar</h3>
 		<p>
-			<img src="images/form_html.png" />
-		</p>
-		<p class="to-build">
-			OK. Vi trycker på knappen för att posta vårt inlägg? Sen då?
-		</p>
-		<p>
-			En webbläsares främsta uppgift är att tolka klientside-kod och presenetra ett gränssnitt för användaren.
-			Med klientsidekod menar vi främst HTML, CSS och Javascript.
-			HTML för struktur, 
-			CSS för presentation, 
-			JavaScript för interaktivitet
-		</p>
-	</article>
-	
-	<!-- HTTP-meddelande -->
-	<article>
-		<h3>Webbläsaren bygger ihop ett så kallat HTTP-meddelande</h3>
-		<p>
-		HTTP- beskrivning
-		</p>
-		<p class="to-build">
-			Detta http-meddelande innehåller bland annat texten vi vill posta på facebook.
-			Andra saker som skickas med:
-			Information om att jag är jag, 
-			
-			SKÄRMDUMP HTTP-meddelandet
-					
-			Detta skickas till facebooks webbserver (eller rättare sagt en av deras webbservrar)
-			
-			Man kallar detta meddelande för ett HTTP-request med HTTP metoden post
-			"Vi skickar en förfrågan om att få posta data/information på facebooks server"
-		</p>
-	</article>
-	
-	<!-- Internet -->
-	<article>
-		<h3>Internet - www</h3>
-		<p>
-		 Meddelandet passerar datorer, nätverk, sladdar, routrar, servrar o.s.v.
-		Traceroute till facebook ger X antal servrar
-		
-		</p>
-		<p class="to-build">
-			Till slut hamnar vi hos facebook webbserver. Den står i USA? Eller luleå?
-		</p>
-	</article>
-	
-	<!-- Backend -->
-	<article>
-		<h3>Webbservern - Backend</h3>
-		<p>
-		 En webbserver förstår HTTP-meddelandet som webbläsaren skickar
-		
-		 Vem är användaren? - PHP-kod läser av meddelandet, kollar i sin databas
-		 Vad vill användaren göra? - POST, med data
-		 Utför detta. Spara informationen som skickas i (rätt) databas.
-		 Skicka tillbaka ett svar. 	
-		
-		SKÄRMDUMP HTTP-meddelandet
-		
-		</p>
-		<p class="to-build">
-			Till slut hamnar vi hos facebook webbserver. Den står i USA? Eller luleå?
-		</p>
-	</article>
-	
-
-	<!-- Hur lång tid skulle det ta att skapa blocket? -->
-	<article>
-		<h1>Vad är det vi ska koncentrera oss på?</h1>
-		<p>
-			FÖRKLARA webbapplikationens roll, 
-			vad vi ska lära oss 
-			Vad vi inte ska lära oss (DATABAS, modellering eller kod mot)
-		</p>
-	</article>
-	
-
-	<!-- Hur lång tid skulle det ta att skapa blocket? -->
-	<article>
-		<h1>Problem vid webbutveckling</h1>
-		<p>
-			FÖRKLARA
-			* 3.14
+			<ul>
+				<li class="to-build">Vad vill användaren göra? Hämta? Posta? Vilken data skickas med?</li>
+				<li class="to-build">Vem skickar detta? Har personen rätt att posta?</li>
+				<li class="to-build">Vart ska informationen sparas? Hur? Är det korrekt data? (validering)</li>
+				<li class="to-build">Skicka tillbaka ett begripligt svar till webbläsaren (HTML)
+			</ul>	
 		</p>
 	</article>
 
+	<!-- Varför utvecklar vi webbapplikationer -->
 	<article>
-		<h1>Jo, men vad ska vi GÖRA?</h1>
+		<h3>Varför utvecklar vi webbapplikationer?</h3>
 		<p>
-			Kursens första del handlar om PHP-programmering.
-			PHP körs på en webbserver, en specifik dator med specifika program som levererar webbsidor till webbläsare
-			Ni ska alltså skriva kod som läggs på en webbserver och sen dynamiskt genererar webbsidor (HTML, CSS och javascript)
+			Vad är fördelarna mot så kallade skrivbordsapplikationer (desktop applications) som 
+			t.ex. Word, Photoshop o.s.v.
 		</p>
+		<ul>
+			<li>Inga installationer (mer än en webbläsare)</li>
+			<li>Plattformsoberoende, platsoberoende</li>
+			<li>Alltid senaste versionen, enklare distrubation</li>
+			<li>Tänk om facebook varit en skrivbordsapplikation?</li>
+		</ul>
+		<p>
+			Alla typer av applikationer passar inte som webbapplikation.
+			Krav på prestanda, säkerhet o.s.v.
+		</p>
+	</article>
+	
+	<!-- Jo men vad ska vi göra -->
+	<article>
+		<h1 class="c">Jo, men vad ska vi GÖRA?</h1>
+		<p>
+			<img src="images/owl_Bored.svg" />
+		</p>
+		
+	</article>
+	
+	<!-- PHP heart wordpress -->
+	<article>
+		<p class="c">
+			<img src="images/php-wordpress.jpg" class="biii" />
+		</p>
+		<ul>
+			<li>Kursens första del handlar om PHP-programmering.</li>
+			<li>PHP är ett serverscript, det exekveras på en webbserver</li>
+			<li>Ni ska alltså få förståelse och kunskap kring att skapa dynamiska webbapplikationer</li>
+			<li>Wordpress är skrivet i PHP, med kunskap i PHP kan man "enkelt" skapa kompletta webbplatser</li>
+		</ul>
 	</article>
 	
 	<!-- Varför måste vi lära oss PHP? -->
 	<article>
 		<h3>
-			Vad är det för mening med att kunna PHP?
+			Ytterligare orsaker till att kunna PHP?
 		</h3>
 		<ul>
 			<li>Förståelse för utvecklingsprocessen - programmering</li>
-			<li>Wordpress är byggt på PHP</li>
-			
 			<li class="to-build">Vanligt serverscriptspråk idagsläget - stort stöd på webbhotell</li>
-		
-			<li class="to-build">Wikipedia, facebook, 65%?</li>
+			<li class="to-build">Wikipedia, facebook, 65% av alla webbplatser?</li>
 			<li class="to-build">Det finns flera serverscriptspråk, C# (ASP.NET), Ruby, Python o.s.v.</li>
 		</ul>
 	</article>
-	
-	<!-- Vad är PHP -->
-	<article>
-		PHP är ett serverscriptspråk<br />
-		Ett av de vanligaste, stort stöd på många webbhotell<br />
-		PHP är fritt/gratis att använda<br />
-		Wordpress är skrivet i PHP<br />
-		OBS! Det finns flera serverscriptspråk, C# (ASP.NET), Ruby, Python o.s.v.
-		
-	</article>
-
 	
 	<!-- PHP - historik och dagsläget-->
 	<article>
 		<h3>
 			PHP - Lite historik
 		</h3>
-		PHP was originally created by Rasmus Lerdorf in 1995.<br />
-		Webben hade ej exploderat - Orsak till dagens populär
-		<q>While PHP originally stood for Personal Home Page, it is now said to stand for PHP: Hypertext Preprocessor</q>
-		VISA BILDEN MED TIDSAXLEN
-		While PHP originally stood for Personal Home Page,[8] it is now said to stand for PHP: Hypertext Preprocessor
-		<a href="http://sv.wikipedia.org/wiki/PHP">http://sv.wikipedia.org/wiki/PHP</a>
+		<p>Rasmus Lerdorf i 1995</p>
 		
-	</article>
-	
-	<!-- PHP - Hur ser det ut -->
-	<article>
-		<h1>Hur ser det ut?</h1>
+		<q>While PHP originally stood for Personal Home Page, it is now said to stand for PHP: Hypertext Preprocessor</q>
+		
 		<p>
-			KODDUMP AV EN WORDPRESSIDA - Gärna komplicerad
+			<a href="http://sv.wikipedia.org/wiki/PHP">http://sv.wikipedia.org/wiki/PHP</a>
 		</p>
 	</article>
 	
 	<!-- PHP - Hello world-->
 	<article>
-		<h3>
+		
+		<p class="big c spaced">
 			Hello World!
-		</h3>
-		<p>
-			Vårt första PHP-exempel!<br />
-			Låt ditt PHP-script skapa en HTML-sida som skriver ut "Hello World!"<br />
-			<p class="big">
-				Demo
-			</p>
 		</p>
-		<p class="note">
-			Example 1
-			
+		<br /><br />
+		<p>
 			<strong>Vad:</strong> Vårt första PHP-exempel!<br />
-			
+			<br />
 			<strong>Problem:</strong> Låt ditt PHP-script skapa en HTML-sida som skriver ut "Hello World!"<br />
-			
+			<br />
 			<strong>Varför:</strong> Förståelse för PHPs uppgift av att rendera HTML och hur HTML och PHP-kod blandas
 		</p>
-		<p>DEMO</p>
+
 	</article>
 	
 	
+	<article>
+		<h3>Vad du ska veta efter denna föreläsning</h3>
+		<ul>
+			<li>Vad är skillnaden mellan backend och frontend?</li>
+			<li>Vart exekveras JavaScript-kod?</li>
+			<li>Vart exekveras PHP-kod?</li>
+			<li>Vad används en databas till i en webbapplikation</li>
+			<li>Vad är det för skillnad mellan en statisk och dynamisk webbapplikation?</li>
+			<li>Vad har serverscriptkod för roll i en webbapplikation?</li>
+			<li>Vilka är de delar som är grunden för webben (www)?</li>
+			<li>Vad är skillnaden mellan en skrivbordsapplikation och en webbapplikation?</li>
+		</ul>
+	</article>
+	
+	<article>
+		<h1>Credits</h1>
+		<ul>
+			<li>Slide 9: Photo taken from http://www.fotopedia.com/items/flickr-2200500024</li>
+			<li>Slide 10: http://openclipart.org/detail/153/bulle-droite-question-by-technoargia</li>
+		</ul>
+	</article>
 	
 </section>
 </body>
