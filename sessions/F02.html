@@ -100,7 +100,8 @@
 		<ul>
 			<li>Använda variabler i PHP</li>
 			<li>Skriva ett formulär i HTML samt ta emot det användaren skriver i ditt PHP-skript</li>
-			<li>Jobba med selektioner i PHP</li>
+			<li>Programmera med selektionssatser i PHP</li>
+			<li>Använda for-loopar i PHP</li>
 		</ul>
 	</article>
 	
@@ -110,11 +111,11 @@
 			Programmeringsrepetition - Variabel
 		</h3>
 		<p>
-			En variabel ses som en tillfällig lagringsplats för ett värde<br />
-			Variablerna	ges	unika namn så att man kan referera till dem senare i sin kod<br />	
-			casesensitive d.v.s. message != Message
-			
-			BILD på ice creame stand?
+			<ul>
+				<li>En variabel ses som en namngiven behållare för ett sparat värde</li>
+				<li>Variablerna	ges	unika namn så att man kan referera till dem senare i sin kod</li>	
+				<li>Ett variabelnamn är "casesensitive" d.v.s. message != Message</li>
+			</ul>
 		</p>
 		<pre>
 // Variabel i javascript
@@ -141,7 +142,9 @@ $tal_x = 10;
 $tal_y = $tal_x;
 $tal_z = 100;
 
+
 $resultat = ($tal_x * $tal_y) - $tal_z;
+// echo skriver ut värdet i $resultat
 echo($resultat);
 		</pre>
 		
@@ -155,6 +158,7 @@ echo($resultat);
 		<p>
 
 			En variabel kan vara av olika <strong>datatyper</strong><br />
+			vilket innebär att man behandla dem på olika sätt.
 			
 			<ul>
 				<li>integer - heltal</li>
@@ -168,27 +172,33 @@ echo($resultat);
 		</p>
 	</article>
 	
+	<!-- Variabler exempel -->
+	<article>
+		<h3>Exempel</h3>
+		<img src="images/variable_ex.png" />
+	</article>
+	
 	<!-- string -->
 	<article>
 		<h1>Textsträngar</h1>
 		<p>
-			Textsträngar eller string kan bestå av noll eller flera tecken<br />
+			Textsträngar (string) kan bestå av noll eller flera tecken<br />
 			Det finns enkla sätt att slå ihop (konkatenering), räkna antal tecken, m.m.
 		</p>
 		<pre>
 // textsträngar
 $sport = "fotboll";
-$team = "Tottenham Hotspur";
-
+$team = "Tottenham Hotspur Football Club";
 
 // I php använder man punkttecken för att slå ihop strängar
 $complete_message = $team ." är bra på " .$sport;
 echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll
 
 // i Javascript använder man plustecken för att slå ihop strängar, i PHP punkttecken
-alert("Hejsan" +" " +"Kerstin");
-		
-	</pre>
+alert("Hejsan" +" " +"Kerstin");		
+		</pre>
+	</article>
+	
 	
 	<!-- Vad kommer skrivas ut-->
 	<article>
@@ -206,14 +216,14 @@ echo("Varan kostar " .($pris + ($pris * $moms)) .$enhet)
 	<!-- HTML - Formulär-->
 	<article>
 			<h3>
-				HTML-formulär - Att låta användaren påverka applikationen
+				HTML-formulär
 			</h3>
-			<p>
-				För att låta användare "Posta" data till en webbapplikation (din php-skript)
-				använder man HTML-formulär
+			<p class="lefty">
+				<img src="images/form_page.png" style="width: 60%"/>
 			</p>
-			BILD på olika typer av formulär 
-			BILD på htmlkod
+			<p>
+				<img src="images/html_form.png"/>
+			</p>
 
 
 	</article>
@@ -221,6 +231,21 @@ echo("Varan kostar " .($pris + ($pris * $moms)) .$enhet)
 	<!-- PHP - Formulär-->
 	<article>
 			BILD PÅ HUR ETT FORMULÄR ARBETAR
+			Från html via HTTP till server och PHP
+			
+	</article>
+	
+	<!-- Om HTML-formulär rent HTMLaktigt-->
+	<article>
+		<h3>Hur bygger man HTML-formulär?</h3>
+		<p>
+			<a href="http://www.html-form-guide.com/html-form/html-form-input.html">
+				http://www.html-form-guide.com/html-form/html-form-input.html
+			</a>
+		</p>
+		<p>
+			
+		</p>
 	</article>
 	
 	<!-- PHP - Formulär DEMO-->
@@ -243,16 +268,11 @@ echo("Varan kostar " .($pris + ($pris * $moms)) .$enhet)
 
 	<!-- PHP - selection -->
 	<article>
-		<h1>Selectioner - PHP</h1>
+		<h1>Selektioner - PHP</h1>
 		<p>
-			Låta användaren styra hur vår webbapplikation ska bete sig.<br />
-			"<strong>OM</strong> användaren matar in ett matematiskt uttryck ska en miniräknare visas"
-		</p>
-		<p>
-			<img src="images/calc.png" />
-		</p>
-		<p class="to-build">
-			OM == IF
+			OM användaren tryckt på "spara-knappen" ska vi...
+			OM användaren inte fyllt formuläret korrekt ska vi...
+			OM 
 		</p>
 	</article>
 	
@@ -260,22 +280,66 @@ echo("Varan kostar " .($pris + ($pris * $moms)) .$enhet)
 	<article>
 		<h1>IF-SATS</h1>
 		<p>
-			if-sats används för att kontroller om något är sant eller falskt
+			if-sats används för att kontrollera om något är sant eller falskt
 		</p>
 		<pre>
-$tal = 3;
+$price = 10.5;
 			
-if($tal == 10) {
-  echo("Talet är tio");		
+if($price < 10) {
+  echo("Priset är mindre än tio");		
 }
-elseif($tal == 5) {
-  echo("Talet är fem");
+
+if($price > 10) {
+  echo("Talet är större än tio");
 }
-else {
-  echo("Talet är varken fem eller tio");
+
+if($price == 10) {
+  echo("Talet är lika med tio");
 }
 		</pre>
 		
+	</article>
+
+	<!-- else -->
+	<article>
+		<h1>else-sats</h1>
+		<p>
+			Selektionssats. Om en if-sats inte “slår in” kan man fånga
+			det i en else-sats. “Om något är sant gör man detta, <strong>annars</strong>
+			gör man detta…”
+		</p>
+		<pre>
+$tal = 50 + 50;
+
+if($tal < 100) {
+  echo("Talet är mindre än 100");
+}
+else {
+  echo("Talet är störe eller lika med 100);
+}			
+		</pre>
+	</article>
+	
+	<!-- if elseif else -->
+	<article>
+		<h1>if-else-if-else</h1>
+		<p>
+			Sista varianten. “Om detta är sant - gör detta, annars om
+			detta är sant – gör detta, annars gör detta!”
+		</p>
+		<pre>
+$tal = 50 - 40;
+
+if($tal > 100) {
+  echo("Talet är större än 100");
+}
+elseif($tal < 100 &amp;&amp; $tal > 20) {
+  echo("talet är mellan 20 och 100")
+}
+else {
+	echo("är lika med eller mindre än 20);
+}			
+		</pre>
 	</article>
 
 	<!-- if-sats med POST -->
@@ -379,7 +443,7 @@ GÖT TAL
 					<li>while-loop</li>
 				</ul>
 			</p>
-		</article>
+	</article>
 
 	<!-- Om for-loop -->
 	<article>
@@ -400,7 +464,7 @@ GÖT TAL
 	  echo("Hello World!");
 	}
 			</pre>
-		</article>
+	</article>
 
 	<!-- Forloop demo -->
 	<article>
@@ -408,7 +472,7 @@ GÖT TAL
 			<p>
 				Jag vill skapa en tabell i HTML med 100 rader via en for-loop
 			</p>
-		</article>
+	</article>
 
 	<!-- While-loop -->
 	<article>
@@ -420,13 +484,9 @@ GÖT TAL
 			<p>
 				Jag vill skapa en tabell i HTML med 100 rader via en while-loop
 			</p>
-		</article>
+	</article>
 
-	<!-- Sammanfattande DEMO-->
-	<article>
-			<h1>DEMO</h1>
-			Se inspelat demo som tar upp många av de delar vi pratat om	
-		</article>
+	
 
 	</section>
   </body>
