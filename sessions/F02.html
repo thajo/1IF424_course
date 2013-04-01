@@ -108,7 +108,7 @@
 	<!-- PHP - Variabel-->
 	<article>
 		<h3>
-			Programmeringsrepetition - Variabel
+			Variabel i PHP
 		</h3>
 		<p>
 			<ul>
@@ -148,6 +148,11 @@ $resultat = ($tal_x * $tal_y) - $tal_z;
 echo($resultat);
 		</pre>
 		
+		<pre class="to-build">
+// $resultat = (10*10) - 100;
+			
+// $resultat = 0;</pre>
+		
 	</article>
 
 	<!-- PHP - Datatyper-->
@@ -161,21 +166,15 @@ echo($resultat);
 			vilket innebär att man behandla dem på olika sätt.
 			
 			<ul>
-				<li>integer - heltal</li>
-				<li>double - decimaltal</li>
-				<li>string - text / tecken</li>
-				<li>boolean - sant eller falsk, true eller false, 1 eller 0</li>
-				<li>array - en lista med värden</li>
+				<li><strong>integer</strong> - heltal (1, 14, 23)</li>
+				<li><strong>double</strong> - decimaltal (1.5, 132.24323)</li>
+				<li><strong>string</strong> - text / tecken ("What ever text")</li>
+				<li><strong>boolean</strong> - sant eller falsk, true eller false, 1 eller 0</li>
+				<li><strong>array</strong> - en lista med värden ([1, 23, 4, 2, 32, "hej", TRUE])</li>
 				<li>...finns fler</li>
 			</ul>
 				
 		</p>
-	</article>
-	
-	<!-- Variabler exempel -->
-	<article>
-		<h3>Exempel</h3>
-		<img src="images/variable_ex.png" />
 	</article>
 	
 	<!-- string -->
@@ -198,7 +197,12 @@ echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll
 alert("Hejsan" +" " +"Kerstin");		
 		</pre>
 	</article>
-	
+		
+	<!-- Variabler exempel -->
+	<article>
+		<h3>Exempel</h3>
+		<img src="images/variable_ex.png" />
+	</article>
 	
 	<!-- Vad kommer skrivas ut-->
 	<article>
@@ -206,11 +210,14 @@ alert("Hejsan" +" " +"Kerstin");
 	
 		<pre>
 $pris = 400;
-$enhet = "kronor"
+$enhet = " kronor"
+$intro = "Varan kostar ";
 $moms = 0.25
 
-echo("Varan kostar " .($pris + ($pris * $moms)) .$enhet)	
+echo($intro .($pris + ($pris * $moms)) .$enhet)	
 		</pre>
+		<pre class="to-build">
+// Varan kostar 500 kronor</pre>
 	</article>
 	
 	<!-- HTML - Formulär-->
@@ -218,62 +225,55 @@ echo("Varan kostar " .($pris + ($pris * $moms)) .$enhet)
 			<h3>
 				HTML-formulär
 			</h3>
-			<p class="lefty">
-				<img src="images/form_page.png" style="width: 60%"/>
+			<p>För att användaren ska kunna skicka in data till vår applikation behöver vi skapa HTML-formulär</p>
+			<p>
+				<img src="images/form_html_login.png" />
 			</p>
 			<p>
-				<img src="images/html_form.png"/>
+				<img src="images/form_login.png"/>
 			</p>
-
-
-	</article>
-
-	<!-- PHP - Formulär-->
-	<article>
-			BILD PÅ HUR ETT FORMULÄR ARBETAR
-			Från html via HTTP till server och PHP
-			
-	</article>
-	
-	<!-- Om HTML-formulär rent HTMLaktigt-->
-	<article>
-		<h3>Hur bygger man HTML-formulär?</h3>
-		<p>
+			<p>
+				Hur man bygger html-formulär:<br />
 			<a href="http://www.html-form-guide.com/html-form/html-form-input.html">
 				http://www.html-form-guide.com/html-form/html-form-input.html
 			</a>
-		</p>
+			</p>
+
+	</article>
+
+	<!-- PHP - Formulär DEMO-->
+	<article>
+		<h1>DEMO</h1>
 		<p>
+			- Skapa ett HTML-formulär<br />
+			- Använd PHP för att skriva ut det användaren matar in<br />
+		</p>
 			
+		<p class="note">
+			1) Skapa ett HTML-formulär
+			2) Visa några olika kontroller - Koncentrera sig till ett textfield
+			3) $_POST, posta till en annan sida
+			4) Skillnad mellan GET och POST
+			5) Posta till samma sida - Problem ? Vi måste titta OM värdet är satt = Selection
 		</p>
 	</article>
 	
-	<!-- PHP - Formulär DEMO-->
-	<article>
-			<h1>DEMO</h1>
-			<p>
-				- Skapa ett HTML-formulär<br />
-				- Använd PHP för att skriva ut det användaren matar in<br />
-			</p>
-			
-			<p class="note">
-				1) Skapa ett HTML-formulär
-				2) Visa några olika kontroller - Koncentrera sig till ett textfield
-				3) $_POST, posta till en annan sida
-				4) Skillnad mellan GET och POST
-				5) Posta till samma sida - Problem ? Vi måste titta OM värdet är satt = Selection
-			</p>
-			
-	</article>
-
+	
 	<!-- PHP - selection -->
 	<article>
 		<h1>Selektioner - PHP</h1>
 		<p>
-			OM användaren tryckt på "spara-knappen" ska vi...
-			OM användaren inte fyllt formuläret korrekt ska vi...
-			OM 
+			När du behöver göra ett vägtal i din kod...
 		</p>
+		<ul>
+			
+			<li>OM användaren tryckt på "spara-knappen" ska vi...</li>
+			<li>OM användaren inte fyllt formuläret korrekt ska vi...</li>
+			<li>OM en speciell sak ska vi...</li>
+			<li>OM en speciell sak inträffat ska vi...</li>
+			<li>Om det inte finns några bloggposter ska vi...</li>
+			<li>OM vi sk visa en bloggpost med kommentarer ska vi...</li>
+		</ul>
 	</article>
 	
 	<!-- IF-sats -->
@@ -356,8 +356,6 @@ else {
 	echo "Text är inte satt";
 }
 		</pre>
-		BILD PÅ HTML-kod		
-		
 	</article>
 
 	<!-- PHP - selectioner DEMO-->
@@ -369,8 +367,6 @@ else {
 		<p class="note">
 			1) Två input fält - (använd ej && -- Ge ett felmeddelande om inputen är tom annars lägg ihop dem
 			2) vad händer om användaren skriver en sträng? - Kolla av om det är ett nummer (visa hur jag hittar det via google)
-		</p>
-		<p>
 			3) utöka med isset och == ""
 			4) vad händer om användaren skriver en sträng? - Kolla av om det är en sträng is_numeric
 			5) Men om jag vill kolla flera saker OM detta och OM detta...			
@@ -380,15 +376,18 @@ else {
 
 	<!-- Logiska uttryck -->
 	<article>
-		<h1>Logiska uttryck</h1>
-		<ul>
-			<li>&gt; - Större än</li>
-			<li>&gt;= - Större än, lika med</li>
-			<li>&lt; - Mindre än</li>
-			<li>&lt;= - Mindre än, lika med</li>
-			<li>== - Lika med</li>
-			<li>!= - Ej lika med, skilt från</li>
-		</ul>
+		<h3>Att jämföra olika värden</h3>
+		<p>
+			<img src="images/jmf.png" />
+		</p>
+			<pre>
+if($tal == 10) {
+  // code goes here
+}			
+
+if($tal &lt;= 10) {
+  // Code goes here	
+}		</pre>
 	</article>
 	
 	<!-- Demo - Logiska uttryck - gissa -->
@@ -404,8 +403,7 @@ if($tal1 &lt;= $tal2) {
   if($tal2 != $tal3) {
 	echo("Andra vilkoret stämmer");
   }	
-}			
-		</pre>
+}		</pre>
 	</article>
 	
 	<!-- Logiska operatorer -->
@@ -413,8 +411,8 @@ if($tal1 &lt;= $tal2) {
 		<h1>Logiska operatorer</h1>
 		<pre>
 // Kombinera flera vilkor
-if ($tal > $tal2 &amp;&amp; $tal < $tal3)
-if ($tal > $tal2 || $tal < $tal3)
+if ($tal > $tal2 &amp;&amp; $tal &lt; $tal3)
+if ($tal > $tal2 || $tal  &lt; $tal3)
 		</pre>	
 	</article>
 	
@@ -453,16 +451,16 @@ GÖT TAL
 			<p>Vi vill bara skriva koden echo("Hello World!") en gång</p>
 
 			<pre>
-	// for-loop
-	// loopen körs lika många gånger
-	// 1. Vi skapar en variabel $i och sätter den till 0
-	// 2. Vi skapar ett vilkor (så läng $i är mindre än 10)
-	// 3. För varje gång loopen går öka $i med 1
+// for-loop
+// loopen körs lika många gånger
+// 1. Vi skapar en variabel $i och sätter den till 0
+// 2. Vi skapar ett vilkor (så läng $i är mindre än 10)
+// 3. För varje gång loopen går öka $i med 1
 
 
-	for($i = 0; $i < $10; $i++) {
-	  echo("Hello World!");
-	}
+for($i = 0; $i < $10; $i++) {
+  echo("Hello World!");
+}
 			</pre>
 	</article>
 
