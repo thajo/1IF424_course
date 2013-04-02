@@ -76,10 +76,7 @@
 		
 		<br /><br />
 		<h1 class="big c">Kursintroduktion</h1>
-		<p class="reference spaced">
-		
-			http://orion.lnu.se/pub/education/course/1IK424/VT13/sessions/F01.html
-		</p>
+	
 		
 		<p class="small_footer">
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
@@ -110,7 +107,6 @@
 			<li>Gillar PHP och reguljära uttryck</li>
 			<li class="s">Skype: emil.lnu, E-post: ec222ba@student.lnu.se</li>
 		</ul>
-		
 	</article>
 		
 	<!-- Varför? -->
@@ -118,9 +114,11 @@
 		<h1 class="c">VARFÖR ÄR VI HÄR?</h1>
 		<ul class="small">
 			<li class="to-build spaced">Få grundläggande kännedom om webben och webbutveckling</li>
-			<li class="to-build spaced">Få förståelse för hur en dynamisk webbapplikation är uppbygd och fungerar</li>
+			<li class="to-build spaced">Få förståelse för hur en dynamisk webbapplikation är uppbyggd och fungerar</li>
 			<li class="to-build spaced">Få grundläggande kännedom om serverscriptspråket PHP</li>
-			<li class="to-build spaced">Lära er skapa en dynamisk webbapplikation med hjälp av publiceringssystemet Wordpress</li>
+			<li class="to-build spaced">
+				Lära er skapa en dynamisk webbapplikation med hjälp av publiceringssystemet Wordpress
+			</li>
 		</ul>
 		<p class="note">
 		
@@ -139,15 +137,15 @@
 	<!-- Examination -->
 	<article class="fill">
 			<h3>
-				Examination
+				Kursens uppdelning
 			</h3>
 			<p>
 			<strong>Delkurs 1 - PHP (3 hp)</strong><br />
-			Betyg: U/G - <span class="small">Noteringar görs om antal lösta extrauppgifter som kan komma att på verka slutbetyget i kursen</span>
+			Betyg: U/G - <span class="small">Noteringar görs om antal lösta extrauppgifter som kan komma att påverka slutbetyget i kursen</span>
 			</p>
 			<p>
 			<strong>Delkurs 2 - Wordpress (2 hp)</strong><br />
-			Betyg: U/G - <span class="small">Noteringar görs om antal lösta extrauppgifter som kan komma att på verka slutbetyget i kursen</span>
+			Betyg: U/G - <span class="small">Noteringar görs om antal lösta extrauppgifter som kan komma att påverka slutbetyget i kursen</span>
 			</p>
 			<p>
 				<strong>Delkurs 3 - Projektarbete (2.5 hp)</strong><br />
@@ -170,7 +168,6 @@
 		<br /><br />
 		<p>Att du är här för att du vill lära dig!</p>
 		<p>Kunskap om HTML + CSS</p>
-		<p>Känner igen vissa termer (variabel, array, if-sats, for-loop ect.)</p>
 		<p>Lägger ca. 20 timmar i veckan</p>
 		<p>Självstudier</p>
 	</article>
@@ -188,7 +185,7 @@
 			<p>
 				Det innebär...<br />
 				<br />
-				<strong class="red">...att man efter tre veckor (vecka 16) ska ha redovisat laboration 1...</strong>
+				<strong class="red">...att man efter tre veckor (vecka 16) ska redovisat laboration 1...</strong>
 				
 			</p>
 			<p>
@@ -213,9 +210,7 @@
 			<li>En dynamisk webbapplikations arkitektur</li>
 			<li>Klientsida (frontend)</li>
 			<li>Serversida (backend)</li>
-			<li>Skillnad mellan JavaScript och PHP</li>
-			<li>HTTP request och response</li>
-			<li>HTML-formulär och "postad" data<li>
+			<li>PHP - Vad är det?</li>
 		</ul>
 		</div>
 		<div class="righty">
@@ -229,8 +224,85 @@
 		</h1>
 		<br /><br />
 	<p>
-		<img class="bi" src="images/web_history.png" />
+		<img class="bi2" src="images/web_history.png" />
 	</p>
+	<p class="note">
+				
+				Inspirationen till webben skapades redan 1945. Det var precis efter andra världskriget
+				och forskaren Vannevar Bush beskrev vad han kallade Memex i sin skrift "As we may think".
+				Memex för ett förslag på en maskin där man kunde spara all sin information 
+				(böcker, kommunikation, brev o.s.v.) och låta
+				"maskinen" hålla reda på detta och göra det presenterbart för användaren via 
+				
+				<br /><br />
+				
+				Denna skrift inspirerade många forskare i "computer science", bland annat gav denna maskin
+				inspiration till skapandet av den första datormusen. Men även idén med "hypertext" 
+				och "hypermedia"
+				
+				<br /><br />
+			
+					En som använde detta var Ted Nelson som först myntade uttrycket. 
+					Mycket handlade om dokumenthantering och hur man skulle organisera detta.
+					Ted Nelsons forskning inspirerade i stor grad Tim Bernes-Lee som ses som 
+					fadern till utvecklingen av den moderna webben med HTML som uppmärkning
+					av information. 
+					Själv tycker han dock inte att webben i form av HTML 
+					
+					"HTML is precisely what we were trying to PREVENT— ever-breaking links, 
+					links going outward only, quotes you can't follow to their origins, 
+					no version management, no rights management"
+					http://xanadu.com.au/ted/TN/WRITINGS/TCOMPARADIGM/tedCompOneLiners.html
+				<br /><br />
+					Tim Bernes-Lee jobbade på CERN med informationshantering och skrev
+					artiklen Information management: A proposal
+					"A web of nodes where user can browse at will"
+					Tim försökte sprida sina idéer bland cheferna i CERN men fick som
+					svar "interesting, but vague
+				<br /><br />
+					1990 - Utvecklar en applikation World Wide Web
+					De tre grundbultarna i detta är URL/URI, HTML, HTTP.
+				<br /><br />
+					Det har funnit flera olika varianter som hade kunnat bli "webben".
+					En av de största vid denna tiden var Gopher, ett list/menybaserat system med länkar till
+					olika typer av dokument. Gopher togs fram och drevs av University of Minnesota men 1993
+					bestämde man att ta ut en licenskostnad för användadet. Detta ledde i sin tur till att 
+					Tim Barnes-Lee:s WWW blev bra mycket populärare då det var helt gratis och släppt med
+					öppen källkod"
+				<br /><br />
+					Senare 1993 släpptes den första riktigt populära grafiska webbläsaren "Mosaic".
+					Detta gjorde att även allmänheten såg en större nytta med webben och fick fart på 
+					utvecklingen.
+					
+					Mosiacutvecklarna anställdes av Netscape och utvecklade där Netscape Navigator<br />
+				Den webbläsare som hade störts inflytande när webben var ung. Samtidigt började
+				andra webbläsartillverkare röra på sig och början till det "browser war" vi känner 
+				till startade. W3C skapades för att hålla koll på standarderna och jobba för
+				ett bättre helhetsgrepp på hur webben skulle fungera
+				<br /><br />
+				Webben hade främst beståt av statiska html-sidor som länkade mellan varandra
+				men tekniker som kunde göra webben mer dynamiskt växte fram. Stöd för datalagraing i databaser
+				och tätare integration mellan webb och företagens övriga system.
+				<br /><br />
+				Web 2.0 innebar en mer användergenererad webb. Utvecklingen skedde på gräsrotsnivå
+				och många nya tekniker (programmerinsgspråk, ramverk, tekniska lösningar) togs fram och 
+				drev webben ytterligare vidare. Många av de idag självklara tjänster skapades och gav
+				webben en starkare plats i människornas liv. Information utbyts och diskuteras på 
+				bloggar, tweets m.m.
+				<br /><br />
+				
+				2007 släppte den första iPhonen och trots att det funnits surfmöjligheter
+				på handhållna enheter var det ändå starten för smartphones och den mobila webben.
+				<br />
+				Android följde och mängder av telefoner och tekniker som responsive design 
+				följde. Man börjar samtidigt få flera typer av enheter, TV-apparater där man 
+				försöker använda en plattform och får en webb att fungera överallt.
+				<br />
+				Framtiden är alltid svår att sia om. Något som pratas om i forskarvärden
+				är begrepp som Semantic Web och Linked Data. Semantiska webben är egentligen
+				ett gammalt uttryck...kanske till och med utopi. Tanken är att man vill göra
+				webben och all dess information tillgänglig för applikationer på ett bättre sätt.
+			</p>	
 	</article>
 	
 	<!-- Server - klient Statiska webbsidor-->
@@ -272,10 +344,16 @@
 	<article>
 		<h3>Dynamisk webbapplikation</h3>
 		<p>
-			Du skriver kodfiler (PHP) som läggs på servern<br />
-			Server exekverar dessa och HTML skapas dynamiskt<br />
+			Visa de 10 senaste blogginläggen.
 		</p>
-		<img src="images/dynamic_request.png" class="bi"/>
+		<p>
+			För att lösa detta behöver vi ett serverscriptspråk (t.ex. PHP)
+			och en databas där informationen ligger lagrad. (backend)
+		</p>
+		<p class="c">
+			<img src="images/web_server_php.png" class="bi"/>
+		</p>
+		
 	</article>
 	
 	<!-- Något saknas förklaring -->
@@ -284,92 +362,31 @@
 			PHP-kod skapar HTML...dynamiskt
 		</h3>
 		<p>
-			<img src="images/wordpress_code.png" />
-		</p>
-	</article>
-
-	<!-- webbserver - Backend -->
-	<article>
-		<h3>Beslut som tas på servern (backend)</h3>
-		<p>
-			<img src="images/facebooka.png" />
+			Istället för att skriva all HTML för hand...
 		</p>
 		<p>
-			<ul>
-				<li class="to-build">Vad vill användaren göra? Hämta? Posta? Vilken data skickas med?</li>
-				<li class="to-build">Vem skickar detta? Har personen rätt att posta?</li>
-				<li class="to-build">Vart ska informationen sparas? Hur? Är det korrekt data? (validering)</li>
-				<li class="to-build">Skicka tillbaka ett begripligt svar till webbläsaren (HTML)
-			</ul>	
+			...kopplar PHP-scriptet upp sig mot databasen, frågar efter de senaste
+			blogginläggen och skapar, dynamiskt, den HTML-kod som behövs.
 		</p>
-	</article>
-
-	<!-- Varför utvecklar vi webbapplikationer -->
-	<article>
-		<h3>Varför utvecklar vi webbapplikationer?</h3>
-		<p>
-			Vad är fördelarna mot så kallade skrivbordsapplikationer (desktop applications) som 
-			t.ex. Word, Photoshop o.s.v.
-		</p>
-		<ul>
-			<li class="to-build">Inga installationer (mer än en webbläsare)</li>
-			<li class="to-build">Plattformsoberoende, platsoberoende</li>
-			<li class="to-build">Alltid senaste versionen, enklare distrubation</li>
-			<li class="to-build">Tänk om facebook varit en skrivbordsapplikation?</li>
-		</ul>
-		<p  class="to-build">
-			Alla typer av applikationer passar inte som webbapplikation.
-			Krav på prestanda, säkerhet o.s.v.
-		</p>
-	</article>
-	
-	<!-- Jo men vad ska vi göra -->
-	<article>
-		<h1 class="c">Jo, men vad ska vi GÖRA?</h1>
-		<p>
-			<img src="images/owl_Bored.svg" />
-		</p>
-		
-	</article>
-	
-	<!-- PHP heart wordpress -->
-	<article>
 		<p class="c">
-			<img src="images/php-wordpress.jpg" class="biii" />
+			<img src="images/get_bloggs.png" style="height: 70%"/>
 		</p>
-		<ul>
-			<li>Kursens första del handlar om PHP-programmering.</li>
-			<li>PHP är ett serverscript, det exekveras på en webbserver</li>
-			<li>Ni ska alltså få förståelse och kunskap kring att skapa dynamiska webbapplikationer</li>
-			<li>Vi kommer inte gå in på databaskoppling, databas modellering, objectorienterad programmering</li>
-			<li>Wordpress är skrivet i PHP, med kunskap i PHP kan man "enkelt" skapa kompletta webbplatser</li>
-		</ul>
 	</article>
+
 	
-	<!-- Varför måste vi lära oss PHP? -->
+	<!-- Returnerar html -->
 	<article>
-		<h3>
-			Ytterligare orsaker till att kunna PHP?
-		</h3>
-		<ul>
-			<li>Förståelse för utvecklingsprocessen - programmering</li>
-			<li class="to-build">Vanligt serverscriptspråk idagsläget - stort stöd på webbhotell</li>
-			<li class="to-build">Wikipedia, facebook, 65% av alla webbplatser?</li>
-			<li class="to-build">Det finns flera serverscriptspråk, C# (ASP.NET), Ruby, Python o.s.v.</li>
-		</ul>
-	</article>
-	
-	<!-- PHP - historik och dagsläget-->
-	<article>
-		<h3>
-			PHP - Lite historik
-		</h3>
-		<p>Rasmus Lerdorf i 1995</p>
-		
-		<q>While PHP originally stood for Personal Home Page, it is now said to stand for PHP: Hypertext Preprocessor</q>
-		
+		<h3 class="c">Webbläsaren visar den genererade HTML-koden</h3>
 		<p>
-			<a href="http://sv.wikipedia.org/wiki/PHP">http://sv.wikipedia.org/wiki/PHP</a>
+			<img src="images/inlagg.png" />
+		</p>
+	</article>
+	
+	<!-- Repetition -->
+	<article>
+		<h3>Sammanfattning</h3>
+		<p>
+				<img src="images/dynamic_request.png" class="bi"/>
 		</p>
 	</article>
 	
@@ -389,6 +406,110 @@
 		</p>
 
 	</article>
+
+	<!-- webbserver - Backend -->
+	<article>
+		<h3>Beslut som tas på servern (backend)</h3>
+		<p class="c">
+			<img src="images/facebooka.png" />
+		</p>
+		<p>
+			<ul>
+				<li>Vad vill användaren göra? Hämta? Posta? Vilken data skickas med?</li>
+				<li class="to-build">Vem skickar detta? Har personen rätt att posta?</li>
+				<li class="to-build">Vart ska informationen sparas? Hur? Är det korrekt data? (validering)</li>
+				<li class="to-build">Skicka tillbaka ett begripligt svar till webbläsaren (HTML, CSS, JS, Felkod)</li>
+			</ul>	
+		</p>
+	</article>
+
+	
+
+	<!-- Varför utvecklar vi webbapplikationer 
+	<article>
+		<h3>Varför utvecklar vi webbapplikationer?</h3>
+		<p>
+			Vad är fördelarna mot så kallade skrivbordsapplikationer (desktop applications) som 
+			t.ex. Word, Photoshop o.s.v.
+		</p>
+		<ul>
+			<li class="to-build">Inga installationer (mer än en webbläsare)</li>
+			<li class="to-build">Plattformsoberoende, platsoberoende</li>
+			<li class="to-build">Alltid senaste versionen, enklare distribution</li>
+			<li class="to-build">Tänk om facebook varit en skrivbordsapplikation?</li>
+		</ul>
+		<p  class="to-build">
+			Alla typer av applikationer passar inte som webbapplikation.
+			Krav på prestanda, säkerhet o.s.v.
+		</p>
+	</article>-->
+	
+	<!-- Jo men vad ska vi göra -->
+	<article>
+		<h1 class="c">Jo, men vad ska vi GÖRA?</h1>
+		<p>
+			<img src="images/owl_Bored.svg" />
+		</p>
+		
+	</article>
+	
+	<!-- PHP heart wordpress -->
+	<article>
+		<p class="c">
+			<img src="images/php-wordpress.jpg" class="biii" />
+		</p>
+		<ul>
+			<li>Kursens första del handlar om enklare PHP-programmering.</li>
+			<li>Ni ska alltså få förståelse och kunskap kring att skapa dynamiska webbapplikationer</li>
+		</ul>
+		<ul class="to-build">
+			<li>Kursens andra del handlar om WordPress</li>
+			<li>Med hjälp av Wordpress kan man skapa större dynamiska webbplatser</li>
+			<li>Wordpress är skrivet i PHP och med kunskap i PHP kan man "enkelt" utveckla mer avancerade webbplatser</li>
+		</ul>
+	</article>
+	
+	<!-- Ytterligare orsaker till att kunna PHP?-->
+	<article>
+		<h3>
+			Ytterligare orsaker till att kunna PHP?
+		</h3>
+		<ul>
+			<li>Förståelse för utvecklingsprocessen - programmering</li>
+			<li class="to-build">Vanligt serverscriptspråk idagsläget</li>
+			<li class="to-build">Wikipedia, facebook, Yahoo, Digg m.fl.</li>
+			<li class="to-build">Det finns flera språk som kan användas som serverscriptspråk, C# (ASP.NET), Ruby, Python o.s.v.</li>
+		</ul>
+		<p class="c">
+			<img src="images/php.png" />
+		</p>
+	</article>
+	
+	<!-- PHP - historik och dagsläget-->
+	<article>
+		<h3>
+			PHP - Lite historik
+			<span class="small"><a href="http://php.net/manual/en/history.php.php">http://php.net/manual/en/history.php.php</a>
+				</span>
+		</h3>
+		<p>Rasmus Lerdorf i 1994-95</p>
+		<p class="c">
+			<img src="images/rl.jpg" class="biii" />
+		</p>
+		<p>En samling script som t.ex. visade antal besökare på en webbsida (PHP Tools)</p> 
+		<p>
+			Gratis att använda, stort community, mycket information att hitta<br />
+			Idagsläget version 5.5<br />
+			"244 million websites" enligt <a class="small" href="http://news.netcraft.com/archives/2013/01/31/php-just-grows-grows.html">
+				http://news.netcraft.com/archives/2013/01/31/php-just-grows-grows.html</a>
+				
+		</p>
+		<p>
+			
+		</p>
+	</article>
+	
+	
 	
 	<!-- Vad du bör veta efter denna föreläsningen -->
 	<article>
@@ -401,7 +522,7 @@
 			<li>Vad är det för skillnad mellan en statisk och dynamisk webbapplikation?</li>
 			<li>Vad har serverscriptkod för roll i en webbapplikation?</li>
 			<li>Vilka är de delar som är grunden för webben (www)?</li>
-			<li>Vad är skillnaden mellan en skrivbordsapplikation och en webbapplikation?</li>
+			<li>Vad PHP är</li>
 			<li>Hur du får ett enkelt PHP-script att rendera ut en HTML-sida</li>
 		</ul>
 	</article>
