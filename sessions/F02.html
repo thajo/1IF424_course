@@ -70,10 +70,7 @@
 		
 		<br /><br />
 		<h1 class="big c">PHP</h1>
-		<p class="reference spaced">
-			<br />
-			http://orion.lnu.se/pub/education/course/1IK424/VT13/sessions/F02.html
-		</p>
+		
 		
 		<p class="small_footer">
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
@@ -103,6 +100,10 @@
 			<li>Programmera med selektionssatser i PHP</li>
 			<li>Använda for-loopar i PHP</li>
 		</ul>
+		<p class="c">
+			
+			<img src="images/study.png" class="bi2" />
+		</p>
 	</article>
 	
 	<!-- PHP - historik och dagsläget-->
@@ -132,7 +133,7 @@
 	<!-- PHP - Variabel-->
 	<article>
 		<h3>
-			Variabel i PHP
+			Vad är en variabel?
 		</h3>
 		<p>
 			<ul>
@@ -143,14 +144,13 @@
 		</p>
 		<pre>
 // Variabel i javascript
-var number = 10;
-number = number + 20;
-alert(number); // Vad innehåller tal för värde?
+var age = 10;
+
 
 // Variabel i PHP
-$tal = 10;
-$tal = $tal + 10;
-echo($tal); // Vad kommer skrivas ut?
+$age = 10;
+$age = $age + 10;
+echo($age); // Vad kommer skrivas ut?
 		</pre>
 		
 	</article>
@@ -215,16 +215,25 @@ $team = "Tottenham Hotspur Football Club";
 
 // I php använder man punkttecken för att slå ihop strängar
 $complete_message = $team ." är bra på " .$sport;
-echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll
-
-// i Javascript använder man plustecken för att slå ihop strängar, i PHP punkttecken
-alert("Hejsan" +" " +"Kerstin");		
+echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll		
 		</pre>
 	</article>
 		
 	<!-- Variabler exempel -->
 	<article>
 		<h3>Exempel</h3>
+		LIVE DEMO
+		Problem: Pris moms
+		$pris = 100;
+		$momssats = 0.25;
+		$antal_varor = 4;
+		
+		
+		
+		echo "Du har beställt " .$antal_varor ."stycken artiklar"
+		echo "Varje artikel kostar " .$pris ."kronor (exklusive moms)";
+		echo "Varje artikel kostar " .($pris * $moms) ."kronor (ink. moms)";
+		echo "Det totala priset blir: " .($pris * $moms * $antal) ." kronor";
 		<img src="images/variable_ex.png" />
 	</article>
 	
@@ -264,6 +273,15 @@ echo($intro .($pris + ($pris * $moms)) .$enhet)
 			</p>
 
 	</article>
+	
+	<article>
+			<h3>
+				$_POST och $_GET
+			</h3>
+			<p>
+				Förklara skillnad.
+			</p>
+	</article>
 
 	<!-- PHP - Formulär DEMO-->
 	<article>
@@ -295,8 +313,8 @@ echo($intro .($pris + ($pris * $moms)) .$enhet)
 			<li>OM användaren inte fyllt formuläret korrekt ska vi...</li>
 			<li>OM en speciell sak ska vi...</li>
 			<li>OM en speciell sak inträffat ska vi...</li>
-			<li>Om det inte finns några bloggposter ska vi...</li>
-			<li>OM vi sk visa en bloggpost med kommentarer ska vi...</li>
+			<li>OM det inte finns några bloggposter ska vi...</li>
+			<li>OM vi ska visa kommentarer till varje bloggpost...</li>
 		</ul>
 	</article>
 	
@@ -307,7 +325,7 @@ echo($intro .($pris + ($pris * $moms)) .$enhet)
 			if-sats används för att kontrollera om något är sant eller falskt
 		</p>
 		<pre>
-$price = 10.5;
+$price = 10;
 			
 if($price < 10) {
   echo("Priset är mindre än tio");		
@@ -339,14 +357,14 @@ if($tal < 100) {
   echo("Talet är mindre än 100");
 }
 else {
-  echo("Talet är störe eller lika med 100);
+  echo("Talet är större eller lika med 100);
 }			
 		</pre>
 	</article>
 	
 	<!-- if elseif else -->
 	<article>
-		<h1>if-else-if-else</h1>
+		<h1>if-elseif-else</h1>
 		<p>
 			Sista varianten. “Om detta är sant - gör detta, annars om
 			detta är sant – gör detta, annars gör detta!”
@@ -357,46 +375,14 @@ $tal = 50 - 40;
 if($tal > 100) {
   echo("Talet är större än 100");
 }
-elseif($tal < 100 &amp;&amp; $tal > 20) {
+elseif($tal < 100 || $tal > 20) {
   echo("talet är mellan 20 och 100")
 }
 else {
-	echo("är lika med eller mindre än 20);
+  echo("är lika med eller mindre än 20);
 }			
 		</pre>
 	</article>
-
-	<!-- if-sats med POST -->
-	<article>
-		<h1>$_POST och IF</h1>
-		<pre>
-
-$text = $_POST["text"];			
-if($text != "") {
-  // $text är satt
-}			
-else {
- // $text är INTE satt 
-	echo "Text är inte satt";
-}
-		</pre>
-	</article>
-
-	<!-- PHP - selectioner DEMO-->
-	<article>
-		<h1>DEMO</h1>
-		<p>
-			Addera två av användaren inskrivna tal
-		</p>
-		<p class="note">
-			1) Två input fält - (använd ej && -- Ge ett felmeddelande om inputen är tom annars lägg ihop dem
-			2) vad händer om användaren skriver en sträng? - Kolla av om det är ett nummer (visa hur jag hittar det via google)
-			3) utöka med isset och == ""
-			4) vad händer om användaren skriver en sträng? - Kolla av om det är en sträng is_numeric
-			5) Men om jag vill kolla flera saker OM detta och OM detta...			
-		</p>
-	</article>
-
 
 	<!-- Logiska uttryck -->
 	<article>
@@ -418,9 +404,9 @@ if($tal &lt;= 10) {
 	<article>
 		<h1>Du gissar</h1>
 		<pre>
-$tal1 = 10;
+$tal1 = 15;
 $tal2 = 15
-$tal2 = 10;
+$tal3 = 10;
 
 if($tal1 &lt;= $tal2) {
   echo("Första vilkoret stämmer");
@@ -433,11 +419,25 @@ if($tal1 &lt;= $tal2) {
 	<!-- Logiska operatorer -->
 	<article>
 		<h1>Logiska operatorer</h1>
+		<p>
+			När vi vill jämföra flera saker på en och samma gång 
+		</p>
 		<pre>
 // Kombinera flera vilkor
-if ($tal > $tal2 &amp;&amp; $tal &lt; $tal3)
-if ($tal > $tal2 || $tal  &lt; $tal3)
-		</pre>	
+if ($tal > $tal2 &amp;&amp; $tal &lt; $tal3) {
+  // code here
+}
+if ($tal > $tal2 || $tal  &lt; $tal3) {
+  // code here
+}		</pre>	
+		
+		<pre>
+if ($tal > $tal2) {
+  if($tal &lt; $tal3) {
+    // code here
+  }
+}
+		</pre>
 	</article>
 	
 	<!-- Demo - Logiska operatorer -->
@@ -448,41 +448,71 @@ GÖT TAL
 		</pre>
 	</article>
 	
-	<!-- Itterationer -->
+
+
+	<!-- if-sats med POST -->
 	<article>
-			<h1>itteration - om och om och om igen</h1>
-			<p>
-				När man skriver kod är det vanligt att man vill göra något flera gånger.
-				T.ex. skapa en tabell med 10 rader och 5 kolumner
-				T.ex. skriva ut saker i en lista/array
-				T.ex. göra någonting till ett visst tillstånd uppnås
-			</p>
-			<p>
-				Man pratar om loopar. Vi ska titta på tre olika varianter:
-				<ul>
-					<li>for-loop</li>
-					<li>foreach-loop</li>
-					<li>while-loop</li>
-				</ul>
-			</p>
+		<h1>$_POST och IF</h1>
+		<pre>
+
+$text = $_POST["text"];			
+if($text != "") {
+  // $text är satt
+}			
+else {
+ // $text är INTE satt 
+  echo "Text är inte satt";
+}
+		</pre>
+	</article>
+
+	<!-- PHP - selectioner DEMO-->
+	<article>
+		<h1>DEMO</h1>
+		<p>
+			Addera två av användaren inskrivna tal
+		</p>
+		<p class="note">
+			1) Två input fält - (använd ej && -- Ge ett felmeddelande om inputen är tom annars lägg ihop dem
+			2) vad händer om användaren skriver en sträng? - Kolla av om det är ett nummer (visa hur jag hittar det via google)
+			3) utöka med isset och == ""
+			4) vad händer om användaren skriver en sträng? - Kolla av om det är en sträng is_numeric
+			5) Men om jag vill kolla flera saker OM detta och OM detta...			
+		</p>
+	</article>
+
+
+		<!-- Iterationer -->
+	<article class="fill">
+			<img src="images/loop.jpg" />
+			<h3>Iteration<span class="small"> - om och om och om igen</span></h3>
+			<ul>
+				<li>T.ex. skapa en tabell med 10 rader och 5 kolumner</li>
+				<li>T.ex. skriva ut alla produktnamn</li>
+				<li>T.ex. göra någonting till ett visst tillstånd uppnås</li>
+			</ul>
+			<ul>
+				<li>for-loop</li>
+				<li>foreach-loop</li>
+				<li>while-loop</li>
+			</ul>
+			
 	</article>
 
 	<!-- Om for-loop -->
 	<article>
 			<h1>Vanligast är for-loopen</h1>
 			<p>for-loopen har man till att upprepa kod ett visst antal gånger</p>
-			<p>Vi vill skriva ut "hello World!" 10 ggr</p>
-			<p>Vi vill bara skriva koden echo("Hello World!") en gång</p>
-
+			<p>Vi vill skriva ut "Hello World!" 10 ggr</p>
 			<pre>
 // for-loop
 // loopen körs lika många gånger
 // 1. Vi skapar en variabel $i och sätter den till 0
-// 2. Vi skapar ett vilkor (så läng $i är mindre än 10)
+// 2. Vi skapar ett vilkor (så läng $i är mindre än 3)
 // 3. För varje gång loopen går öka $i med 1
 
 
-for($i = 0; $i < $10; $i++) {
+for($i = 0; $i < 3; $i++) {
   echo("Hello World!");
 }
 			</pre>
@@ -493,6 +523,7 @@ for($i = 0; $i < $10; $i++) {
 			<h1>DEMO</h1>
 			<p>
 				Jag vill skapa en tabell i HTML med 100 rader via en for-loop
+				Öka på för varje gång
 			</p>
 	</article>
 
@@ -500,13 +531,36 @@ for($i = 0; $i < $10; $i++) {
 	<article>
 			<h1>while-loop</h1>
 			<p>
-				while-loopen är egentligen en enklare variant av loop.
+				while-loopen är en enklare variant av loop.
 				Du kommer stöta på den när vi börjar jobba med wordpress
 			</p>
 			<p>
-				Jag vill skapa en tabell i HTML med 100 rader via en while-loop
+				Så länge något är sant görs koden innanför while-loopen
 			</p>
+			<pre>
+$counter = 5;
+while($counter > 0) {
+	echo $counter;
+	$counter = $counter - 1;
+}
+			</pre>
 	</article>
+	
+	<!-- Vad du bör ha koll på efter denna föreläsning -->
+	<article>
+		<h3>Vad du ska kunna efter denna förläsning</h3>
+		<ul>
+			<li>Använda variabler i PHP</li>
+			<li>Skriva ett formulär i HTML samt ta emot det användaren skriver i ditt PHP-skript</li>
+			<li>Programmera med selektionssatser i PHP</li>
+			<li>Använda for-loopar i PHP</li>
+		</ul>
+		<p class="c">
+			
+			<img src="images/study.png" class="bi2" />
+		</p>
+	</article>
+		
 
 	
 
