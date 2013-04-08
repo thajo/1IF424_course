@@ -82,34 +82,28 @@
 		</p>
  	</article>
 
-
 	<!-- Repetition -->
 	<article>
 		<h3>Repetition</h3>
 		<ul>
-			<li>Variabel</li>
-			<li>HTML forms</li>
-			<li>$_POST</li>
-			<li>if-satsen</li>
-			<li>logista uttryck</li>
+			<li>Variabel, if-satsen, Logiska uttryck</li>
+			<li>HTML forms, $_POST</li>
 		</ul>
 		<pre>
 &lt;form method="post">
 	&lt;input name="age" type="text" />
 	&lt;input name="name" type="text" />
 	&lt;input name="submit" type="submit" />
-&lt;/form>			
-		</pre>
+&lt;/form></pre>
 		<pre>
 $name = $_POST["name"];
 $age = $_POST["age"];
 
-if($name == "") {
+if($name != "") {
   if($age > 18) {
     echo "Du är äldre än 18 år";
   }
-}
-		</pre>
+}</pre>
 	</article>
 	
 	<!-- Logiska operatorer -->
@@ -127,7 +121,7 @@ if($name == "") {
 }</pre>
 		
 		
-		<pre>
+		<pre  class="to-build">
 // Kombinera flera vilkor
 if ($name == "" &amp;&amp; $age > 18) {
   // code here
@@ -138,6 +132,30 @@ if ($name == "" || $age > 18) {
 		
 	</article>
 	
+	<!-- Exempel - Du testar -->
+	<article>
+		<h3>Vad skrivs ut?</h3>
+		<pre>
+$show_posts = true;
+$has_posts = true;
+$nr_of_posts = 5;
+$show_comments = false;
+$is_single = true;
+
+if($has_posts &amp;&amp; $show_posts) {
+  if($nr_of_posts > 10 || $show_comments) {
+	echo "Showing information in many pages";
+  }
+  else if($is_single &amp;&amp; !$show_comments) {
+    echo "Show information in single page";    	
+  }
+  else {
+	echo "Show nothing";
+  }
+}
+			
+		</pre>
+	</article>
 	
 	<!-- Att tänka på kring formulär -->
 	<article>
@@ -150,17 +168,17 @@ if ($name == "" || $age > 18) {
 			<li>Kontrollera att allt är ifyllt som vi tänkt det</li>
 			<li>Lita aldrig på användarens inskickade data</li>
 		</ul>
+		<p class="c">
+<img src="images/thinking_women.png" />			
+		</p>
 	</article>
 	
 	<!-- demo -->
 	<article>
-		<h3>DEMO</h3>
-		<p class="note">
-			något fel. Fakturaformulär.
-			isset, htmlencode, is_numeric, 
+		<p class="c">
+			<img src="images/demo.png" />			
 		</p>
 	</article>
-	
 	
 	<!-- Iterationer -->
 	<article class="fill">
@@ -198,19 +216,6 @@ for($i = 0; $i < 3; $i++) {
 			</pre>
 	</article>
 
-	<!-- Forloop demo -->
-	<article>
-			<h1>DEMO</h1>
-			<p>
-				Ett enkelt exempel på for-loop
-			</p>
-			<br />
-		<p class="c">
-			<img src="images/demo.png" />			
-		</p>
-		
-	</article>
-
 	<!-- While-loop -->
 	<article>
 			<h1>while-loop</h1>
@@ -233,20 +238,27 @@ while($counter > 0) {
 	<!-- wordpress - whilelopp -->
 	<article>
 		<h3>Exempel på whilelopp i wordpress</h3>
-		BILD HÄR
+		<p>Som ser lite annorlunda ut</p>
+		<p class="c">
+			<img src="images/get_bloggs.png" />
+		</p>
 	</article>
 	
 		
 	<!-- PHP - arrayer -->
 	<article>
 			<h3 class="c medium">Array</h3>
-			<br />
-			<p>En variabel kan spara ett värde, en array innehåller en lista med flera variabler/värden</p>
-			<p>En lista med nummer, En lista med alla blogginlägg, en lista med inmatade meddelanden...</p>
-			<p>Du kan spara alla typer av värden i en array - i PHP</p>
-			<br />
-			<p class="to-build">
+			<ul>
+				<li>En variabel kan spara ett värde, en array innehåller en lista med flera variabler/värden</li>
+				<li>En lista med nummer, En lista med alla blogginlägg, en lista med inmatade meddelanden...</li>
+				<li>Du kan spara olika typer av värden i en array - i PHP</li>
+			</ul>
+			
+			<pre>
+$arr = array("Hej", 12, 176, True, "Lisa", 87, 148);</pre>
+			<p class="c to-build">
 				<img src="images/array.png" />
+				<img src="images/arr_variable.png" class="biii righty" />
 			</p>		
 	</article>
 
@@ -258,10 +270,13 @@ $array = array(); // skapa en tom array
 $array[0] = 13;
 $array[1] = 231;
 $array[2] = "hejsan";</pre>		
-			VISA BILD PÅ LÅDAN
-			<pre>
+			<p>
+				<img src="images/little_Arr.png" style="margin: 0px;"/>
+			</p>
+			<pre  style="margin: 4px;"/>
 echo($array[2]);
-echo($array[3]); // Felsida?</pre>
+echo($array[3]); // ???</pre>
+			<img class="to-build" src="images/error_mess_offset.png" />
 	</article>
 
 	<!-- PHP - arrayer SKAPA 2 -->
@@ -280,7 +295,8 @@ array_push($array, $tal); // läggs sist
 array_push($array, 12); // läggs sist 
 
 // Hur många element/värden finns det i arrayen
-$nr_of_elements = sizeof($array); // 2
+$nr_of_elements = sizeof($array); 
+echo $nr_of_elements; // Skriver ut 2
 		</pre>	
 	</article>
 
@@ -297,6 +313,9 @@ echo $array[0] ."&lt;br />";
 echo $array[1] ."&lt;br />";
 echo $array[2] ."&lt;br />"; // o.s.v.
 			</pre>
+			<p class="c">
+				<img src="images/homer2.gif" style="height: 60%" /> 
+			</p>
 	</article>
 
 	<!-- PHP - loopa en array -->
@@ -323,8 +342,13 @@ for($i = 0; $i &lt; $nr_of_elements; $i++) {
 
 	<!-- Demo -->
 	<article>
-		DEMO
-		
+		<p class="c">
+			<img src="images/demo.png" />			
+		</p>
+		<p>
+			Att fylla en dropdownlist med värden från
+			en array.
+		</p>
 		<p class="note">
 			Gör ett demo där man har en array och som fyller en 
 			dropdownlist
@@ -342,7 +366,8 @@ $array = array(1, 4, 23, 43, 23, 78);
 foreach($array as $current_value) {
   echo($current_value ."&lt;br />");
 }
-			</pre>		
+			</pre>	
+			<img src="images/pros.jpeg" style="width: 75%"/>	
 	</article>
 
 
@@ -353,50 +378,62 @@ foreach($array as $current_value) {
 				<li>Arrayer är listor</li> 
 				<li>Oftast vet man inte hur många element (värden) listan har<li>
 				<li>Antal blogposter, antal kommentarer e.c.t.</li>
-				
-				
 			</ul>
-			<br />
-			<p class="to-build s">
-				Vi behöver kunna ta reda på hur många element som finns och 
-				hur man hämtar ut värde för värde.
+			<p class="c">
+				<img src="images/array_lab2.png" style="height: 55%"/>
 			</p>
+		
 	</article>
 
 	<!-- PHP - arrayer associativ skapande -->
 	<article>
 			<h1>Associativa arrayer</h1>
 			<p>
-				Istället för att hålla reda på index, nummren,
+				Istället för att hålla reda på index, numren,
 				kan man använda namngivning med textsträngar.<br />
 				Key and value
 			</p>
-	<pre>
-$array = array(
+	<pre class="lefty">
+$info = array(
   "name" => "Stina",
   "nickname" => "stina_76",
   "age" => 37
-);</pre>
-		<p>
-			BILD på låda
+);
+echo $info["age"]; // skriver ut 37</pre>
+		<p class="c rightly">
+			<br />
+			<img src="images/ass_array.png" style="height: 25%" />
 		</p>
 
-	<pre class="to-build">
+	<pre style="clear: both;" class="to-build">
 var_dump($_POST);
-$_POST["name"];</pre>	
+echo $_POST["name"];</pre>	
 	</article>
 
 	<!-- associativ skriva ut associative -->
 	<article>
 		<h3>Hur skriver man ut en assosiativ array</h3>
 		<pre>
-			
+$info = array(
+  "name" => "Stina",
+  "nickname" => "stina_76",
+  "age" => 37
+);
+
+foreach ($info as $key => $value) {
+ echo 'Nykeln: "' .$key.'" innehåller värdet '.$value.'&lt;br />';
+}
 		</pre>
+		<p>
+Nykeln: "name" innehåller värdet Stina<br />
+Nykeln: "nickname" innehåller värdet stina_76<br />
+Nykeln: "age" innehåller värdet 37<br />			
+		</p>
 	</article>
 
 	<!-- Multipla arrayer -->
 	<article>
-			<h3>Multidimensional Arrays</h3>
+			<h3>Multidimensional Arrays (lite överkurs)</h3>
 			<p>Ibland behöver man beskriva lite mer komplex data</p>
 			<p>
 				<table border="1" class="small">
@@ -442,8 +479,8 @@ echo $shop[0][0]." costs ".$shop[0][1]." and you get ".$shop[0][2];</pre>
 				<li>En funktion kan returnera ett värde (integer, string, boolean...)</li>
 				<li>Inom programmering pratar man om DRY - Don´t Repeat Yourself</li>
 			</ul>
-			<p>
-				BILD PÅ FUNKTION
+			<p class="c">
+				<img src="images/kodblock.png" style="width: 50%"/>
 			</p>
 	</article>
 	
@@ -451,7 +488,7 @@ echo $shop[0][0]." costs ".$shop[0][1]." and you get ".$shop[0][2];</pre>
 	<article>
 		<h3>Hur skriver man en funktion</h3>
 		<pre>
-// deklaration av funktion
+// deklaration av funktion med parameter
 function sayHello($name) {
    echo("Hello " .$name ."!");
 }
@@ -461,13 +498,27 @@ $first_name = "Ellen";
 sayHello($first_name); // "Hello Ellen!" skrivs ut
 sayHello("Nils"); // "Hello Nils!" skrivs ut
 		</pre>
+		
+		<pre>
+function sayHello($name) {
+	$str = "Hello $name!";
+	return $str;
+}
+echo sayHello("Erik"); // Skriver ut "Hello Erik"
+		</pre>
+
 	</article>
+	
+	
 	
 	<!-- Bryt ut kod i funktioner -->
 	<article>
-		<h3>Exempel</h3>
-		Demo
-		
+		<p class="c">
+			<img src="images/demo.png" />			
+		</p>
+		<p>
+			Att Strukturera upp sin kod.
+		</p>
 		<p class="note">
 			Visa ett exempel på dålig kod
 			Bryt ut i funktioner
@@ -477,9 +528,22 @@ sayHello("Nils"); // "Hello Nils!" skrivs ut
 	<!-- Att ah koll på efter idag -->
 	<article>
 		<h3>Vad ska vi känna till efter idag</h3>
+		<ul>
+			<li>Logiska operatorer</li>
+			<li>for-loopar, while-loop</li>
+			<li>Arrayer</li>
+			<li>Funktioner</li>
+		</ul>
 		
 	</article>
-
+	
+	<!-- Slut för idag -->
+	<article>
+		<h1>Slut för idag</h1>
+		<p class="c">
+			<img src="images/slut.jpg" />
+		</p>
+	</article>
 	</section>
   </body>
 </html>
