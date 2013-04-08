@@ -71,11 +71,8 @@
        
 		
 		<br /><br />
-		<h1 class="big c">Fortsättning PHP, arrayer, funktioner</h1>
-		<p class="reference spaced">
-		
-			http://orion.lnu.se/pub/education/course/1IK424/VT13/sessions/F01.html
-		</p>
+		<h1 class="big c">PHP Part II</h1>
+	
 		
 		<p class="small_footer">
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
@@ -85,34 +82,172 @@
 		</p>
  	</article>
 
+
 	<!-- Repetition -->
 	<article>
-		<h1>Repetition</h1>
+		<h3>Repetition</h3>
+		<ul>
+			<li>Variabel</li>
+			<li>HTML forms</li>
+			<li>$_POST</li>
+			<li>if-satsen</li>
+			<li>logista uttryck</li>
+		</ul>
+		<pre>
+&lt;form method="post">
+	&lt;input name="age" type="text" />
+	&lt;input name="name" type="text" />
+	&lt;input name="submit" type="submit" />
+&lt;/form>			
+		</pre>
+		<pre>
+$name = $_POST["name"];
+$age = $_POST["age"];
+
+if($name == "") {
+  if($age > 18) {
+    echo "Du är äldre än 18 år";
+  }
+}
+		</pre>
+	</article>
+	
+	<!-- Logiska operatorer -->
+	<article>
+		<h1>Logiska operatorer</h1>
 		<p>
-			Repetera...
+			När vi vill jämföra flera saker på en och samma gång
+			OCH - ELLER 
+		</p>
+		<pre>
+if($name == "") {
+  if($age > 18) {
+    echo "Du är äldre än 18 år";
+  }
+}</pre>
+		
+		
+		<pre>
+// Kombinera flera vilkor
+if ($name == "" &amp;&amp; $age > 18) {
+  // code here
+}
+if ($name == "" || $age > 18) {
+  // code here
+}		</pre>	
+		
+	</article>
+	
+	
+	<!-- Att tänka på kring formulär -->
+	<article>
+		<h1>Att tänka på!</h1>
+		<ul>
+			<li>Variabelnamn, gärna engelska</li>
+			<li>indenterad kod, snyggt och prydligt</li>
+			<li>Funkar det inte och du inte förstår felmeddelande. Kommentera bort rad för rad.</li>
+			<li>Kolla att användaren tryckt på knappen (postar data)</li>
+			<li>Kontrollera att allt är ifyllt som vi tänkt det</li>
+			<li>Lita aldrig på användarens inskickade data</li>
+		</ul>
+	</article>
+	
+	<!-- demo -->
+	<article>
+		<h3>DEMO</h3>
+		<p class="note">
+			något fel. Fakturaformulär.
+			isset, htmlencode, is_numeric, 
 		</p>
 	</article>
+	
+	
+	<!-- Iterationer -->
+	<article class="fill">
+			<img src="images/loop.jpg" />
+			<h3>Iteration<span class="small"> - om och om och om igen</span></h3>
+			<ul>
+				<li>T.ex. skapa en tabell med 10 rader och 5 kolumner</li>
+				<li>T.ex. skriva ut alla produktnamn</li>
+				<li>T.ex. göra någonting till ett visst tillstånd uppnås</li>
+			</ul>
+			<ul>
+				<li>for-loop</li>
+				<li>while-loop</li>
+				<li>foreach-loop</li>
+			</ul>
+			
+	</article>
 
+	<!-- Om for-loop -->
+	<article>
+			<h1>Vanligast är for-loopen</h1>
+			<p>for-loopen har man till att upprepa kod ett visst antal gånger</p>
+			<p>Vi vill skriva ut "Hello World!" 10 ggr</p>
+			<pre>
+// for-loop
+// loopen körs lika många gånger
+// 1. Vi skapar en variabel $i och sätter den till 0
+// 2. Vi skapar ett vilkor (så läng $i är mindre än 3)
+// 3. För varje gång loopen går öka $i med 1
+
+
+for($i = 0; $i < 3; $i++) {
+  echo("Hello World!");
+}
+			</pre>
+	</article>
+
+	<!-- Forloop demo -->
+	<article>
+			<h1>DEMO</h1>
+			<p>
+				Ett enkelt exempel på for-loop
+			</p>
+			<br />
+		<p class="c">
+			<img src="images/demo.png" />			
+		</p>
+		
+	</article>
+
+	<!-- While-loop -->
+	<article>
+			<h1>while-loop</h1>
+			<p>
+				while-loopen är en enklare variant av loop.
+				Du kommer stöta på den när vi börjar jobba med wordpress
+			</p>
+			<p>
+				Så länge något är sant görs koden innanför while-loopen
+			</p>
+			<pre>
+$counter = 5;
+while($counter > 0) {
+  echo $counter;
+  $counter = $counter - 1;
+}
+			</pre>
+	</article>
+	
+	<!-- wordpress - whilelopp -->
+	<article>
+		<h3>Exempel på whilelopp i wordpress</h3>
+		BILD HÄR
+	</article>
+	
+		
 	<!-- PHP - arrayer -->
 	<article>
-			<h3>Array</h3>
+			<h3 class="c medium">Array</h3>
+			<br />
 			<p>En variabel kan spara ett värde, en array innehåller en lista med flera variabler/värden</p>
 			<p>En lista med nummer, En lista med alla blogginlägg, en lista med inmatade meddelanden...</p>
 			<p>Du kan spara alla typer av värden i en array - i PHP</p>
-
-			<p>
+			<br />
+			<p class="to-build">
 				<img src="images/array.png" />
 			</p>		
-	</article>
-
-	<!-- När kommer vi stöta på arrayer -->
-	<article>
-			<h1>När förekommer arrayer och vad behöver man kunna göra med dem?</h1>
-			<p>
-				Arrayer är listor. Oftast vet man inte hur många element (värden) listan har.
-				Antal blogposter, antal svar från servern
-				Vi behöver kunna ta reda på hur många element som finns och hur man går igenom del för del.
-			</p>
 	</article>
 
 	<!-- PHP - arrayer SKAPA -->
@@ -122,31 +257,110 @@
 $array = array(); // skapa en tom array
 $array[0] = 13;
 $array[1] = 231;
-$array[2] = "hejsan";
-			</pre>		
+$array[2] = "hejsan";</pre>		
 			VISA BILD PÅ LÅDAN
 			<pre>
-
 echo($array[2]);
-echo($array[3]); // Felsida?
-
-			</pre>
+echo($array[3]); // Felsida?</pre>
 	</article>
 
 	<!-- PHP - arrayer SKAPA 2 -->
 	<article>
-			<h1>Om array</h1>
+			<h1>Saker att göra med en array</h1>
 			<p>
-				I PHP finns det ett antal metoder som man kan använda.
+				I PHP finns det ett antal vanligt förekommande uppgifter/metoder
+			</p>
+		<pre>
+$tal = 123;
+
+// Att skapa en ny, tom array
+$array = array(); 
+// Att lägga något sist i arrayen
+array_push($array, $tal); // läggs sist 
+array_push($array, 12); // läggs sist 
+
+// Hur många element/värden finns det i arrayen
+$nr_of_elements = sizeof($array); // 2
+		</pre>	
+	</article>
+
+	<!-- Skriva ut en array -->
+	<article>
+			<h3>Att skriva ut en array</h3>
+			<p>
+				Säg att vi har en array/lista med värden.
+				Hur kan jag skriva ut dessa i min HTML-kod?
 			</p>
 			<pre>
-	$tal = 123;
-	$array = array(); // skapa en tom array
-	array_push($array, $tal); // läggs sist 
+$array = array(1, 4, 23, 43, 23, 78);
+echo $array[0] ."&lt;br />";				
+echo $array[1] ."&lt;br />";
+echo $array[2] ."&lt;br />"; // o.s.v.
+			</pre>
+	</article>
 
-	// Hur många element finns det i arrayen
-	$nr_of_elements = sizeof($array); // 1
-			</pre>	
+	<!-- PHP - loopa en array -->
+	<article>
+			<h3>Att skriva ut en array, utan att veta hur stor den är...</h3>
+			<br />
+			<p>
+				Att göra något flera ggr...hmmm...
+			</p>	
+			<pre class="to-build">
+// for-loop
+$array = array(1, 4, 23, 43, 23, 78);
+
+// Hur många element/lådor finns det i arrayen
+$nr_of_elements = count($array);
+
+// loopen körs lika många gånger
+for($i = 0; $i &lt; $nr_of_elements; $i++) {
+  $current_value = $array[$i];
+  echo($current_value ."&lt;br />");
+}
+			</pre>		
+	</article>
+
+	<!-- Demo -->
+	<article>
+		DEMO
+		
+		<p class="note">
+			Gör ett demo där man har en array och som fyller en 
+			dropdownlist
+		</p>
+	</article>
+
+	<!-- PHP - foreach -->
+	<article>
+			<h3>Itterationer - foreach-loop</h3>
+			<p>Ett annat (snyggare?) sätt är att använda en foreach-loop</p>
+			<pre>
+// for-loop
+$array = array(1, 4, 23, 43, 23, 78);				
+				
+foreach($array as $current_value) {
+  echo($current_value ."&lt;br />");
+}
+			</pre>		
+	</article>
+
+
+	<!-- När kommer vi stöta på arrayer -->
+	<article>
+			<h3>När förekommer arrayer och vad behöver man kunna göra med dem?</h3>
+			<ul>
+				<li>Arrayer är listor</li> 
+				<li>Oftast vet man inte hur många element (värden) listan har<li>
+				<li>Antal blogposter, antal kommentarer e.c.t.</li>
+				
+				
+			</ul>
+			<br />
+			<p class="to-build s">
+				Vi behöver kunna ta reda på hur många element som finns och 
+				hur man hämtar ut värde för värde.
+			</p>
 	</article>
 
 	<!-- PHP - arrayer associativ skapande -->
@@ -154,30 +368,38 @@ echo($array[3]); // Felsida?
 			<h1>Associativa arrayer</h1>
 			<p>
 				Istället för att hålla reda på index, nummren,
-				kan man använda namngivning med textsträngar.
+				kan man använda namngivning med textsträngar.<br />
 				Key and value
 			</p>
 	<pre>
-	  $array = array(
-	   "name" => "John",
-	   "message" => "Hello!",
-	   );
-	</pre>
+$array = array(
+  "name" => "Stina",
+  "nickname" => "stina_76",
+  "age" => 37
+);</pre>
 		<p>
 			BILD på låda
 		</p>
-	<pre>
-	var_dump($_POST);
-	$_POST["name"]
-	</pre>	
+
+	<pre class="to-build">
+var_dump($_POST);
+$_POST["name"];</pre>	
+	</article>
+
+	<!-- associativ skriva ut associative -->
+	<article>
+		<h3>Hur skriver man ut en assosiativ array</h3>
+		<pre>
+			
+		</pre>
 	</article>
 
 	<!-- Multipla arrayer -->
 	<article>
-			<h1>Multidimensional Arrays</h1>
+			<h3>Multidimensional Arrays</h3>
 			<p>Ibland behöver man beskriva lite mer komplex data</p>
 			<p>
-				<table border="1">
+				<table border="1" class="small">
 					<thead>
 						<td>Produkt</td>
 						<td>Pris</td>
@@ -200,124 +422,63 @@ echo($array[3]); // Felsida?
 					</tr>
 				</table>
 			</p>
-			<p>Det går att spara arrayer i arrayer</p>
 	<pre>
-	$shop = array( array("Bultbräda", 499, 12),
-	               array("Sparkcykel", 876 , 2),
-	               array("Modellera", 39.90 , 124) 
-	             ); 	
-	</pre>
+$shop = array( 
+  array("Bultbräda", 499, 12),
+  array("Sparkcykel", 876 , 2),
+  array("Modellera", 39.90 , 124) 
+);</pre>
 	<pre>
-echo $shop[0][0]." costs ".$shop[0][1]." and you get ".$shop[0][2]."<br />";
-echo $shop[1][0]." costs ".$shop[1][1]." and you get ".$shop[1][2]."<br />";
-echo $shop[2][0]." costs ".$shop[2][1]." and you get ".$shop[2][2]."<br />";
-	</pre>
-	</article>
-
-	<!-- Skriva ut en array -->
-	<article>
-			<h3>Att skriva ut en array...lite snyggare</h3>
-			<p>
-				Säg att vi har en array/lista med värden.
-				Hur kan jag på något smidigt sätt skriva ut dessa i min HTML-kod?
-			</p>
-			BILD PÅ EN TABELL MED VÄRDEN
-	</article>
-
-	<!-- PHP - loopa en array -->
-	<article>
-			<h3>Att loopa igenom en array</h3>
-
-			<pre>
-	// for-loop
-	$array = array(1, 20, 4);
-
-	// Hur många element/lådor finns det i arrayen
-	$length_on_array = count($array);
-
-	// loopen körs lika många gånger
-	for($i = 0; $i < $length_on_array; $i++) {
-	  $current_value = $array[$i];
-	  echo($current_value ."&lt;br />");
-	}
-			</pre>		
-	</article>
-
-	<!-- PHP - foreach -->
-	<article>
-			<h3>Itterationer</h3>
-			<p>Ett annat sätt är att använda en foreach-loop</p>
-			<pre>
-	foreach($array as $current_value) {
-	  echo($current_value ."<br />");
-	}
-			</pre>		
+echo $shop[0][0]." costs ".$shop[0][1]." and you get ".$shop[0][2];</pre>
 	</article>
 
 	<!-- PHP - funktioner -->
 	<article>
 			<h3>Att strukturera upp sin kod</h3>
+			<ul>
+				<li>Uppdelning av kod i mer översiktliga delar/kodblock</li>
+				<li>Kan anropas flera gånger = mindre kod</li>
+				<li>En funktion kan ta emot parametrar för att styra koden innanför</li>
+				<li>En funktion kan returnera ett värde (integer, string, boolean...)</li>
+				<li>Inom programmering pratar man om DRY - Don´t Repeat Yourself</li>
+			</ul>
 			<p>
-				Uppdelning av kod i mer översiktliga delar<br />
-				Kan anropas flera gånger = mindre kod
-				En funktion kan ta emot parametrar för att styra koden innanför
-				En funktion kan returnera ett värde (integer, string, boolean...)
+				BILD PÅ FUNKTION
 			</p>
-
-	</article>
-
-	
-	
-	<!-- Bryt ut kod i funktioner -->
-	<article>
-		
 	</article>
 	
 	<!-- Exempel på funktioner -->
 	<article>
+		<h3>Hur skriver man en funktion</h3>
 		<pre>
-	// deklaration av funktion
-	function sayHello($name) {
-	echo("Hello " .$name ."!");
-	}
+// deklaration av funktion
+function sayHello($name) {
+   echo("Hello " .$name ."!");
+}
 
-	// anrop av funktion
-	sayHello("Ellen"); // "Hello Ellen!" skrivs ut
-	sayHello("Nils"); // "Hello Nils!" skrivs ut
+// anrop av funktion
+$first_name = "Ellen";
+sayHello($first_name); // "Hello Ellen!" skrivs ut
+sayHello("Nils"); // "Hello Nils!" skrivs ut
 		</pre>
-		</article>
-
-	<!-- Default deklarerade parametrar-->
-	<article>
-
 	</article>
-
-	<!-- PHP - funktioner -->
+	
+	<!-- Bryt ut kod i funktioner -->
 	<article>
-			<h3>DEMO - funktioner</h3>
-			<p>
-
-			</p>
-		</article>
-
-	<!-- Att lösa problem -->
+		<h3>Exempel</h3>
+		Demo
+		
+		<p class="note">
+			Visa ett exempel på dålig kod
+			Bryt ut i funktioner
+		</p>
+	</article>
+	
+	<!-- Att ah koll på efter idag -->
 	<article>
-			<h1>Att lösa problem</h1>
-			<p>
-				Under utevcklingsfasen kommer man stöta på problem<br />
-			</p>
-			<h1>Hur gör man då?</h1>
-		</article>
-
-	<!-- Att lösa problem -->
-	<article>
-			<h1>Att lösa problem</h1>
-			<p>
-				Problem 1: Hur räknar jag antal tecken i en sträng?
-
-			</p>
-			<h1>Hur gör man då?</h1>
-		</article>
+		<h3>Vad ska vi känna till efter idag</h3>
+		
+	</article>
 
 	</section>
   </body>
