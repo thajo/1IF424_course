@@ -1,0 +1,59 @@
+	<!-- PHP - arrayer SKAPA 2 -->
+	<article>
+			<h1>Saker att göra med en array</h1>
+			<p>
+				I PHP finns det ett antal vanligt förekommande uppgifter/metoder
+			</p>
+		<pre>
+$tal = 123;
+
+// Att skapa en ny, tom array
+$array = array(); 
+
+// Att lägga något sist i arrayen
+array_push($array, $tal); // läggs sist 
+array_push($array, 12); // läggs sist 
+
+// Hur många element/värden finns det i arrayen
+$nr_of_elements = sizeof($array); 
+echo $nr_of_elements; // Skriver ut 2
+		</pre>	
+	</article>
+
+<!-- Multipla arrayer -->
+	<article>
+			<h3>Multidimensional Arrays (lite överkurs)</h3>
+			<p>Ibland behöver man beskriva lite mer komplex data</p>
+			<p>
+				<table border="1" class="small">
+					<thead>
+						<td>Produkt</td>
+						<td>Pris</td>
+						<td>Antal</td>
+					</thead>
+					<tr>
+						<td>Bultbtäda</td>
+						<td>499</td>
+						<td>12</td>
+					</tr>
+					<tr>
+						<td>Sprakcykel</td>
+						<td>876</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>Modellera</td>
+						<td>39.90</td>
+						<td>124</td>
+					</tr>
+				</table>
+			</p>
+	<pre>
+$shop = array( 
+  array("Bultbräda", 499, 12),
+  array("Sparkcykel", 876 , 2),
+  array("Modellera", 39.90 , 124) 
+);</pre>
+	<pre>
+echo $shop[0][0]." costs ".$shop[0][1]." and you get ".$shop[0][2];</pre>
+	</article>

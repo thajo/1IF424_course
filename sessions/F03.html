@@ -86,8 +86,7 @@
 	<article>
 		<h3>Repetition</h3>
 		<ul>
-			<li>Variabel, if-satsen, Logiska uttryck</li>
-			<li>HTML forms, $_POST</li>
+			<li>Variabel, if-satsen, Logiska uttryck, HTML forms, $_POST</li>
 		</ul>
 		<pre>
 &lt;form method="post">
@@ -101,7 +100,7 @@ $age = $_POST["age"];
 
 if($name != "") {
   if($age > 18) {
-    echo "Du är äldre än 18 år";
+    echo "Namnet är ifyllt och åldern är äldre än 18 år";
   }
 }</pre>
 	</article>
@@ -114,7 +113,7 @@ if($name != "") {
 			OCH - ELLER 
 		</p>
 		<pre>
-if($name == "") {
+if($name != "") {
   if($age > 18) {
     echo "Du är äldre än 18 år";
   }
@@ -123,11 +122,11 @@ if($name == "") {
 		
 		<pre  class="to-build">
 // Kombinera flera vilkor
-if ($name == "" &amp;&amp; $age > 18) {
-  // code here
+if ($name != "" &amp;&amp; $age > 18) {
+  // Namn är inte tomt och ålder är över 18
 }
-if ($name == "" || $age > 18) {
-  // code here
+if ($name != "" || $age > 18) {
+  // Namn är inte tomt ELLER ålder är över 18
 }		</pre>	
 		
 	</article>
@@ -136,18 +135,18 @@ if ($name == "" || $age > 18) {
 	<article>
 		<h3>Vad skrivs ut?</h3>
 		<pre>
-$show_posts = true;
 $has_posts = true;
 $nr_of_posts = 5;
-$show_comments = false;
+$show_comments = true;
 $is_single = true;
+$show_posts = true;
 
 if($has_posts &amp;&amp; $show_posts) {
-  if($nr_of_posts > 10 || $show_comments) {
-	echo "Showing information in many pages";
+  if($is_single &amp;&amp; !$show_comments) {
+	echo "Show information in single page";   
   }
-  else if($is_single &amp;&amp; !$show_comments) {
-    echo "Show information in single page";    	
+  elseif($nr_of_posts > 10 || $show_comments) {	
+	echo "Showing information in many pages";
   }
   else {
 	echo "Show nothing";
@@ -164,8 +163,6 @@ if($has_posts &amp;&amp; $show_posts) {
 			<li>Variabelnamn, gärna engelska</li>
 			<li>indenterad kod, snyggt och prydligt</li>
 			<li>Funkar det inte och du inte förstår felmeddelande. Kommentera bort rad för rad.</li>
-			<li>Kolla att användaren tryckt på knappen (postar data)</li>
-			<li>Kontrollera att allt är ifyllt som vi tänkt det</li>
 			<li>Lita aldrig på användarens inskickade data</li>
 		</ul>
 		<p class="c">
@@ -178,6 +175,9 @@ if($has_posts &amp;&amp; $show_posts) {
 		<p class="c">
 			<img src="images/demo.png" />			
 		</p>
+		<p class="c">
+			Ytterligare ett formulär
+		</p>	
 	</article>
 	
 	<!-- Iterationer -->
@@ -210,7 +210,7 @@ if($has_posts &amp;&amp; $show_posts) {
 // 3. För varje gång loopen går öka $i med 1
 
 
-for($i = 0; $i < 3; $i++) {
+for($i = 0; $i &lt; 3; $i++) {
   echo("Hello World!");
 }
 			</pre>
@@ -244,7 +244,21 @@ while($counter > 0) {
 		</p>
 	</article>
 	
+	<!-- Att spara en lottorad -->
+	<article>
+		<h3>Att spara en kenorad</h3>
+		<pre>
+$nr1 = 4;
+$nr2 = 14;
+$nr3 = 3;
+$nr4 = 44;
+...			
+		</pre>
 		
+		<p>
+			Vi behöver något som kan spara en samling med variabler, en lista
+		</p>
+	</article>		
 	<!-- PHP - arrayer -->
 	<article>
 			<h3 class="c medium">Array</h3>
@@ -262,6 +276,19 @@ $arr = array("Hej", 12, 176, True, "Lisa", 87, 148);</pre>
 			</p>		
 	</article>
 
+	<!-- När kommer vi stöta på arrayer -->
+	<article>
+			<h3>När förekommer arrayer och vad behöver man kunna göra med dem?</h3>
+			<ul>
+				<li>Arrayer är listor</li> 
+				<li>Oftast vet man inte hur många element (värden) listan har<li>
+				<li>Antal blogposter, antal kommentarer e.c.t.</li>
+			</ul>
+			<p class="c">
+				<img src="images/array_lab2.png" style="height: 55%"/>
+			</p>
+	</article>
+
 	<!-- PHP - arrayer SKAPA -->
 	<article>
 			<h3>Array - i PHP</h3>
@@ -269,7 +296,7 @@ $arr = array("Hej", 12, 176, True, "Lisa", 87, 148);</pre>
 $array = array(); // skapa en tom array
 $array[0] = 13;
 $array[1] = 231;
-$array[2] = "hejsan";</pre>		
+$array[2] = "Hejsan";</pre>		
 			<p>
 				<img src="images/little_Arr.png" style="margin: 0px;"/>
 			</p>
@@ -277,27 +304,6 @@ $array[2] = "hejsan";</pre>
 echo($array[2]);
 echo($array[3]); // ???</pre>
 			<img class="to-build" src="images/error_mess_offset.png" />
-	</article>
-
-	<!-- PHP - arrayer SKAPA 2 -->
-	<article>
-			<h1>Saker att göra med en array</h1>
-			<p>
-				I PHP finns det ett antal vanligt förekommande uppgifter/metoder
-			</p>
-		<pre>
-$tal = 123;
-
-// Att skapa en ny, tom array
-$array = array(); 
-// Att lägga något sist i arrayen
-array_push($array, $tal); // läggs sist 
-array_push($array, 12); // läggs sist 
-
-// Hur många element/värden finns det i arrayen
-$nr_of_elements = sizeof($array); 
-echo $nr_of_elements; // Skriver ut 2
-		</pre>	
 	</article>
 
 	<!-- Skriva ut en array -->
@@ -323,7 +329,7 @@ echo $array[2] ."&lt;br />"; // o.s.v.
 			<h3>Att skriva ut en array, utan att veta hur stor den är...</h3>
 			<br />
 			<p>
-				Att göra något flera ggr...hmmm...
+				Att göra något flera ggr...hmmm...loop?
 			</p>	
 			<pre class="to-build">
 // for-loop
@@ -371,20 +377,6 @@ foreach($array as $current_value) {
 	</article>
 
 
-	<!-- När kommer vi stöta på arrayer -->
-	<article>
-			<h3>När förekommer arrayer och vad behöver man kunna göra med dem?</h3>
-			<ul>
-				<li>Arrayer är listor</li> 
-				<li>Oftast vet man inte hur många element (värden) listan har<li>
-				<li>Antal blogposter, antal kommentarer e.c.t.</li>
-			</ul>
-			<p class="c">
-				<img src="images/array_lab2.png" style="height: 55%"/>
-			</p>
-		
-	</article>
-
 	<!-- PHP - arrayer associativ skapande -->
 	<article>
 			<h1>Associativa arrayer</h1>
@@ -410,68 +402,10 @@ var_dump($_POST);
 echo $_POST["name"];</pre>	
 	</article>
 
-	<!-- associativ skriva ut associative -->
-	<article>
-		<h3>Hur skriver man ut en assosiativ array</h3>
-		<pre>
-$info = array(
-  "name" => "Stina",
-  "nickname" => "stina_76",
-  "age" => 37
-);
-
-foreach ($info as $key => $value) {
- echo 'Nykeln: "' .$key.'" innehåller värdet '.$value.'&lt;br />';
-}
-		</pre>
-		<p>
-Nykeln: "name" innehåller värdet Stina<br />
-Nykeln: "nickname" innehåller värdet stina_76<br />
-Nykeln: "age" innehåller värdet 37<br />			
-		</p>
-	</article>
-
-	<!-- Multipla arrayer -->
-	<article>
-			<h3>Multidimensional Arrays (lite överkurs)</h3>
-			<p>Ibland behöver man beskriva lite mer komplex data</p>
-			<p>
-				<table border="1" class="small">
-					<thead>
-						<td>Produkt</td>
-						<td>Pris</td>
-						<td>Antal</td>
-					</thead>
-					<tr>
-						<td>Bultbtäda</td>
-						<td>499</td>
-						<td>12</td>
-					</tr>
-					<tr>
-						<td>Sprakcykel</td>
-						<td>876</td>
-						<td>2</td>
-					</tr>
-					<tr>
-						<td>Modellera</td>
-						<td>39.90</td>
-						<td>124</td>
-					</tr>
-				</table>
-			</p>
-	<pre>
-$shop = array( 
-  array("Bultbräda", 499, 12),
-  array("Sparkcykel", 876 , 2),
-  array("Modellera", 39.90 , 124) 
-);</pre>
-	<pre>
-echo $shop[0][0]." costs ".$shop[0][1]." and you get ".$shop[0][2];</pre>
-	</article>
-
+	
 	<!-- PHP - funktioner -->
 	<article>
-			<h3>Att strukturera upp sin kod</h3>
+			<h3>Att strukturera upp sin kod med funktioner</h3>
 			<ul>
 				<li>Uppdelning av kod i mer översiktliga delar/kodblock</li>
 				<li>Kan anropas flera gånger = mindre kod</li>
@@ -494,12 +428,13 @@ function sayHello($name) {
 }
 
 // anrop av funktion
+sayHello("Eva"); // "Hello Eva!" skrivs ut
+sayHello("Nils"); // "Hello Nils!" skrivs ut
 $first_name = "Ellen";
 sayHello($first_name); // "Hello Ellen!" skrivs ut
-sayHello("Nils"); // "Hello Nils!" skrivs ut
 		</pre>
 		
-		<pre>
+		<pre class="to-build">
 function sayHello($name) {
 	$str = "Hello $name!";
 	return $str;
@@ -511,13 +446,13 @@ echo sayHello("Erik"); // Skriver ut "Hello Erik"
 	
 	
 	
-	<!-- Bryt ut kod i funktioner -->
+	<!-- DEMO - Bryt ut kod i funktioner -->
 	<article>
 		<p class="c">
 			<img src="images/demo.png" />			
 		</p>
-		<p>
-			Att Strukturera upp sin kod.
+		<p class="c">
+			Att strukturera upp sin kod.
 		</p>
 		<p class="note">
 			Visa ett exempel på dålig kod
@@ -525,7 +460,7 @@ echo sayHello("Erik"); // Skriver ut "Hello Erik"
 		</p>
 	</article>
 	
-	<!-- Att ah koll på efter idag -->
+	<!-- Att ha koll på efter idag -->
 	<article>
 		<h3>Vad ska vi känna till efter idag</h3>
 		<ul>

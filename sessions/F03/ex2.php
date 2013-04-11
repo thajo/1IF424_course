@@ -11,17 +11,11 @@
 $arr = array("Kalmar", "Växjö", "Karlskrona");
 ?>
 <form method="post">
+	<!-- Gör en select/dropdown med värdena som finns i arrayen ovan -->
 	<select>
-	<?php
-	
-		$length = sizeof($arr);
-		
-		for($i = 0; $i < $length; $i++) {
-			echo "<option value='" .$i ."'>" .$arr[$i] ."</option>";
-		}
-		
-	
-	?>
+		<option value="1">Testvärde 1</option>
+		<option value="2">Testvärde 2</option>
+		<option value="3">Testvärde 3</option>
 	</select>
 	<input type="submit" name="submit" value="Skicka" />
 </form>

@@ -15,26 +15,17 @@
 
 <?php
 	
-	
-
-	if( isset($_POST["submit"]) ) {
-
-		
-		$mess = htmlspecialchars($_POST["message"]);
-		echo $mess;
+	$mess = $_POST["message"];
+	echo $mess ."<br />";
 		
 		
-		$nr = $_POST["how_many"];
-		if($nr != "" && is_numeric($nr)) {
-			echo "beräkingen gav: " .$nr + 10;
-		}
-		else {
-			echo "Det du skrev var ingen siffra";
-		}
-		
-		
-		
+	/*$nr = $_POST["how_many"];
+	if($nr != "") {
+		echo "beräkingen gav: " .$nr + 10;
 	}
+	else {
+		echo "Det du skrev var ingen siffra";
+	}*/
 ?>
 </body>
 </html>
