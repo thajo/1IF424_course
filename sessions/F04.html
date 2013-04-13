@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+
+  <head>
+    <title>Föreläsning 4 - 1IF424</title>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Föreläsning 1 i kursen webbramverk, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src='slides.js' media="screen"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style media="print">
+	         @page {
+	            size: A4 landscape;
+	             @top-right {
+	                content: "Page " counter(page);
+	             }
+	         }
+	          article {
+	            page-break-after: always;
+	            margin: auto;
+	          }
+	          article.next, article.past {
+	            display: block;    
+	          }
+	
+				iframe {
+					display: none;
+				}
+				article img {
+					display: none;
+				}
+	          body {
+	              display: block !important;
+	              font-family: 'Open Sans', Arial, sans-serif;
+	              font-size: 1.5em;
+	          }
+	</style>
+  </head>
+  
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-default'>
+      
+	<!-- Första sidan -->
+    <article>
+       	<h1>
+          Web Management, 1IK424
+          <br />
+          <span class="small">Linnéuniversitetet, VT2013</span>
+        </h1>
+       
+		
+		<br /><br />
+		<h1 class="c">PHP Part III, Mashup, Wordpress</h1>
+	
+		
+		<p class="small_footer">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
+					<img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>&nbsp;&nbsp;Detta verk är licensierat under en 
+					
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">Creative Commons Erkännande-IckeKommersiell-DelaLika 3.0 Unported Licens</a>.<br />
+		</p>
+ 	</article>
+
+	<!-- Repetition -->
+	<article>
+		<h3>Repetition</h3>
+		<ul>
+			<li>Funktioner, arrayer</li>
+		</ul>
+		<pre>
+DO FUNCTION
+
+
+</pre>
+	</article>
+	
+	<!-- Repetition 2 -->
+	<article>
+		<h3>Repetition</h3>
+		DEMO - Sriefigurer
+	</article>
+	
+	<!-- Multipla arrayer -->
+	<article>
+				<h3>Multidimensional Arrays (lite överkurs)</h3>
+				<p>Ibland behöver man beskriva lite mer komplex data</p>
+				<p>
+					<table border="1" class="small">
+						<thead>
+							<td>Produkt</td>
+							<td>Pris</td>
+							<td>Antal</td>
+						</thead>
+						<tr>
+							<td>Bultbtäda</td>
+							<td>499</td>
+							<td>12</td>
+						</tr>
+						<tr>
+							<td>Sprakcykel</td>
+							<td>876</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>Modellera</td>
+							<td>39.90</td>
+							<td>124</td>
+						</tr>
+					</table>
+				</p>
+		<pre>
+	$shop = array( 
+	  array("Bultbräda", 499, 12),
+	  array("Sparkcykel", 876 , 2),
+	  array("Modellera", 39.90 , 124) 
+	);</pre>
+		<pre>
+	echo $shop[0][0]." costs ".$shop[0][1]." and you get ".$shop[0][2];</pre>
+	</article>
+	
+	<!-- And now to something completly diffrent -->
+	<article>
+		MONTY PYTHON
+	</article>
+	
+	<!-- HTML-taggar -->
+	<article>
+		iframe - koppla med mashup - Hämta data
+	</article>
+	
+	<!-- Mashup -->
+	<article>
+		<h1>Mashup</h1>
+		
+	</article>
+	
+	<!-- Mashup -->
+	<article>
+		BILD PÅ VAD MASHUP BETYDER - 
+	</article>
+	
+	<!-- Exempel 1 -->
+	<article class="fill">
+		<iframe src="http://www.superlokal.se"></iframe>
+	</article>
+	
+	<!-- Exempel 2 -->
+	<article class="fill">
+		<iframe src="http://www.annonskartan.se"></iframe>
+	</article>
+	<!-- Exempel 3 -->
+	<article class="fill">
+		<iframe src="http://www.flightradar24.com"></iframe>
+	</article>
+	<!-- Exempel 4 -->
+	<article class="fill">
+		<iframe src="http://www.vackertvader.se"></iframe>
+	</article>
+	<!-- Exempel 5 -->
+	<article class="fill">
+		<iframe src="http://www.200ok.se/tv"></iframe>
+	</article>
+	<!-- Exempel 6 -->
+	<article class="fill">
+		<iframe src="http://linuskarlsson.se/hjts"></iframe>
+	</article>
+	
+	<!-- bild över hur det funkar -->
+	<article>
+		server, server klient
+	</article>
+	
+	<!-- API, att dela data -->
+	<article>
+		Att dela data, Varför gör man det?
+	</article>
+	
+	<!-- Ett öppet API -->
+	<article>
+		
+	</article>
+	
+	<!-- Open data international-->
+	<article>
+		
+	</article>
+	
+	<!-- Goverment -->
+	<article>
+		
+	</article>
+	
+	<!-- Exempel på goverment data -->
+	<article>
+		
+	</article>
+	
+	
+	<!-- Wordpress-->
+	<article>
+		LOGO
+	</article>
+	
+	<!-- Vad är wordpress -->
+	<article>
+		
+	</article>
+	
+	<!-- Wordpress history -->
+	<article>
+		
+	</article>
+	
+	<!-- Varför använda wordpress -->
+	<article>
+		
+	</article>
+	
+	<!-- Vilka använder Wordpress -->
+	<article>
+		
+	</article>
+	
+	<!-- Hur börjar jag -->
+	<article>
+		DEMO PÅ INSTALLATION
+	</article>
+	
+	<!-- Slut för idag -->
+	<article>
+		<h1>Slut för idag</h1>
+		<p class="c">
+			<img src="images/slut.jpg" />
+		</p>
+	</article>
+	</section>
+  </body>
+</html>
