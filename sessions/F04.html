@@ -71,7 +71,7 @@
        
 		
 		<br /><br />
-		<h1 class="c">PHP Part III, Mashup, Wordpress</h1>
+		<h1 class="c red">PHP Part III, Mashup, Wordpress</h1>
 	
 		
 		<p class="small_footer">
@@ -82,28 +82,61 @@
 		</p>
  	</article>
 
-	<!-- Repetition -->
+	<!-- Repetition 1 -->
 	<article>
-		<h3>Repetition</h3>
+			<h3 class="c medium">Repetition - Array</h3>
+			<ul>
+				<li>En variabel kan spara ett värde, en array innehåller en lista med flera variabler/värden</li>
+			</ul>
+			
+			<pre>
+$arr = array("Hej", 12, 176, True, "Lisa", 87, 148);</pre>
+			<p class="c">
+				<img src="images/array.png" />
+				<img src="images/arr_variable.png" class="biii righty" />
+			</p>		
+	</article>
+
+	<!-- Repetition 2-->
+	<article>
+		<h3 class="c medium">Repetition - Funktioner</h3>
 		<ul>
-			<li>Funktioner, arrayer</li>
+			<li>Bryta ut kod som kan återanvändas</li>
+			<li></li>
 		</ul>
 		<pre>
-DO FUNCTION
+function add($number1, $number2) {
+ return $number1 + $number2;	
+}
+
+$sum = add(13, 26);
+echo($sum); // Skriver ut 39
+
+$sum = add(3, 9);
+echo($sum); // Skriver ut 11
 
 
 </pre>
 	</article>
 	
-	<!-- Repetition 2 -->
+	<!-- Repetition 3 -->
 	<article>
-		<h3>Repetition</h3>
-		DEMO - Sriefigurer
+		<h3 class="medium c">Repetition</h3>
+		<p class="c">
+			<br /><br />
+			<img src="images/demo.png" />			
+		</p>
+		<p class="c">
+			Att jobba med en associativ array
+		</p>
+		<p class="note">
+			Seriefigurerexemplet
+		</p>
 	</article>
 	
 	<!-- Multipla arrayer -->
 	<article>
-				<h3>Multidimensional Arrays (lite överkurs)</h3>
+				<h3>Multidimensionell Arrays</h3>
 				<p>Ibland behöver man beskriva lite mer komplex data</p>
 				<p>
 					<table border="1" class="small">
@@ -113,7 +146,7 @@ DO FUNCTION
 							<td>Antal</td>
 						</thead>
 						<tr>
-							<td>Bultbtäda</td>
+							<td>Bultbräda</td>
 							<td>499</td>
 							<td>12</td>
 						</tr>
@@ -129,103 +162,190 @@ DO FUNCTION
 						</tr>
 					</table>
 				</p>
+		<pre style="margin-bottom: 0">
+$shop = array( 
+  array("Bultbräda", 499, 12),
+  array("Sparkcykel", 876 , 2),
+  array("Modellera", 39.90 , 124) 
+);</pre>
+
+	</article>
+	
+	<!-- Multipla arrayer -->
+	<article>
+		<h3>Multidimensionell Arrays</h3>
+		<pre style="margin-bottom: 0">
+$shop = array( 
+  array("Bultbräda", 499, 12),
+  array("Sparkcykel", 876 , 2),
+  array("Modellera", 39.90 , 124) 
+);</pre>
+<p class="c">
+	<img src="images/multiple_array.png" width="70%" />
+</p>
 		<pre>
-	$shop = array( 
-	  array("Bultbräda", 499, 12),
-	  array("Sparkcykel", 876 , 2),
-	  array("Modellera", 39.90 , 124) 
-	);</pre>
-		<pre>
-	echo $shop[0][0]." costs ".$shop[0][1]." and you get ".$shop[0][2];</pre>
+echo $shop[0][0]." kostar ".$shop[0][1]." kronor och det finns ".$shop[0][2];
+echo $shop[2][0]." kostar ".$shop[2][1]." kronor och det finns ".$shop[2][2];</pre>
 	</article>
 	
 	<!-- And now to something completly diffrent -->
-	<article>
-		MONTY PYTHON
+	<article class="fill">
+		<img src="images/monty.png" />
 	</article>
 	
 	<!-- HTML-taggar -->
 	<article>
-		iframe - koppla med mashup - Hämta data
+		<h3 class="medium c">HTML-taggen &lt;iframe&gt;</h3>
+		<p>
+			<br />
+			Används för att öppna en annan sida inne i din html-sida<br />
+		</p>
+	
+		<p class="to-build">
+			<pre>
+&lt;iframe src="http://www.dn.se"&gt;&lt;/iframe></pre>
+
+			<iframe src="http://www.dn.se" width="80%" height="70%"></iframe>
+		</p>
+	</article>
+	
+	<!-- data från andra tjänster -->
+	<article>
+		<p class="c">
+		<img src="images/thinking.png" width="40%" />
+		</p>
+		<span class="righty">Om man skulle kunna kombinera ihop data från olika tjänster till en egen tjänst?</span>
 	</article>
 	
 	<!-- Mashup -->
 	<article>
-		<h1>Mashup</h1>
+		<h1 class="c medium">Mashup</h1>
 		
+		<q>
+			Mashup är en typ av webbapplikation som sammanställer information och funktionalitet från fler av varandra oberoende källor.
+		</q>
+		<p class="small l">
+			<a href="http://sv.wikipedia.org/wiki/Mashup">http://sv.wikipedia.org/wiki/Mashup</a>
+		</p>
 	</article>
 	
 	<!-- Mashup -->
 	<article>
-		BILD PÅ VAD MASHUP BETYDER - 
+		<h3 class="medium c">Mashup - webbtjänster</h3>
+		<h2>
+		<img src="images/mashup_1.png" />
+		</h2>
 	</article>
 	
+	<!-- Mashup 2 -->
+	<article>
+		<h3 class="medium c">Mashup - API:er</h3>
+		<p style="margin-top: 40px">
+			API - Application Programming Interface<br />
+			Enkelt för programmerare att komma åt data
+		</p>
+		<h2>
+		<img src="images/mashup_2.png" />
+		</h2>
+	</article>
+	
+	<!-- Mashup 3 -->
+	<article>
+		<p class="c">
+		<img src="images/mashup_3.png"  height="99%"/>
+		</p>
+	</article>
+	
+	<!-- Exempel på mashups -->
 	<!-- Exempel 1 -->
-	<article class="fill">
-		<iframe src="http://www.superlokal.se"></iframe>
+	<article>
+		<h1 class="c">Exempel</h1>
+		<ul>
+		<!--<li><a href="http://www.superlokal.se">http://www.superlokal.se</a></li>-->
+		<li>
+			<a href="http://www.annonskartan.se">http://www.annonskartan.se</a> - <span class="small">Blocket, google maps, tradera m.fl. annonstorg</span>
+		</li>
+		<li>
+			<a href="http://www.flightradar24.com">http://www.flightradar24.com</a>
+			- <span class="small">Google Maps, airport locations, broadcast air traffic data o.s.v. </span>
+		</li>
+		<li><a href="http://www.vackertvader.se">http://www.vackertvader.se</a>
+		 - <span class="small">Yr.no, google maps, m.fl.</span>	
+		</li>
+		<li><a href="http://www.200ok.se/tv">http://www.200ok.se/tv</a>
+			- <span class="small">Soundcloud, Reddit, Instagram</span>
+		</li>
+		<li><a href="http://linuskarlsson.se/hjts">http://linuskarlsson.se/hjts</a>
+				- <span class="small">Soundcloud, Reddit, Instagram</span>
+			</li>
+		</ul>
 	</article>
 	
-	<!-- Exempel 2 -->
-	<article class="fill">
-		<iframe src="http://www.annonskartan.se"></iframe>
-	</article>
-	<!-- Exempel 3 -->
-	<article class="fill">
-		<iframe src="http://www.flightradar24.com"></iframe>
-	</article>
-	<!-- Exempel 4 -->
-	<article class="fill">
-		<iframe src="http://www.vackertvader.se"></iframe>
-	</article>
-	<!-- Exempel 5 -->
-	<article class="fill">
-		<iframe src="http://www.200ok.se/tv"></iframe>
-	</article>
-	<!-- Exempel 6 -->
-	<article class="fill">
-		<iframe src="http://linuskarlsson.se/hjts"></iframe>
-	</article>
 	
 	<!-- bild över hur det funkar -->
 	<article>
-		server, server klient
+		<h3 class="c">I laborationen</h3>
+		<img src="images/lab2_rch.png" />
 	</article>
 	
 	<!-- API, att dela data -->
 	<article>
-		Att dela data, Varför gör man det?
+		<h3 class="c medium">Varför delar man data?</h3>
+		
+		
+		<ul>
+			<li>API:er kostar att utveckla<li>
+			<li>Vår data är vår affärsidé<li>
+			<li>Många anrop, mer trafik, mer kostnad för servrar</li>	
+		</ul>
+		<br />
+		<ul class="to-build">
+			<li>Få din tjänst att användas</li>
+			<li>Konkurensfördel</li>
+			<li>Informationen är betald med skattemedel</li>
+			<li>Knyta utvecklare som skapar tjänster</li>
+			<li>Företagets interna system kan kräva detta</li>
+		</ul>
 	</article>
 	
-	<!-- Ett öppet API -->
-	<article>
-		
-	</article>
+	
 	
 	<!-- Open data international-->
 	<article>
-		
+		<h3>Öppen offentlig data</h3>
+		<ul>
+			<li>Datamängder från offentlig sektor som människor kan ladda ner och bearbeta själva</li>
+			<li>PSI-direktivet, EU:s</li> 
+			<li>Skattefinansierat</li>
+			<li>Demokrati, minska kostnader, innovation till samhällets gagn</li>
+			<li>statistik från hela samhället, geografisk data, ekonomiska uppgifter</li>
+		</ul>
 	</article>
 	
-	<!-- Goverment -->
-	<article>
-		
-	</article>
-	
-	<!-- Exempel på goverment data -->
-	<article>
-		
+	<!-- Exempel på open data -->
+	<article class="fill">	
+		<img src="images/open_data.png" width="70%" height="70%" />
 	</article>
 	
 	
 	<!-- Wordpress-->
-	<article>
-		LOGO
+	<article class="fill">
+		<img src="images/wp-blue.png" />
+		<h3>WordPress</h3>
 	</article>
 	
 	<!-- Vad är wordpress -->
 	<article>
-		
+		<h3>Vad är WordPress?</h3>
+		<ul>
+			<li>Startade 2003 som ett "blogging system"</li>
+			<li>Används också som ett CMS (Content Management System)</li>
+			<li>Skrivet i PHP och med mySQL som databas</li> 
+			<li>Fitt och "open source"</li>
+			<li>Utbyggningsbart med hjälp av teman, plugins, widgets</li> 
+		</ul>
 	</article>
+	
 	
 	<!-- Wordpress history -->
 	<article>
@@ -234,26 +354,42 @@ DO FUNCTION
 	
 	<!-- Varför använda wordpress -->
 	<article>
-		
+		<h3>Varför använda WordPress?</h3>
+		<ul>
+			<li>Enkelhet</li>
+			<li>Fritt att använda</li>
+			<li>The Community</li>
+			<li>Teman (och plugin)</li>
+			<li>"It´s more than just a blogging system"</li>
+			<li>SEO - Search engine optimization</li>
 	</article>
 	
-	<!-- Vilka använder Wordpress -->
+	<!-- Exempel på Wordpress -->
 	<article>
+		<h1>Exempel</h1>
+		<ul>
+			<li><a href="http://briansmith.com/">http://briansmith.com/</a></li>
+			<li><a href="http://kartellstorela.com/">http://kartellstorela.com/</a></li>
+			<li><a href="http://www.smashingmagazine.com/">http://www.smashingmagazine.com/</a></li>
+		</ul>
+			<p class="small">
+			source: <a href="http://wordpress.org/showcase/">http://wordpress.org/showcase/</a>
+		</p>
+		<p>
+			<a href="https://coursepress.lnu.se/kurs/web-management/">https://coursepress.lnu.se/kurs/web-management/</a></li>
+		</p>
 		
 	</article>
 	
 	<!-- Hur börjar jag -->
 	<article>
-		DEMO PÅ INSTALLATION
-	</article>
-	
-	<!-- Slut för idag -->
-	<article>
-		<h1>Slut för idag</h1>
+		<h3>Att komma igång...</h3>
 		<p class="c">
-			<img src="images/slut.jpg" />
+			<br /><br />
+			<img src="images/demo.png" />			
 		</p>
 	</article>
+	
 	</section>
   </body>
 </html>
