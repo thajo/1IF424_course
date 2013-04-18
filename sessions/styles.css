@@ -390,7 +390,7 @@ h3 {
 
 article.fill h3 {
 	font-size: 70px;
-  background: rgba(255, 255, 255, .75);
+  background: rgba(255, 255, 255, .90);
   padding-top: .4em;
   padding-bottom: .5em;
   margin-top: -.2em;
@@ -673,7 +673,7 @@ article.smaller q::after {
 	
 	article.fill p {
 		font-size: 30px;
-	  	background: rgba(255, 255, 255, .85);
+	  	background: rgba(255, 255, 255, .90);
 	  	padding: 10px;
 		color: black;
 	}
@@ -798,7 +798,7 @@ max-height: 190px;
 
 article.fill ul {
 	font-size: 30px;
-background: rgba(255, 255, 255, .85);
+background: rgba(255, 255, 255, .95);
 padding: 40px;
 color: black;
 }

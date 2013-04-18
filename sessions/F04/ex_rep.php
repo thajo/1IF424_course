@@ -20,7 +20,7 @@ $arr = array(
 // Arrayen loopas igenom
 foreach($arr as $program => $image_url) {
 	
-	// Här anropas funktionen "showImages" med två parametrar, fört URL:en sedan texten
+	// Här anropas funktionen "showImages" med två parametrar, först URL:en sedan texten
 	$current_html_tag = showImages($image_url, $program);
  	
 	// Skriv ut HTML-koden som returneras.
@@ -34,9 +34,14 @@ foreach($arr as $program => $image_url) {
 
 <?php
 
-// This funktion takes
+// Denna funktion tar två parametrar, först url och sedan texten
 function showImages($url, $text) {
+	// Skapar en img-tagg
 	$html = "<img src='$url' />";
+	
+	// bygger vidare (.=) på strängen html och lägger till en p-tagg med texten
 	$html .= "<p>$text</p>";
+	
+	// returnerar html-koden
 	return $html;
 }

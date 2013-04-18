@@ -91,11 +91,31 @@
 			
 			<pre>
 $arr = array("Hej", 12, 176, True, "Lisa", 87, 148);</pre>
-			<p class="c">
+			<p class="c to-build">
 				<img src="images/array.png" />
-				<img src="images/arr_variable.png" class="biii righty" />
-			</p>		
+				<img src="images/arr_variable.png" class="biii righty" /><br />
+			</p>
+					
 	</article>
+
+
+	<article>
+			<h3>Repetition - Skriv ut array</h3>
+			<p>
+				<img src="images/ass_array.png" style="height: 30%" />
+			</p>
+			<pre>
+$info = array("name" => "Stina", "nickname" => "stina_76", "age" => 37);				
+				
+foreach($info as $current_value) {
+  echo($current_value ."&lt;br />");
+}</pre>	
+<pre class="to-build">
+foreach($info as $current_key => $current_value) {
+  echo($current_key ." har värdet " .$current_value ."&lt;br />");
+}</pre>
+	</article>
+
 
 	<!-- Repetition 2-->
 	<article>
@@ -113,10 +133,11 @@ $sum = add(13, 26);
 echo($sum); // Skriver ut 39
 
 $sum = add(3, 9);
-echo($sum); // Skriver ut 11
-
-
+echo($sum); // Skriver ut 12
 </pre>
+<p>
+	funktionsnamn, parameter, returvärde, funktionsanrop
+</p>
 	</article>
 	
 	<!-- Repetition 3 -->
@@ -136,7 +157,7 @@ echo($sum); // Skriver ut 11
 	
 	<!-- Multipla arrayer -->
 	<article>
-				<h3>Multidimensionell Arrays</h3>
+				<h3>Multidimensionell Arrayer</h3>
 				<p>Ibland behöver man beskriva lite mer komplex data</p>
 				<p>
 					<table border="1" class="small">
@@ -184,8 +205,10 @@ $shop = array(
 	<img src="images/multiple_array.png" width="70%" />
 </p>
 		<pre>
-echo $shop[0][0]." kostar ".$shop[0][1]." kronor och det finns ".$shop[0][2];
-echo $shop[2][0]." kostar ".$shop[2][1]." kronor och det finns ".$shop[2][2];</pre>
+echo $shop[0][0]." kostar ".$shop[0][1]." kronor och det finns ".$shop[0][2];</pre>
+	<pre class="to-build">
+echo $shop[2][0]; // ?
+echo $shop[1][2]; // ?</pre>
 	</article>
 	
 	<!-- And now to something completly diffrent -->
@@ -214,7 +237,7 @@ echo $shop[2][0]." kostar ".$shop[2][1]." kronor och det finns ".$shop[2][2];</p
 		<p class="c">
 		<img src="images/thinking.png" width="40%" />
 		</p>
-		<span class="righty">Om man skulle kunna kombinera ihop data från olika tjänster till en egen tjänst?</span>
+		<span class="righty">Om man skulle kunna kombinera ihop data från olika tjänster till en ny, egen tjänst?</span>
 	</article>
 	
 	<!-- Mashup -->
@@ -288,7 +311,21 @@ echo $shop[2][0]." kostar ".$shop[2][1]." kronor och det finns ".$shop[2][2];</p
 		<img src="images/lab2_rch.png" />
 	</article>
 	
-	<!-- API, att dela data -->
+	<!-- Problem med "andras data" -->
+	<article>
+		<h3 class="medium c">Problem man kan stöta på</h3>
+		<ul>
+			<li>Beroende av någon annans data/server</li>
+			<li>Begränsningar på antal anrop</li>
+			<li>Få/köpa en API-nyckel</li>
+			<li>Dålig dokumentation</li>
+		</ul>
+		<p class="c">
+			<img src="images/confused.jpg" />
+		</p>
+	</article>
+	
+	<!-- API, att dela data 
 	<article>
 		<h3 class="c medium">Varför delar man data?</h3>
 		
@@ -307,26 +344,21 @@ echo $shop[2][0]." kostar ".$shop[2][1]." kronor och det finns ".$shop[2][2];</p
 			<li>Företagets interna system kan kräva detta</li>
 		</ul>
 	</article>
-	
+	-->
 	
 	
 	<!-- Open data international-->
-	<article>
+	<article class="fill">
+		<img src="images/open_data.png" width="70%" height="70%" />
 		<h3>Öppen offentlig data</h3>
 		<ul>
 			<li>Datamängder från offentlig sektor som människor kan ladda ner och bearbeta själva</li>
-			<li>PSI-direktivet, EU:s</li> 
 			<li>Skattefinansierat</li>
 			<li>Demokrati, minska kostnader, innovation till samhällets gagn</li>
-			<li>statistik från hela samhället, geografisk data, ekonomiska uppgifter</li>
+			<li>Statistik från hela samhället, geografisk data, ekonomiska uppgifter</li>
+			<li>PSI-direktivet, EU-kommissionen</li> 
 		</ul>
 	</article>
-	
-	<!-- Exempel på open data -->
-	<article class="fill">	
-		<img src="images/open_data.png" width="70%" height="70%" />
-	</article>
-	
 	
 	<!-- Wordpress-->
 	<article class="fill">
@@ -339,16 +371,11 @@ echo $shop[2][0]." kostar ".$shop[2][1]." kronor och det finns ".$shop[2][2];</p
 		<h3>Vad är WordPress?</h3>
 		<ul>
 			<li>Startade 2003 som ett "blogging system"</li>
-			<li>Används också som ett CMS (Content Management System)</li>
-			<li>Skrivet i PHP och med mySQL som databas</li> 
-			<li>Fitt och "open source"</li>
+			<li>Används som ett CMS (Content Management System)</li>
+			<li>Skrivet i PHP och använder en mySQL-databas</li> 
+			<li>Fritt och "open source"</li>
 			<li>Utbyggningsbart med hjälp av teman, plugins, widgets</li> 
 		</ul>
-	</article>
-	
-	
-	<!-- Wordpress history -->
-	<article>
 		
 	</article>
 	
@@ -358,10 +385,10 @@ echo $shop[2][0]." kostar ".$shop[2][1]." kronor och det finns ".$shop[2][2];</p
 		<ul>
 			<li>Enkelhet</li>
 			<li>Fritt att använda</li>
-			<li>The Community</li>
-			<li>Teman (och plugin)</li>
 			<li>"It´s more than just a blogging system"</li>
+			<li>Teman (och plugin)</li>
 			<li>SEO - Search engine optimization</li>
+			<li>The Community</li>
 	</article>
 	
 	<!-- Exempel på Wordpress -->
@@ -389,6 +416,7 @@ echo $shop[2][0]." kostar ".$shop[2][1]." kronor och det finns ".$shop[2][2];</p
 			<img src="images/demo.png" />			
 		</p>
 	</article>
+	
 	
 	</section>
   </body>
