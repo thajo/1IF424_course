@@ -90,6 +90,7 @@
 	
 	<!-- Vad är wordpress -->
 	<article>
+		<h1>Vad är WordPress?</h1>
 		<ul>
 			<li>Ett CMS (Content Management System)</li>
 			<li>Wordpress.org vs. wordpress.com</li>
@@ -101,33 +102,24 @@
 		</p>
 	</article>
 	
-	<!-- Begrepp -->
-	<article>
-		<h3>Begrepp vi kommer stöta på</h3>
+	<!-- Vårt mål -->
+	<article class="fill">
+		<img src="images/goal.jpg" />
+		<h3>Vårt mål</h3>
 		<ul>
-			<li>Post, Pages, Custom Post Type</li> 
-			<li>Themes, Widgets, plugins</li> 
-			<li>Categories, tags, taxonamy</li> 
-			<li>Post format, slug, sticky post</li> 
-			<li>Include files, "the loop", template parts</li>
-			<li>Child themes, wp_query, </li> 
+			<li>Kunna skapa en dynamisk webbplats (blogg, sidor, menyer o.s.v.)</li>
 		</ul>
 	</article>
 	
-	<!-- Demo som går igenom dashboard -->
+	<!-- Dagens agenda -->
 	<article>
-		<p class="c">
-			<img src="images/demo.png" />
-		</p>	
-	</article>
-	
-	<!-- Vårt mål -->
-	<article>
-		<h1>Vårt mål</h1>
+		<h3>Dagens agenda</h3>
 		<ul>
-			<li>Kunna skapa en dynamisk webbplats (blogg, sidor, menyer o.s.v.)</li>
-			<li>Kunna skapa ett tema från grunden</li>
-			<li>Kunna utgå från ett befintligt tema</li>
+			<li>Introducera begrepp, förstå "dashboard", vårt första tema</li>
+			<li>Post, Pages, Custom Post Type</li> 
+			<li>Themes, Widgets, plugins</li> 
+			<li>Categories, Tags, taxonamy</li> 
+			<li>Include files, "the loop", template parts</li>
 		</ul>
 	</article>
 	
@@ -144,71 +136,93 @@
 		</p>
 	</article>
 	
-	<!-- Vad är wordpress - filstruktur -->
+	<!-- Post vs. Pages -->
 	<article>
 		<h3>Posts vs. Pages</h3>
+		<ul>
+			<li>Post - "Att posta en artikel/inlägg"</li>
+			BILD 
+			
+			<li>Pages - Mer statiskt innehåll, Sällan uppdaterade</li>
+			BILD
+		</ul>
+	</article>
+	
+	<!-- taxnoomies, att märka upp informationen -->
+	<article>
+		<h1>Att märka upp sina poster</h1>
+		<ul>
+			<li>
+				Category - En post kan tillhöra flera kategorier (News, Design, Programming...)
+				<br />BILD
+			</li>
+			<li>
+				Tag - Ett eller flera nyckelord man ger sin post (Responsive design, PHP, WP Themes...)
+				<br />BILD
+			</li>
+			<li>Custom taxonomy - ???</li>
+		</ul>
 		<p>
-			Post - "Att posta ett inlägg"
-			Categories, tags, custom taxonomies (blog post, news, reviews, innehåll som uppdateras ofta)
-			Pages - Statiskt innehåll, Sällan uppdaterade
+			Genom att märka upp information kan man enklare strukturera, sortera, söka och leda användaren rätt
 		</p>
 	</article>
 	
-	<!-- taxnoomies -->
+	<!-- Demo som går igenom dashboard -->
 	<article>
-		<h1>Att märka upp sina poster</h1>
-		<ul>
-			<li>Category - En post kan tillhöra flera kategorier</li>
-			<li>Tag - A keyword that you can add to the post</li>
-			<li>Custom taxonomy - ???</li>
-		</ul>
+		<h1>Dashboard</h1>
 		<p>
-			Kunna sortera, visa endast visa kategorier...
+			Administrationsgränssnittet i Wordpress
 		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+		<p class="note">
+			Introducerar begreppen via wp-admin
+			Skapa category, tags, och posta ett antal
+			inlägg med bilder.
+		</p>	
 	</article>
-		
-	<!-- taxnoomies -->
-	<article>
-		<h1>Att märka upp sina poster</h1>
-		<ul>
-			<li>Category - En post kan tillhöra flera kategorier</li>
-			<li>Tag - A keyword that you can add to the post</li>
-			<li>Custom taxonomy - ???</li>
-		</ul>
-		<p>
-			Kunna sortera, visa endast visa kategorier...
-		</p>
-	</article>	
-		
+	
 	<!-- Att pimpa sin wordpress -->	
 	<article>
 		<h1>Att pimpa wordpress</h1>
-		<h3>Themes, Widgets, plugins</h3>
+		
 		<p>
-			Möjligheter att bygga ut sin applikation
+			Möjligheter att skräddasy sin WordPress-applikation
+			<ul>
+				<li><strong>Themes</strong> - Layout, CSS, Hur allt ska se ut och presenteras</li>
+				<li><strong>Widgets</strong> - Små delar som kan infogas i en sida med specifik funktionalitet, Kalender, "senaste kommentarerna"...</li>
+				<li><strong>Plugins</strong> - Ren PHP-programmering som utökar WordPress grundläggande funktionallitet</li>
+			</ul>
 		</p>
 		
 	</article>
-	<!-- Exempel på themes -->
-	<aticle>
-		<h1>Exempel på teman</h1>
-		BILDER PÅ OLIAK TEMAN
-	</aticle>
 	
-	<!-- Exempel på plugin -->
-	<aticle>
-		<h1>Exempel på plugin</h1>
-		BILDER PÅ OLIAK Plugin
-	</aticle>
+	<!-- Exempel på themes -->
+	<article>
+		<h1>Exempel - Teman</h1>
+		<p>
+			Byter utseende på din WordPress-applikation.
+			Finns massor av färdiga "themes".
+			
+		</p>
+		BILDER PÅ OLIAK TEMAN
+	</article>
 	
 	<!-- Exempel på widgets -->
-	<aticle>
-		<h1>Exempel på widgets</h1>
+	<article>
+		<h1>Exempel - Widgets</h1>
 		BILDER PÅ OLIAK widgets
-	</aticle>
+	</article>
 	
+	<!-- Exempel på plugin -->
+	<article>
+		<h1>Exempel - Plugin</h1>
+		BILDER PÅ OLIAK Plugin
+	</article>
+		
 	<!-- Demo plugin -->
-	<aticle>
+	<article>
 		<h1>Att byta ett tema och installera ett plugin</h1>
 		<p>
 			<img src="images/demo.png" />
@@ -217,53 +231,114 @@
 			Välj ett Tema och visa att det inte går att ladda ner
 			via wordpress.
 		</p>
-	</aticle>
+	</article>
 	
+	<!-- Att tänka på vid många plugins -->
 	<article>
-		<h3>Att tänka på...</h3>
+		<h1>Att tänka på...</h1>
 		<p>
 			Problem med för mycket plug-in
 			och "knasiga" teman
 		</p>
-		WHEN WORDPRESS FUCK UP
+		<ul>
+			<li>Prestanda - dåligt kodade plugin</li>
+			<li>Problem, buggar - Dåligt kodade plugin</li>
+			<li>Fungerar inte med nyare versioner av WordPress - Versionskonflikt</li>
+			<li>För plottrigt</li>
+		</ul>
+		<p>
+			Kolla alltid vad andra tycker, läs på innan du installerar ett plugin...
+			<a href="http://wordpress.org/extend/plugins/">
+				http://wordpress.org/extend/plugins/
+			</a>
+		</p>
 	</article>
 	
 	
+	<!-- Att skapa sitt eget tema -->
 	<article>
-		Install - DEMO - Noname! No content
-		MÅL: Bild på powerpointbild, Ta morgans bild
-		index.php
+		<h1>Skapa ett eget tema</h1>
+		<p>
+			MÅL: Bild på powerpointbild, Ta morgans bild och modifiera lite
+		</p>
+	</article>
+	
+	<!-- Hur Kommer man igång -->
+	<article>
+		<h3>Hur kommer man igång</h3>
+		BILD PÅ FILSTRUKTUR - wp-content
+		<p>
+			Vad kan ingå i ett tema:<br />
+			<ul>
+				<li>Template files: En eller flera php-filer som visar innehållet (HTML och PHP)</li>
+				<li>Stylesheet file: "style.css", Definierar utseendet på temat. Innehåller en deklaration för temat</li>
+				<li>Functions.php: När du behöver skriva mer php-kod för att utöka funktionalliteten</li>
+				<li>Andra filer: JavaScript, bilder o.s.v.</li>
+			</ul>
+		</p>
+	</article>
+	
+	
+	<!-- Theme definition-->
+	<article>
+		<h3>The stylesheet</h3>
+		
+		<p>
+			<strong>Theme declaration:<br /></strong>
+			Alla teman ska ha en deklation där metainformation om temat ska ingå:<br />
+			BILD - Visa de olika delarna samt några små vanliga regler
+		</p>
+		<p>
+			Vad kan ingå i ett tema:<br />
+			<ul>
+				<li>Template files: En eller flera php-filer som visar innehållet (HTML och PHP)</li>
+				<li>Stylesheet file: "style.css", Definierar utseendet på temat. Innehåller en deklaration för temat</li>
+				<li>Functions.php: När du behöver skriva mer php-kod för att utöka funktionalliteten</li>
+				<li>Andra filer: JavaScript, bilder o.s.v.</li>
+			</ul>
+		</p>
+	</article>
+	
+	<!-- Templete sites -->
+	<article>
+		<h3>Template files</h3>
+		<p>
+			Någonstans måste vi ju tala om vart innehållet ska finnas.<br />
+			Man kan ha flertalet med template-filer som läses in hierarkiskt<br />
+			Vi börjar med att skapa en index.php.
+		</p>
+		
+		<p>
+			<img src="images/demo.png" />
+		</p>
 		<p class="note">
 			Skapa en sida som skriver ut bloggens titel, bygg på sidan med en header,
 			en layout.
 			Hitta sida med layout som jag tagit from HTML Dog
+			Få in stylesheet och bilder
 		</p>
 	</article>
 	
+	<!-- Template files -->
 	<article>
+		<h3>Att dela upp din sida i delar</h3>
+		
 		Så vi ska bara ha en index-fil?
+			BILD PÅ OMRÅDEN (header, content, sidebar, footer, left-sidebar)
+		
 		<p class="to-build">
 			Eller kan vi struturera upp det?
 		</p>
 	</article>
 	
+	<!-- Demo skapa header, footer, content, sidebar -->
 	<article>
-		BILD PÅ OMRÅDEN (header, content, sidebar, footer, left-sidebar)
-	</article>
-	
-	
-	<article>
-		Att bryta ut koden...Bild på hela koden med header i egen fil
-	</article>
-	
-	
-	<article>
-		DEMO - Jobba upp strukturen
-		<p class="note">
-			Vi har nu en struktur på vår sida
+		<h3>Att bryta ut koden</h3>
+		<p>
+			<img src="images/demo.png" />
 		</p>
 	</article>
-	
+		
 	
 	
 	<article>
@@ -272,6 +347,7 @@
 		Layout. Vart lägger jag bilder, javascript o.s.v.
 	</article>
 	
+	<!-- Statiska resurser -->
 	<article>
 		Add a loggo.
 		<p class="note">
@@ -279,119 +355,59 @@
 		</p>
 	</article>
 	
-	
+	<!-- Hur får vi ut data? -->
 	<article>
 		<h3>Men all data då?</h3>
 		<p>
-			Vart hamnar våra postade inlägg?
-			Hur visar jag upp all information
+			Vart hamnar våra postade inlägg?<br />
+			Hur visar jag upp all information?
 		</p>
-		Dags att fylla på med data. The loop. Fokus på blog
+		
+			
+			
 	</article>
 	
+	<!-- The loop -->
 	<article>
-		<h1>The loop</h1>
-	</article>
-	
-	<article>
-		<h3>Att skriva ut poster</h3>
+		<h1>The Loop</h1>
 		<p>
-			while the_post()
+			Det som drar data ur databasen kallas "The Loop". Vare sig det handlar om
+			ett antal poster (while) eller en enskild Post.
 		</p>
-	</article>
-	
-	<article>
-		<h3>Vad kan vi få för information från posten</h3>
 		<p>
-			the_title(), the_author()
+			Enklaste sättet att förstå hur man använder The Loop är att se ett exempel.
 		</p>
 	</article>
 	
+	<!-- Template tags -->
 	<article>
-		<h3>Vad kan vi få för information från posten</h3>
+		<h3>Template tags</h3>
 		<p>
-			DEMO
+			"Template tags" är nycklen till hur vi hämtar dynamiskt innehåll. Det finns flertalet
+			tillgängliga i Wordpress, uppdelade på olika kategorier. Håll koll!<br />
+			<a href="http://codex.wordpress.org/Template_Tags">http://codex.wordpress.org/Template_Tags</a>
 		</p>
+		
+		<h3>Några vanliga Post template tags</h3>
+		<ul>
+			<li>the_title()</li>
+			<li>the_permalink()</li>
+			<li>the_content()</li>
+			<li>the_ID()</li>
+			<li>post_class()</li>
+		</ul>
 	</article>
 	
-	<article>
-		is_singular()
-	</article>
-	
+	<!-- Avslut F05 -->
 	<article>
 		Uppgift till nästa gång
 		Fyll blogg med data - Bli bekväm med admingränssnittet
 		Testa! 
 	</article>
 	
-	<article>
-		Theme - Child themes
-	</article>
 	
-	<article>
-		Implementera en sökruta
-	</article>
-	
-	<article>
-		Lägg kategorier i sidebar
-	</article>
-	
-	<article>
-		Sorterara på taggar
-	</article>
-	<article>
-		Kommentarer på bloggpost
-	</article>
-	
-	<article>
-		Lägg kategorier i sidebar
-	</article>
-	
-	<article>
-		Lägg kategorier i sidebar
-	</article>
-	
-	<article>
-		Create a menu
-	</article>
-	
-	<article>
-		Pages
-	</article>
-	<article>
-		Add pages to menu
-	</article>
-	
-	<article>
-		Pages templates
-	</article>
 	
 
-	
-	<article>
-		Custom posts - Meta posts
-	</article>
-	
-	<article>
-		Dölja saker i admingränssnittet
-	</article>
-	
-	<article>
-		SEO Wordpress
-	</article>
-	
-	<article>
-		Custom fields
-	</article>
-	
-	<article>
-		Meta boxes
-	</article>
-	
-	<article>
-		Plugins vad är det och hur kan jag använda det
-	</article>
-	
 	</section>
   </body>
 </html>
