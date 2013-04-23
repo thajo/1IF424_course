@@ -82,40 +82,68 @@
 		</p>
  	</article>
 
-
 	<article>
 		<h3>Agenda</h3>
 		<ul>
+			<li>The Loop - repetition</li>
 			<li>Vad är get_template_part()</li>
+			<li>Hur gör jag om jag har fler poster än jag vill visa på en sida</li>
 			<li>Hur skiljer jag på att visa en lista med poster och en enskild post?</li>
 			<li>Hur visar man kommentarer till bloggposten</li>
 			<li>Hur visar jag en resultatsida från en sökning?</li>
-			<li>Hur gör jag om jag har fler poster än jag vill visa på en sida</li>
-			
+			<li>Hur kan jag använda widgets?</li>
 			<li>Hur skapar jag en meny?</li>
-			<li>Page and Page Templates</li>
 		</ul>
 	</article>
+
+
+	<!-- The loop -->
+	<article>
+		<h1>The Loop</h1>
+		<p>
+			BILD PÅ THE LOOP CODE
+		</p>
+		<p>
+			BILD PÅ HTML
+		</p>
+	</article>
 	
-	
+	<!-- Paging -->
+	<article>
+		<h3>När listan blir för lång</h3>
+		<p>
+			Vad händer när jag har 100 inlägg?
+		</p>
+		<p class="c">
+			<img src="images/confused.jpg" />
+		</p>
+		<p>
+			Som default hämtar Wordpress max 10 poster åt gången i loopen<br />
+			Hur visar jag de andra?
+		</p>
+		<p class="to-build">
+			<a href="http://codex.wordpress.org/Function_Reference/next_posts_link">
+				http://codex.wordpress.org/Function_Reference/next_posts_link
+			</a>
+		</p>
+	</article>
+
+	<!-- Att bryta ut loopen -->
+	<article>
+		<h3>Olika utseende, olika loopar</h3>
+		<p>
+			<img src="images/diffrent_loops.png" style="height:98%"/>
+		</p>
+	</article>
+
 	<!-- get_template_part() -->
 	<article>
 			<h3>get_template_part()</h3>
 			<p>
-				Används när vi vill dela upp vår kod ytterligare
-				beroende på hur vi vill visa posterna.
+				Används när vi vill dela upp vår kod ytterligare<br />
+				ger möjlighet att ladda in egna template-files var vi vill.
 			</p>
-			<p>
-				Har användaren klickat på en post
-				ska även möjligheten till kommentarer visas
-			</p>
-	</article>
-	
-	<!-- Exempel get_template_part() -->
-	<article>
-		<h1>is_singular()</h1>
-		<pre>
-
+			<pre>
 &lt;?php if (is_single()) : ?>
    &lt;?php // det är en single post så jag laddar in templaten som visar dessa
        get_template_part('content', 'single'); // kommer leta efter filen content-single.php
@@ -129,18 +157,59 @@
 		</pre>
 	</article>
 	
+	<!-- Conditional tags -->
+	<article>
+		<h3>Conditional Tags</h3>
+		<p>
+			Används t.ex. för att avgöra vad för typ av sida som efterfrågats!
+			<ul>
+			<li>Startsidan? - is_home()</li>
+			<li>Är det en enskild post? - is_single()</li>
+			<li>Vill man lista kategorier? - is_category()</li>
+			<li>Lista taggar? - is_tag()</li>
+			</ul>
+		</p>
+		<p>
+			Finns också för att avgöra om en inställning är gjord eller
+			om en specifik post (när vi är i loopen) har någon egenskap
+			<ul>
+			<li>Är posten en "sticky post"? - is_sticky()</li>
+			<li>Tillåts att man kommenterar på posten? - comments_open()</li>
+			</ul>
+		</p>
+		<p>
+			Enda sättet att vet a vad man kan göra och kolla av är att läsa på:
+			<a href="http://codex.wordpress.org/Conditional_Tags">
+				http://codex.wordpress.org/Conditional_Tags
+			</a>
+		</p>
+	</article>
+	
+	<!-- Demo get_template_part -->
+	<article>
+		<h3>Att via en post på oliak sätt</h3>
+		<p>
+			<img src="images/diffrent_loops.png" style="height:98%"/>
+		</p>
+	</article>
+	
+
+	<!-- Att lista ut kategorier -->
 	<article>
 		<h3>Hantera kategorier</h3>
 		<p>
 			Vi vill ge användaren möjlighet att sortera våra inlägg per kategori.<br />
 			Detta är en typisk uppgift där vi får använda Wordpress codex
 		</p>
-		http://codex.wordpress.org/Template_Tags/wp_list_categories
+		<p>
+		<a href="http://codex.wordpress.org/Template_Tags/wp_list_categories
+		">http://codex.wordpress.org/Template_Tags/wp_list_categories</a>
+		</p>
 	</article>
 	
-	<!-- DEMO - implementera kommentarer -->
+	<!-- DEMO - kategorier -->
 	<article>
-		<h3>Att implemntera en lista med kategorier</h3>
+		<h3>Att implementera en lista med kategorier</h3>
 		<p>
 			Vi vill i vår sidebar inkludera en lista med kategorier.
 		</p>
@@ -160,11 +229,19 @@
 			Då wordpress har sina rötter som bloggverktyg finns såklart inbyggt stöd för
 			kommentarer.
 		</p>
+		<p>
+		<img src="images/comments.png" style="height: 70%"/>
+		</p>
+	</article>
 	
-		BILD PÅ KOMMENTARER
+	<!-- Enklaste sättet att få svenska språk -->
+	<article>
+		<h3>Byt språk på wordpress</h3>
+		<p>
+			http://codex.wordpress.org/Installing_WordPress_in_Your_Language#Manually_Installing_Language_Files
+		</p>
 	</article>
 		
-	
 	<!-- Hur gör vi en sökruta -->
 	<article>
 		<h3>Att implementera en sökruta</h3>
@@ -203,64 +280,36 @@ Självstudie	: <a href="http://codex.wordpress.org/Function_Reference/get_search
 		<p>
 			Fördelar är att det är enkelt för en administratör att dra och släppa 
 			widgets i sidan.<br />
-			Nackdelar är att man kan bli lite låst
+		</p>
+		
+		<p>
+			För att få en yta att lägga till widgets i behöver vi registrera den i functions.php
 		</p>
 		
 	</article>
-	
-	
+		
 	<!-- Demo - Article -->
 	<article>
 		<h3>Att skapa en widget area och lägga in widgets</h3>
 		<p>
 			<img src="images/demo.png" />
-			
 		</p>
 	</article>
 	
+	<!-- Menyer -->
 	<article>
-		<h3>Hantera menyer</h3>
+		<h3>Att fixa en dynamisk meny</h3>
 		<p>
-			På liknande sätt hanteras menyer
-			
+			På liknande sätt som widgets registreras menyer
+		</p>
+		<p>
+			<img src="images/demo.png" />
 		</p>
 	</article>
 	
-	<article>
-		Pages
-	</article>
+	
 
-	<article>
-		Add pages to menu
-	</article>
 	
-	<article>
-		Pages templates
-	</article>
-		
-	<article>
-		Custom posts - Meta posts
-	</article>
-	
-	<article>
-		Dölja saker i admingränssnittet
-	</article>
-	
-	<article>
-		SEO Wordpress
-	</article>
-	
-	<article>
-		Custom fields
-	</article>
-	
-	<article>
-		Meta boxes
-	</article>
-	
-	<article>
-		Plugins vad är det och hur kan jag använda det
-	</article>
 	
 	
 
