@@ -101,12 +101,24 @@
 	<!-- The loop -->
 	<article>
 		<h1>The Loop</h1>
-		<p>
-			BILD PÅ THE LOOP CODE - TA PÅ EN VANLIGT CONTENT
-			Fyll på med fler tempalte tags
+		<br /><br />
+		<p class="c spaced">
+			<img src="images/the_loop.png" />
 		</p>
+		
+	</article>
+	
+	<!-- WPQuery -->
+	<article>
+		<h3>Några ord om WPQuery</h3>
 		<p>
-			BILD PÅ HTML
+			"The Loop" använder sig av WPQuery.<br />
+			Man kan skriva kod som talar om precis vad loopen ska hämta eller ifall
+			man vill ha fler "loopar"
+		</p>
+		<br /><br />
+		<p class="c">
+			<img src="images/wp_query.png" />
 		</p>
 	</article>
 	
@@ -119,31 +131,44 @@
 		</p>
 	</article>
 
+	<!-- Template heirarky -->
 	<article>
-		TEMPLATE HEIRARKY
-		När vi anropar en spcifik sida letar wordpress efter något.
-		VISA BILD!
-		demo på single
-		http://codex.wordpress.org/Theme_Development#Template_Files_List
+		<h1>Template Hierarchy</h1>
+		<p class="c">
+			<a href="images/Template_Hierarchy.png" target="_blank"><img src="images/Template_Hierarchy.png" height="80%"/></a>
+		</p>
 	</article>
 
+	<!-- single.php -->
+	<article>
+		<h3>Att visa en enskild post i en egen sida</h3>
+		<p>
+			single.php
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+	</article>
+
+	<!-- Att bryta ut loopen -->
+	<article>
+		<h3>Olika utseende, olika loopar</h3>
+		<p>
+			<img src="images/diffrent_loops.png" style="height:98%"/>
+		</p>
+	</article>
+
+	
 	<!-- get_template_part() -->
 	<article>
 			<h3>get_template_part()</h3>
 			<p>
 				Vi vill ha möjligheten att ladda in olika filer beroende på hur vi vill att loopen ska köras.
+				(WP 3.0)
 			</p>
-			<pre>
-&lt;?php 
-if (is_single()) : 
-  // det är en single post så jag laddar in templaten som visar dessa
-  get_template_part('content', 'single'); // kommer leta efter filen content-single.php
-else : 
-  // Annars så visar jag listan med poster i loopen som vanligt
-  get_template_part('content'); // kommer ladd ain filen content.php
-endif; ?>
-
-		</pre>
+			<p class="c">
+				<img src="images/get_template_part.png" />
+			</p>
 	</article>
 	
 	<!-- Conditional tags -->
@@ -160,13 +185,22 @@ endif; ?>
 		</p>
 		
 		<p>
-			Enda sättet att vet a vad man kan göra och kolla av är att läsa på:
+			Enda sättet att veta vad man kan göra är att läsa på:
 			<a href="http://codex.wordpress.org/Conditional_Tags">
 				http://codex.wordpress.org/Conditional_Tags
 			</a>
 		</p>
 		<p class="c">
 			<img src="images/besserwisser.jpg" />
+		</p>
+	</article>
+	
+	<!-- Demo get_template_part -->
+	<article>
+		<h3>Att via en post på olika sätt</h3>
+		<p class="c">
+			<img src="images/demo.png" /><br />
+			<img src="images/diffrent_loops.png" style="height:80%"/>
 		</p>
 	</article>
 	
@@ -190,29 +224,19 @@ endif; ?>
 		</p>
 	</article>
 	
-	<!-- Demo get_template_part -->
-	<article>
-		<h3>Att via en post på olika sätt</h3>
-		<p class="c">
-			<img src="images/demo.png" /><br />
-			<img src="images/diffrent_loops.png" style="height:80%"/>
-		</p>
-	</article>
 	
-
 	<!-- Att lista ut kategorier -->
 	<article>
 		<h3>Hantera kategorier</h3>
 		<p>
 			Vi vill ge användaren möjlighet att sortera våra inlägg per kategori.<br />
-			Detta är en typisk uppgift där vi får använda Wordpress codex
+			Detta är en typisk uppgift där vi får använda Wordpress codex för att söka vårt svar
 		</p>
 		<p>
-		<a href="http://codex.wordpress.org/Template_Tags/wp_list_categories
-		">http://codex.wordpress.org/Template_Tags/wp_list_categories</a>
+		<a href="http://codex.wordpress.org/" target="blank">http://codex.wordpress.org/</a>
 		</p>
-		<p>
-			SKÄRMDUMP
+		<p class="c">
+			<img src="images/category.png" />
 		</p>
 	</article>
 	
@@ -244,6 +268,7 @@ endif; ?>
 			</a>
 		<p class="c">
 		<img src="images/comments.png" style="height: 50%"/>
+		<img src="images/demo.png" />
 		</p>
 	</article>
 	
@@ -251,7 +276,7 @@ endif; ?>
 	<article>
 		<h3>Hur byter man språk på wordpress?</h3>
 		<p>
-			<a class="medium_small" href="http://codex.wordpress.org/Installing_WordPress_in_Your_Language#Manually_Installing_Language_Files">
+			<a style="font-size: 14pt" href="http://codex.wordpress.org/Installing_WordPress_in_Your_Language#Manually_Installing_Language_Files">
 				http://codex.wordpress.org/Installing_WordPress_in_Your_Language#Manually_Installing_Language_Files
 			</a>
 		</p>
@@ -263,8 +288,8 @@ endif; ?>
 			<li>Öppna filen "wp-config.php" - leta rade på raden define('WPLANG', '');</li>
 			<li>Ändra till define('WPLANG', 'sv_SE');</li>
 		</ul>
-		<p>
-			FLAGGBILD
+		<p class="c">
+			<img src="images/flag_sweden.png" />
 		</p>
 	</article>
 		
@@ -276,12 +301,11 @@ endif; ?>
 		</p>
 		<pre>
 get_search_form(); // Ett standard formulär kommer renderas ut</pre>
-		<p>BILD PÅ SÖKRUTA</p>
-		
+				
 		<p>
-Självstudie	: <a href="http://codex.wordpress.org/Function_Reference/get_search_form">
+			<a href="http://codex.wordpress.org/Function_Reference/get_search_form">
 				http://codex.wordpress.org/Function_Reference/get_search_form
-				</a>
+			</a>
 		</p>
 		<p class="c">
 			<img src="images/demo.png" />
@@ -304,10 +328,10 @@ Självstudie	: <a href="http://codex.wordpress.org/Function_Reference/get_search
 		</p>
 		
 		<p>
-			För att få en yta att lägga till widgets i behöver vi registrera den i functions.php
+			För att få en yta att lägga till widgets i behöver vi registrera den i <strong>functions.php</strong>
 		</p>
 		<p>
-			BILD WIDGETS
+			<img src="images/widget.png" width="75%"/>
 		</p>
 		
 	</article>
@@ -332,20 +356,6 @@ Självstudie	: <a href="http://codex.wordpress.org/Function_Reference/get_search
 	</article>
 	
 	
-	<!-- Tips till laborationen -->
-	<article>
-		<h3>Nästa gång</h3>
-		<ul>
-			<li>Skapa child themes</li>
-			<li>Page templates</li>
-			<li>Meta boxes</li>
-			<li></li>
-		</ul>
-	</article>
-	
-	
-	
-
 	</section>
   </body>
 </html>
