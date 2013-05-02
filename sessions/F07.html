@@ -15,7 +15,7 @@
 <html>
 
   <head>
-    <title>Föreläsning 5 - 1IF424</title>
+    <title>Föreläsning 7 - 1IF424</title>
     <meta charset="utf-8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="description" content="Föreläsning 1 i kursen webbramverk, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
@@ -62,7 +62,7 @@
     <section class='slides layout-widescreen template-default'>
       
 	<!-- Första sidan -->
-    <article>
+    <article class="first">
        	<h1>
           Web Management, 1IK424
           <br />
@@ -71,7 +71,7 @@
        
 		
 		<br /><br />
-		<h1 class="c red">Wordpress part II</h1>
+		<h1 class="c red">Wordpress part III</h1>
 	
 		
 		<p class="small_footer">
@@ -82,37 +82,219 @@
 		</p>
  	</article>
 	
+	<!-- Agenda -->
+	<article>
+		<h1>Agenda</h1>
+		<ul>
+			<li>Page, Page template</li>
+			<li>Att välja tema</li>
+			<li>Child Themes</li>
+			<li>Custom Post Type</li>
+			<li>SEO - Att tänka på vid sökmotoroptimering</li>
+		</ul>
+	</article>
 	
+	<!-- Page -->
+	<article>
+		<h1>Pages</h1>
+		<ul>
+			<li>Är ämnade för "statiskt" innehåll</li>
+			<li>Skapas via admingränssnittet</li>
+			<li>En sida tilldelas en "Page template" - "Default template" = page.php</li>
+			<li>Du kan skapa en uppsättning av "Page Templates" att välja på</li>
+		</ul> 
+	</article>
+	
+	<!-- Page screenshot -->
+	<article class="fill">
+		<img src="images/static_pages.png" style="width: 80%"/>
+	</article>
+	
+	<!-- Demo - Hur jag ändrar startsida -->
+	<article>
+		<h3>Att skapa statiska sidor</h3>
+		<p>
+			Skapa en statisk sida och placera i en dynamisk meny<br />
+			Använd "default template".<br />
+			Gör denna sida till startsida och placera bloggflödet i en annan sida.		
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>	
+		<p class="note">
+			Skapa En startsida och en nyhetssida, lägg i menyn
+			Visa hur man ändrar till en annan startsida
+		</p>
+	</article>
 		
-	
-	
-	<article>
-		Custom fields
-	</article>
-	
-	<article>
-		Custom posts - Meta posts
-	</article>
-	
-	
 	<!-- Page templates -->
 	<article>
-		Pages templates
+		<h1>Pages templates</h1>
+		<p>
+			Visa sidor har två kolumner, andra tre o.s.v.
+		</p>
+		<p>
+			Genom att skapa egna <i>Page Templates</i> kan du tilldela olika sidor olika utseenden.
+		</p>
+		
+		<p>
+			En page templete skapas i en egen fil<br />
+			De bör ha liknande namn ex. template-two-cols.php, template-four-cols.php o.s.v.<br />
+		</p>	
+		<p>
+			<img src="images/page_template.png" />&nbsp;
+			<img src="images/template_select.png" style="height: 50%"/>
+		</p>
 	</article>
+	
+	<!-- DEMO -->
+	<article>
+		<h3>Skapa två template som visar olika kategorier på olika sätt</h3>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+	</article>
+	
+	<!-- Att använda någon annans tema  -->
+	<article>
+		<h1>Att använda andras teman</h1>
+		<ul>
+			<li>Man lär sig genom att studera andras teman</li>
+			<li>Får design, struktur och massor av funktionallitet</li>
+			<li>Kunna manipulera de delar man vill</li>
+			<li>Det svåra är att hitta rätt tema just för dig</li>
+		</ul>
+		<p class="c">
+			<img src="images/loop_arrow.png" height="50%" />
+		</p>
+	</article> 
+		
+	<!-- När du väljer tema  -->
+	<article>
+		<h1>När du väljer ett tema</h1>
+		<ul>
+			<li>Vad tycker andra?</li>
+			<li>Licens - Vad krävs för att få använda det?</li>
+			<li>Utseende, layout</li>
+			<li>Enkelhet att modifiera? Custum headers, custom background</li>
+			<li>Kunna manipulera de delar man vill</li>
+			<li>Språkstöd?</li>
+			<li>Hur välstrukturerat ser det ut, filmässigt och kodmässigt</li>
+			<li>Prestanda, hur snabbt laddar det?</li>
+			<li>Valideras det? <a href="http.validator.w3.org">http.validator.w3.org</a></li>
+			<li>Testa i olika webbläsare!</li>
+			<li>Hur är stödet för mobila webbläsare?</li>
+			<li>Vinner man något på att utgå från en annans tema</li>
+			<li>SEO - Hur väl anpassat för sökmotorerna?</li>
+		</ul>
+	</article> 
+	
+	<!-- Child theme -->
+	<article>
+		<h1>Child theme</h1>
+		<p>
+			Ändra i det befintliga temats filer.<br />
+			Vad händer om temat uppdateras med ny funktionalitet?
+		</p>
+		<p>
+			<img src="images/theme_arv.png" />
+		</p>
+		<p>
+			Genom att skapa ett eget "child theme" ärver man ner egenskaper från ett befintligt "parent theme"<br />
+			Du byter ut de delar du vill förändra, egna sidor, egen css ect.<br />
+			
+		</p>
+		<p>
+			Ett child theme skapas i en egen mapp, med egna filer
+		</p>
+	</article> 
+		
+	<!-- Child theme bild -->
+	<article>
+		BILD ÖVER CHILD THEME
+		Varje template i child theme är högre rankat än i parent
+		Detta gäller inte functions.php, Bara förändringar
+	</article>	
+		
+	<!-- How to write a child theme -->
+	<article>
+		HUR MAN SKRIVER
+		IMPORTERA CSS
+	</article>	
+	
+	<!-- DEMO child theme -->
+	<article>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+	</article>	
+	
+	<!-- Vad kan gå fel vid child themes -->
+	<article>
+		<h3>Vad kan gå fel?</h3>
+		<p>
+			Använd  get_stylesheet_directory_uri()
+			istället för get_template_directory_uri()
+		</p>
+		<pre>
+&lt;img src="&lt;php echo get_template_directory			
+		</pre>
+	</article>	
+		
+	<!-- Custom post types -->
+	<article>
+		<h1>Custom post types</h1>
+		<p>
+			Du kan skapa egna "posttyper"
+		</p>
+		BILD PÅ PRODUKTER i ADMIN
+		<p>
+			Du kan skapa egna kategorier till din posttyp
+			Userfriendly
+			Ta steget från blogg till CMS
+		</p>
+	</article>
+	
+	<!-- Custom post types - DEMO -->
+	<article>
+		<h1>Custom post types - DEMO</h1>
+		<p>
+			Att skapa en egen custom post type
+			och visa en sida med dessa
+		</p>
+	</article>
+	
+	<!-- Vad är _e() -->
+	<article>
+		<h1>Språkstöd</h1>
+		<p>
+			Överkurs
+		</p>
+	</article>
+	
+	<!-- Dölja saker i ett gränssnitt -->	
 	<article>
 		Dölja saker i admingränssnittet
+		http://sethstevenson.net/customize-the-wordpress-admin-menu-based-on-user-roles/
 	</article>
 	
+	<!-- SEO -->
 	<article>
+		<h1>SEO</h1>
+		<p>Search Engine Optimization</p>
 		SEO Wordpress
+		<ul>
+			<li>Validerad kod</li>
+			<li>Bra permalänkar, "page-slug"</li>
+			<li>Tags, keywords</li>
+			<li>Generate a sitemap</li>
+			<li>Dynamisk &lt;title></li>
+			<li>Använd rubriknivåer, h1, h2 o.s.v.</li>
+			<li>Breadcrums</li>
+			<li>Laddningstid</li>
+		</ul>
 	</article>
 	
-	<article>
-		Meta boxes
-	</article>
-	
-	
-
 	</section>
   </body>
 </html>
