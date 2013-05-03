@@ -222,13 +222,23 @@
 		<ol>
 			<li>Skapa en ny mapp i wp-content/themes</li>
 			<li>Skapa filen style.css som vanligt och lägg till raden "Template"</li>
-			BILD
-			<li>Importera 
+<pre>
+	
+</pre>
+			<li>Importera stylesheet från "parent"</li>
+			<pre>
+/* i child-themes style.css */
+@import	()			
+			</pre>
+			
 		</ol>
 	</article>	
 	
 	<!-- DEMO child theme -->
 	<article>
+		<p>
+			Att göra ett child theme...
+		</p>
 		<p class="c">
 			<img src="images/demo.png" />
 		</p>
@@ -242,7 +252,7 @@
 			istället för get_template_directory_uri()
 		</p>
 		<pre>
-&lt;img src="&lt;php echo get_template_directory			
+&lt;img src="&lt;php echo get_template_directory" />			
 		</pre>
 	</article>	
 		
@@ -252,7 +262,9 @@
 		<p>
 			Du kan skapa egna "posttyper"
 		</p>
-		BILD PÅ PRODUKTER i ADMIN
+		<p>
+			<img src="images/cutsom_type.png" />
+		</p>
 		<p>
 			Du kan skapa egna kategorier till din posttyp
 			Userfriendly
@@ -263,6 +275,10 @@
 	<!-- Custom post types - DEMO -->
 	<article>
 		<h1>Custom post types - DEMO</h1>
+		<br />
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
 		<p>
 			Att skapa en egen custom post type
 			och visa en sida med dessa
