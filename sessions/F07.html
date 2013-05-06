@@ -91,6 +91,7 @@
 			<li>Child Themes</li>
 			<li>Custom Post Type</li>
 			<li>SEO - Att tänka på vid sökmotoroptimering</li>
+			<li>Tips till projektet</li>
 		</ul>
 	</article>
 	
@@ -99,10 +100,13 @@
 		<h1>Pages</h1>
 		<ul>
 			<li>Är ämnade för "statiskt" innehåll</li>
-			<li>Skapas via admingränssnittet</li>
-			<li>En sida tilldelas en "Page template" - "Default template" = page.php</li>
-			<li>Du kan skapa en uppsättning av "Page Templates" att välja på</li>
+			<li>En sida tilldelas en "Page template" (default page.php)</li>
+			<li>Du kan skapa en uppsättning av "Page Templates" där du presenterar information</li>
 		</ul> 
+
+		<p class="c">
+			<img src="images/page_dump.png" height="50%"/>
+		</p>
 	</article>
 	
 	<!-- Page screenshot -->
@@ -129,7 +133,7 @@
 		
 	<!-- Page templates -->
 	<article>
-		<h1>Pages templates</h1>
+		<h3>Pages templates</h3>
 		<p>
 			Visa sidor har två kolumner, andra tre o.s.v.
 		</p>
@@ -139,8 +143,8 @@
 		
 		<p>
 			En page templete skapas i en egen fil<br />
-			De bör ha liknande namn ex. template-two-cols.php, template-four-cols.php o.s.v.<br />
 		</p>	
+		<br /><br />
 		<p>
 			<img src="images/page_template.png" />&nbsp;
 			<img src="images/template_select.png" style="height: 50%"/>
@@ -171,21 +175,16 @@
 		
 	<!-- När du väljer tema  -->
 	<article>
-		<h1>När du väljer ett tema</h1>
+		<h3 class="c">När du väljer ett tema</h3>
 		<ul>
-			<li>Vad tycker andra?</li>
-			<li>Licens - Vad krävs för att få använda det?</li>
 			<li>Utseende, layout</li>
-			<li>Enkelhet att modifiera? Custum headers, custom background</li>
-			<li>Kunna manipulera de delar man vill</li>
-			<li>Språkstöd?</li>
+			<li>Licens - Vad krävs för att få använda det?</li>
+			<li>Vad tycker andra?</li>
+			<li>Enkelhet att modifiera? Custum headers, custom background (sid 152-153)</li>
 			<li>Hur välstrukturerat ser det ut, filmässigt och kodmässigt</li>
 			<li>Prestanda, hur snabbt laddar det?</li>
-			<li>Valideras det? <a href="http.validator.w3.org">http.validator.w3.org</a></li>
-			<li>Testa i olika webbläsare!</li>
-			<li>Hur är stödet för mobila webbläsare?</li>
+			<li>Testa i olika webbläsare! Mobila webbläsare?</li>
 			<li>Vinner man något på att utgå från en annans tema</li>
-			<li>SEO - Hur väl anpassat för sökmotorerna?</li>
 		</ul>
 	</article> 
 	
@@ -193,23 +192,35 @@
 	<article>
 		<h1>Taktik vid befintliga teman</h1>
 		<p>
-			Ändra i det befintliga temats filer.<br />
+			Man kan såklart kopiera och ändra i det befintliga temats filer.<br />
 			Vad händer om temat uppdateras med ny funktionalitet?
 		</p>
+		<p>
+			<img src="images/little_question.png" height="70%"/>
+		</p>
+	</article> 
 	
+	<!-- Child theme -->
+	<article>
+		<h3 class="c">Att bara modifiera det man vill?</h3>
+		<p>
+			Men jag vill ju kunna ta ett färdigt tema och bara lägga på mina förändingar.
+			Detta bör ske separat från det färdiga temat...
+		</p>
 		
+		<h1 class="c">Hur gör jag?</h1>
+	
 	</article> 
 		
 	<!-- Child theme bild -->
 	<article>
-		<h1>Child Theme</h1>
-		<p>
-			<img src="images/theme_arv.png" height="60%" />
+		<h3>Child Theme</h3>
+		<p class="c">
+			<img src="images/theme_arv.png" height="70%" />
 		</p>
 		<p>
-			Genom att skapa ett eget "child theme" ärver man ner egenskaper från ett befintligt "parent theme"<br />
+			Man "ärver" ner egenskaper från ett befintligt "parent theme"<br />
 			Du byter ut de delar du vill förändra, egna sidor, egen css ect.<br />
-				Detta gäller inte functions.php, Bara förändringar
 		</p>
 		<p>
 			Ett child theme skapas i en egen mapp, med egna filer
@@ -220,15 +231,18 @@
 	<article>
 		<h1>Hur!?</h1>
 		<ol>
-			<li>Skapa en ny mapp i wp-content/themes</li>
+			<li>Ladda ner ett tema och lägg som vanligt i wp-content/themes</li>
+			<li>Skapa en ny mapp i wp-content/themes för ditt child-theme. Aktivera temat.</li>
 			<li>Skapa filen style.css som vanligt och lägg till raden "Template"</li>
 <pre>
-	
+...	
+Template: pinboard	
+...
 </pre>
-			<li>Importera stylesheet från "parent"</li>
+			<li>Importera CSS in i ditt childtheme</li>
 			<pre>
 /* i child-themes style.css */
-@import	()			
+@import url('../pinboard/style.css');		
 			</pre>
 			
 		</ol>
@@ -236,38 +250,26 @@
 	
 	<!-- DEMO child theme -->
 	<article>
-		<p>
-			Att göra ett child theme...
-		</p>
+		<h3>
+			Att skapa ett child theme...
+		</h3>
 		<p class="c">
 			<img src="images/demo.png" />
 		</p>
 	</article>	
-	
-	<!-- Vad kan gå fel vid child themes -->
-	<article>
-		<h3>Vad kan gå fel?</h3>
-		<p>
-			Använd  get_stylesheet_directory_uri()
-			istället för get_template_directory_uri()
-		</p>
-		<pre>
-&lt;img src="&lt;php echo get_template_directory" />			
-		</pre>
-	</article>	
-		
+				
 	<!-- Custom post types -->
 	<article>
-		<h1>Custom post types</h1>
+		<h3 class="c">Custom post types</h3>
 		<p>
 			Du kan skapa egna "posttyper"
 		</p>
-		<p>
+		<p class="c">
 			<img src="images/cutsom_type.png" />
 		</p>
 		<p>
-			Du kan skapa egna kategorier till din posttyp
-			Userfriendly
+			Du kan även skapa egna kategorier till din posttyp
+			<br />
 			Ta steget från blogg till CMS
 		</p>
 	</article>
@@ -280,40 +282,106 @@
 			<img src="images/demo.png" />
 		</p>
 		<p>
-			Att skapa en egen custom post type
+			Att skapa en egen custom post type i olika kategorier
 			och visa en sida med dessa
-		</p>
-	</article>
-	
-	<!-- Vad är _e() -->
-	<article>
-		<h1>Språkstöd</h1>
-		<p>
-			Överkurs
 		</p>
 	</article>
 	
 	<!-- Dölja saker i ett gränssnitt -->	
 	<article>
-		Dölja saker i admingränssnittet
-		http://sethstevenson.net/customize-the-wordpress-admin-menu-based-on-user-roles/
+		<h3 class="c">Dölja saker i admingränssnittet</h3>
+		<p>
+			För att ge en enklare bild av administrationsgränssnittet
+		</p>
+		<a href="http://sethstevenson.net/customize-the-wordpress-admin-menu-based-on-user-roles/">
+			http://sethstevenson.net/customize-the-wordpress-admin-menu-based-on-user-roles/
+		</a>
 	</article>
 	
 	<!-- SEO -->
 	<article>
-		<h1>SEO</h1>
-		<p>Search Engine Optimization</p>
-		SEO Wordpress
-		<ul>
-			<li>Validerad kod</li>
-			<li>Bra permalänkar, "page-slug"</li>
-			<li>Tags, keywords</li>
-			<li>Generate a sitemap</li>
-			<li>Dynamisk &lt;title></li>
-			<li>Använd rubriknivåer, h1, h2 o.s.v.</li>
-			<li>Breadcrums</li>
-			<li>Laddningstid</li>
+		<h3 class="c">SEO - Search Engine Optimization</h3>
+		
+		<ul class="lefty">
+			<dt>Validerad kod (http://validator.w3.org/)</dt>
+			<dd>Sökmotorer gillar bra kodade HTML-sidor</dd>
+			
+			<dt>Bra beskrivande permalänkar</dt>
+			<dd>
+				"page-slug". "remove stopwords"<br /><br />
+				<img src="images/permalink.png" width="90%" />
+			</dd>
+			
+			<dt>Kategorier, Tags (etiketter), keywords</dt>
+			<dd>Lägg lite tid på hur du kan kategorisera den</dd>	
+		
 		</ul>
+		<p class="righty"><img src="images/search.png" /></p>
+	</article>
+	
+	<article>
+		<h3  class="c">SEO - forts.</h3>
+		<dt>Dynamisk &lt;title></dt>
+		<dd>
+		<pre>&lt;title>&lt;?php bloginfo('name'); ?> &lt;?php wp_title(); ?>&lt;/title></pre>
+		</dd>
+		
+		<dt>Använd rubriknivåer, h1, h2 o.s.v.</dt>
+		<dd>
+		Det är viktigt att man tänker på hur man skriver.
+		Nyckelord tidigt i texten. 
+		</dd>
+		<dt>Laddningstid</dt>
+		<dd>
+		En snabbladdad sida är viktigt även för sökmotorer
+		</dd>	
+		
+	</article>	
+	
+	<article>
+		<h3  class="c">SEO - forts.</h3>
+		<dt>XML Sitemaps</dt>
+		<dd>
+			En XML-fil som bewskriver webbplatsen för sökmotorn.
+		</dd>
+		
+		<dt>Breadcrums</dt>
+		<dd>
+		Hjälper sökmotorn att strukturerar upp webbplatsen.
+		</dd>
+		<dt>Skapa en bra sida folk länkar till!</dt>
+		<dd>
+		Det viktigaste är en bra webbplats som folk vill länka till.
+		</dd>	
+		
+	</article>	
+	
+	<!-- Vad som kan läsas i boken -->
+	<article>
+		<h1>Självstudie</h1>
+		<p>
+			Delar som inte tagits upp på föreläsningar men som finns beskrivet i kurslitteraturen
+		</p>
+		<ul>
+			<li>Språkstöd</li>
+			<li>Custom types</li>
+			<li>Meta boxex</li>
+			<li>Social Media (kapitel 10)</li>
+		</ul>
+		</p>
+	</article>
+	
+	<!-- Vad som kan läsas i boken -->
+	<article>
+		<h1>Tips till projektet</h1>
+	
+		<ul>
+			<li>Dela upp arbetet!</li>
+			<li>Fokusera i första hand på de grundläggande funktionerna</li>
+			<li>Det finns plugin som kan ge efterfrågad funktionalitet!</li>
+			<li>"Google is your friend"</li>
+		</ul>
+		</p>
 	</article>
 	
 	</section>
