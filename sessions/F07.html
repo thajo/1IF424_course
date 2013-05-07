@@ -56,7 +56,6 @@
   </head>
   
 
-
   <body style='display: none'>
 
     <section class='slides layout-widescreen template-default'>
@@ -87,7 +86,6 @@
 		<h1>Agenda</h1>
 		<ul>
 			<li>Page, Page template</li>
-			<li>Att välja tema</li>
 			<li>Child Themes</li>
 			<li>Custom Post Type</li>
 			<li>SEO - Att tänka på vid sökmotoroptimering</li>
@@ -99,11 +97,11 @@
 	<article>
 		<h1>Pages</h1>
 		<ul>
-			<li>Är ämnade för "statiskt" innehåll</li>
-			<li>En sida tilldelas en "Page template" (default page.php)</li>
-			<li>Du kan skapa en uppsättning av "Page Templates" där du presenterar information</li>
+			<li>Är ämnade för "statiskt" innehåll (Om oss, Kontakt...)</li>
+			<li>Layouten styrs främst i page.php (se heirarkin för template files)</li>
+			<li>Vanligtvis skapar man dock en "Page Template"</li>
+			<li>Kraftfull när man bygger mer CMS-liknande applikationer</li>
 		</ul> 
-
 		<p class="c">
 			<img src="images/page_dump.png" height="50%"/>
 		</p>
@@ -113,14 +111,34 @@
 	<article class="fill">
 		<img src="images/static_pages.png" style="width: 80%"/>
 	</article>
+			
+	<!-- Page templates -->
+	<article>
+		<h3>Pages templates</h3>
+		
+		<p>
+			Genom att skapa egna <i>Page Templates</i> är du helt fri att styra utseendet på sidan.
+		</p>
+		
+		<p>
+			En page templete skapas i en egen PHP-fil i tema-mappen<br />
+		</p>
+		<p>
+			Behöver inte innehålla "The Loop"...men kan mycket väl göra det...
+		</p>	
+		<br /><br />
+		<p class="c">
+			<img src="images/page_template.png" />&nbsp;
+			<img src="images/template_select.png" style="height: 50%"/>
+		</p>
+	</article>
 	
 	<!-- Demo - Hur jag ändrar startsida -->
 	<article>
 		<h3>Att skapa statiska sidor</h3>
 		<p>
 			Skapa en statisk sida och placera i en dynamisk meny<br />
-			Använd "default template".<br />
-			Gör denna sida till startsida och placera bloggflödet i en annan sida.		
+			Gör denna sida till statisk startsida och placera bloggflödet i en annan sida.		
 		</p>
 		<p class="c">
 			<img src="images/demo.png" />
@@ -133,60 +151,32 @@
 		</p>
 	</article>
 		
-	<!-- Page templates -->
-	<article>
-		<h3>Pages templates</h3>
-		<p>
-			Visa sidor har två kolumner, andra tre o.s.v.
-		</p>
-		<p>
-			Genom att skapa egna <i>Page Templates</i> kan du tilldela olika sidor olika utseenden.
-		</p>
-		
-		<p>
-			En page templete skapas i en egen fil<br />
-		</p>	
-		<br /><br />
-		<p>
-			<img src="images/page_template.png" />&nbsp;
-			<img src="images/template_select.png" style="height: 50%"/>
-		</p>
-	</article>
-	
-	<!-- DEMO -->
-	<article>
-		<h3>Skapa två template som visar olika kategorier på olika sätt</h3>
-		<p class="c">
-			<img src="images/demo.png" />
-		</p>
-	</article>
-	
 	<!-- Att använda någon annans tema  -->
 	<article>
 		<h1>Att använda andras teman</h1>
 		<ul>
 			<li>Man lär sig genom att studera andras teman</li>
-			<li>Får design, struktur och massor av funktionallitet</li>
+			<li><i>twentyeleven, twentytwelve</i> - Teman gjorda för att studera</li>
+			<li>Får design, struktur och massor av funktionalitet</li>
 			<li>Kunna manipulera de delar man vill</li>
-			<li>Det svåra är att hitta rätt tema just för dig</li>
 		</ul>
 		<p class="c">
-			<img src="images/loop_arrow.png" height="50%" />
+			<img src="images/loop_arrow.png" height="40%" />
 		</p>
 	</article> 
 		
 	<!-- När du väljer tema  -->
 	<article>
-		<h3 class="c">När du väljer ett tema</h3>
+		<h1 class="c">När du väljer ett tema</h1>
 		<ul>
 			<li>Utseende, layout</li>
 			<li>Licens - Vad krävs för att få använda det?</li>
-			<li>Vad tycker andra?</li>
-			<li>Enkelhet att modifiera? Custum headers, custom background (sid 152-153)</li>
+			<li>Vad tycker andra om temat? Senast uppdaterat?</li>
+			<li>Enkelhet att modifiera? Custum headers, Custom background</li>
 			<li>Hur välstrukturerat ser det ut, filmässigt och kodmässigt</li>
-			<li>Prestanda, hur snabbt laddar det?</li>
+			<li>Prestanda, hur snabbt laddas sidorna?</li>
 			<li>Testa i olika webbläsare! Mobila webbläsare?</li>
-			<li>Vinner man något på att utgå från en annans tema</li>
+			<li>Vinner man något på att utgå från ett befintligt tema</li>
 		</ul>
 	</article> 
 	
@@ -200,18 +190,6 @@
 		<p>
 			<img src="images/little_question.png" height="70%"/>
 		</p>
-	</article> 
-	
-	<!-- Child theme -->
-	<article>
-		<h3 class="c">Att bara modifiera det man vill?</h3>
-		<p>
-			Men jag vill ju kunna ta ett färdigt tema och bara lägga på mina förändingar.
-			Detta bör ske separat från det färdiga temat...
-		</p>
-		
-		<h1 class="c">Hur gör jag?</h1>
-	
 	</article> 
 		
 	<!-- Child theme bild -->
@@ -231,9 +209,9 @@
 		
 	<!-- How to write a child theme -->
 	<article>
-		<h1>Hur!?</h1>
+		<h3 class="c">Hur!?</h3>
 		<ol>
-			<li>Ladda ner ett tema och lägg som vanligt i wp-content/themes</li>
+			<li>Ladda ner ett tema (pinboard) och lägg som vanligt i wp-content/themes</li>
 			<li>Skapa en ny mapp i wp-content/themes för ditt child-theme. Aktivera temat.</li>
 			<li>Skapa filen style.css som vanligt och lägg till raden "Template"</li>
 <pre>
@@ -244,8 +222,7 @@ Template: pinboard
 			<li>Importera CSS in i ditt childtheme</li>
 			<pre>
 /* i child-themes style.css */
-@import url('../pinboard/style.css');		
-			</pre>
+@import url('../pinboard/style.css');</pre>
 			
 		</ol>
 	</article>	
@@ -255,6 +232,9 @@ Template: pinboard
 		<h3>
 			Att skapa ett child theme...
 		</h3>
+		<p>
+			Använd ett färdig tema för att skapa ett child theme med några få modifieringar
+		</p>
 		<p class="c">
 			<img src="images/demo.png" />
 		</p>
@@ -278,7 +258,7 @@ Template: pinboard
 	
 	<!-- Custom post types - DEMO -->
 	<article>
-		<h1>Custom post types - DEMO</h1>
+		<h1 class="c">Custom post types</h1>
 		<br />
 		<p class="c">
 			<img src="images/demo.png" />
@@ -295,6 +275,17 @@ Template: pinboard
 		<p>
 			För att ge en enklare bild av administrationsgränssnittet
 		</p>
+		<pre>
+// I functions.php
+add_action( 'admin_menu', 'my_remove_menu_pages' );
+
+function my_remove_menu_pages() {
+   remove_menu_page('link-manager.php');
+   remove_menu_page('tools.php');	
+   remove_menu_page('users.php');	
+   remove_menu_page('media.php');
+}			
+		</pre>
 		<a href="http://sethstevenson.net/customize-the-wordpress-admin-menu-based-on-user-roles/">
 			http://sethstevenson.net/customize-the-wordpress-admin-menu-based-on-user-roles/
 		</a>
@@ -315,12 +306,13 @@ Template: pinboard
 			</dd>
 			
 			<dt>Kategorier, Tags (etiketter), keywords</dt>
-			<dd>Lägg lite tid på hur du kan kategorisera den</dd>	
+			<dd>Lägg lite tid på hur du kan strukturera, beskrivande namn</dd>	
 		
 		</ul>
 		<p class="righty"><img src="images/search.png" /></p>
 	</article>
 	
+	<!-- SEO -->
 	<article>
 		<h3  class="c">SEO - forts.</h3>
 		<dt>Dynamisk &lt;title></dt>
@@ -340,11 +332,12 @@ Template: pinboard
 		
 	</article>	
 	
+	<!-- SEO -->
 	<article>
 		<h3  class="c">SEO - forts.</h3>
 		<dt>XML Sitemaps</dt>
 		<dd>
-			En XML-fil som bewskriver webbplatsen för sökmotorn.
+			En XML-fil som bewskriver webbplatsen för sökmotorn. (http://www.seo-guide.se/xml-sitemap)
 		</dd>
 		
 		<dt>Breadcrums</dt>
@@ -365,15 +358,15 @@ Template: pinboard
 			Delar som inte tagits upp på föreläsningar men som finns beskrivet i kurslitteraturen
 		</p>
 		<ul>
-			<li>Språkstöd</li>
-			<li>Custom types</li>
-			<li>Meta boxex</li>
+			<li>Språkstöd (Kapitel 6)</li>
+			<li>Custom types (Kapitel 6)</li>
+			<li>Meta boxes (Kapitel 6)</li>
 			<li>Social Media (kapitel 10)</li>
 		</ul>
 		</p>
 	</article>
 	
-	<!-- Vad som kan läsas i boken -->
+	<!-- Tips till projektet -->
 	<article>
 		<h1>Tips till projektet</h1>
 	
@@ -381,7 +374,7 @@ Template: pinboard
 			<li>Dela upp arbetet!</li>
 			<li>Fokusera i första hand på de grundläggande funktionerna</li>
 			<li>Det finns plugin som kan ge efterfrågad funktionalitet!</li>
-			<li>"Google is your friend"</li>
+			<li>"Sök och du ska finna!"</li>
 		</ul>
 		</p>
 	</article>
