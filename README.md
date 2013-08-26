@@ -1,11 +1,11 @@
-1IF424- Web Management - En kurs i wordpressutveckling för interaktionsdesigners
+1IF424- Web Management 
 =============
 
 Kursutveckling för kursen 1IF424, Web Management, Linnéuniversitetet, Kalmar
 
 
 Om denna kurs
-=============
+-------------
 Detta är utvecklingsmaterialet för kursen Web management som går på Linnéuniveritetet VT13.
 Kursen håller just nu på att utvecklas.
 Kursen går för utbildningsprogrammet interaktionsdesigner åk 1
