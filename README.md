@@ -1,4 +1,4 @@
-1IF424- Web Management 
+1IF424- Web Management VT13
 =============
 
 Kursutveckling för kursen 1IF424, Web Management, Linnéuniversitetet, Kalmar
