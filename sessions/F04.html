@@ -81,6 +81,75 @@
 						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">Creative Commons Erkännande-IckeKommersiell-DelaLika 3.0 Unported Licens</a>.<br />
 		</p>
  	</article>
+	
+		<!-- PHP - funktioner -->
+		<article>
+				<h3>Att strukturera upp sin kod med funktioner</h3>
+				<ul>
+					<li>Uppdelning av kod i mer översiktliga delar/kodblock</li>
+					<li>Kan anropas flera gånger = mindre kod</li>
+					<li>En funktion kan ta emot parametrar för att styra koden innanför</li>
+					<li>En funktion kan returnera ett värde (integer, string, boolean...)</li>
+					<li>Inom programmering pratar man om DRY - Don´t Repeat Yourself</li>
+				</ul>
+				<p class="c">
+					<img src="images/kodblock.png" style="width: 50%"/>
+				</p>
+		</article>
+	
+		<!-- Exempel på funktioner -->
+		<article>
+			<h3>Hur skriver man en funktion</h3>
+			<pre>
+	// deklaration av funktion med parameter
+	function sayHello($name) {
+	   echo("Hello " .$name ."!");
+	}
+
+	// anrop av funktion
+	sayHello("Eva"); // "Hello Eva!" skrivs ut
+	sayHello("Nils"); // "Hello Nils!" skrivs ut
+	$first_name = "Ellen";
+	sayHello($first_name); // "Hello Ellen!" skrivs ut
+			</pre>
+		
+			<pre class="to-build">
+	function sayHello($name) {
+		$str = "Hello $name!";
+		return $str;
+	}
+	echo sayHello("Erik"); // Skriver ut "Hello Erik"
+			</pre>
+
+		</article>
+	
+	
+	
+		<!-- DEMO - Bryt ut kod i funktioner -->
+		<article>
+			<p class="c">
+				<img src="images/demo.png" />			
+			</p>
+			<p class="c">
+				Att strukturera upp sin kod.
+			</p>
+			<p class="note">
+				Visa ett exempel på dålig kod
+				Bryt ut i funktioner
+			</p>
+		</article>
+	
+		<!-- Att ha koll på efter idag -->
+		<article>
+			<h3>Vad ska vi känna till efter idag</h3>
+			<ul>
+				<li>Logiska operatorer</li>
+				<li>for-loopar, while-loop</li>
+				<li>Arrayer</li>
+				<li>Funktioner</li>
+			</ul>
+		
+		</article>
 
 	<!-- Repetition 1 -->
 	<article>

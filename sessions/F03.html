@@ -82,59 +82,11 @@
 		</p>
  	</article>
 
-	<!-- Repetition -->
-	<article>
-		<h3>Repetition</h3>
-		<ul>
-			<li>Variabel, if-satsen, Logiska uttryck, HTML forms, $_POST</li>
-		</ul>
-		<pre>
-&lt;form method="post">
-	&lt;input name="age" type="text" />
-	&lt;input name="name" type="text" />
-	&lt;input name="submit" type="submit" />
-&lt;/form></pre>
-		<pre>
-$name = $_POST["name"];
-$age = $_POST["age"];
 
-if($name != "") {
-  if($age > 18) {
-    echo "Namnet är ifyllt och åldern är äldre än 18 år";
-  }
-}</pre>
-	</article>
-	
-	<!-- Logiska operatorer -->
-	<article>
-		<h1>Logiska operatorer</h1>
-		<p>
-			När vi vill jämföra flera saker på en och samma gång
-			OCH - ELLER 
-		</p>
-		<pre>
-if($name != "") {
-  if($age > 18) {
-    echo "Du är äldre än 18 år";
-  }
-}</pre>
-		
-		
-		<pre  class="to-build">
-// Kombinera flera vilkor
-if ($name != "" &amp;&amp; $age > 18) {
-  // Namn är inte tomt och ålder är över 18
-}
-if ($name != "" || $age > 18) {
-  // Namn är inte tomt ELLER ålder är över 18
-}		</pre>	
-		
-	</article>
-	
-	<!-- Exempel - Du testar -->
-	<article>
-		<h3>Vad skrivs ut?</h3>
-		<pre>
+		<!-- Exempel - Du testar -->
+		<article>
+			<h3>Vad skrivs ut?</h3>
+			<pre>
 $has_posts = true;
 $nr_of_posts = 5;
 $show_comments = true;
@@ -151,58 +103,46 @@ if($has_posts &amp;&amp; $show_posts) {
   else {
 	echo "Show nothing";
   }
-}
-			
-		</pre>
-	</article>
-	
-	<!-- Att tänka på kring formulär -->
+}</pre>
+		</article>
+
+	<!-- Repetition -->
 	<article>
-		<h1>Att tänka på!</h1>
-		<ul>
-			<li>Variabelnamn, gärna engelska</li>
-			<li>indenterad kod, snyggt och prydligt</li>
-			<li>Funkar det inte och du inte förstår felmeddelande. Kommentera bort rad för rad.</li>
-			<li>Lita aldrig på användarens inskickade data</li>
-		</ul>
-		<p class="c">
-<img src="images/thinking_women.png" />			
+		<h3>Vi fortsätter</h3>
+		<p>
+			Problem. Vi har skrivit kod för att kolla om användaren tryckt på knappen.
+			Vi vill validera...d.v.s. kolla om användaren har skrivit något formulären.
 		</p>
-	</article>
-	
-	<!-- demo -->
-	<article>
 		<p class="c">
 			<img src="images/demo.png" />			
 		</p>
-		<p class="c">
-			Ytterligare ett formulär
-		</p>	
+		
+		
 	</article>
 	
-	<!-- Iterationer -->
-	<article class="fill">
-			<img src="images/loop.jpg" />
-			<h3>Iteration<span class="small"> - om och om och om igen</span></h3>
-			<ul>
-				<li>T.ex. skapa en tabell med 10 rader och 5 kolumner</li>
-				<li>T.ex. skriva ut alla produktnamn</li>
-				<li>T.ex. göra någonting till ett visst tillstånd uppnås</li>
-			</ul>
-			<ul>
-				<li>for-loop</li>
-				<li>while-loop</li>
-				<li>foreach-loop</li>
-			</ul>
+		<!-- Iterationer -->
+		<article class="fill">
+				<img src="images/loop.jpg" />
+				<h3>Iteration<span class="small"> - om och om och om igen</span></h3>
+				<ul>
+					<li>T.ex. skapa en tabell med 10 rader och 5 kolumner</li>
+					<li>T.ex. skriva ut alla produktnamn</li>
+					<li>T.ex. göra någonting till ett visst tillstånd uppnås</li>
+				</ul>
+				<ul>
+					<li>for-loop</li>
+					<li>while-loop</li>
+					<li>foreach-loop</li>
+				</ul>
 			
-	</article>
+		</article>
 
-	<!-- Om for-loop -->
-	<article>
-			<h1>Vanligast är for-loopen</h1>
-			<p>for-loopen har man till att upprepa kod ett visst antal gånger</p>
-			<p>Vi vill skriva ut "Hello World!" 10 ggr</p>
-			<pre>
+		<!-- Om for-loop -->
+		<article>
+				<h1>Vanligast är for-loopen</h1>
+				<p>for-loopen har man till att upprepa kod ett visst antal gånger</p>
+				<p>Vi vill skriva ut "Hello World!" 10 ggr</p>
+				<pre>
 // for-loop
 // loopen körs lika många gånger
 // 1. Vi skapar en variabel $i och sätter den till 0
@@ -212,47 +152,88 @@ if($has_posts &amp;&amp; $show_posts) {
 
 for($i = 0; $i &lt; 3; $i++) {
   echo("Hello World!");
-}
-			</pre>
-	</article>
+}</pre>
+		</article>
 
-	<!-- While-loop -->
-	<article>
-			<h1>while-loop</h1>
-			<p>
-				while-loopen är en enklare variant av loop.
-				Du kommer stöta på den när vi börjar jobba med wordpress
-			</p>
-			<p>
-				Så länge något är sant görs koden innanför while-loopen
-			</p>
-			<pre>
+		<!-- While-loop -->
+		<article>
+				<h1>while-loop</h1>
+				<p>
+					while-loopen är en enklare variant av loop.
+					Du kommer stöta på den när vi börjar jobba med wordpress
+				</p>
+				<p>
+					Så länge något är sant görs koden innanför while-loopen
+				</p>
+				<pre>
 $counter = 5;
 while($counter > 0) {
   echo $counter;
   $counter = $counter - 1;
-}
-			</pre>
-	</article>
+}</pre>
+
+				<pre>
+$counter = 5;
+while($counter > 0) {
+  echo $counter;
+  $counter--;
+}</pre>
+		</article>
 	
-	<!-- wordpress - whilelopp -->
+		<!-- Repetition -->
+		<article>
+			<h3>DEMO</h3>
+		
+			<h3>Olika typer av loopar</h3>
+			<p>
+				Skapa en varaibel som ges ett numeriskt värde.
+				Skriv ut "Hello world" lika många gånger
+    
+				Gör samma sak med en whileloop
+			</p>
+			<p class="c">
+				<img src="images/demo.png" />			
+			</p>
+		
+		
+		</article>
+	
+	
+		<!-- wordpress - whilelopp -->
+		<article>
+			<h3>Exempel på whilelopp i wordpress</h3>
+			<p>Som ser lite annorlunda ut</p>
+			<p class="c">
+				<img src="images/get_bloggs.png" />
+			</p>
+		</article>
+	
+	
+	<!-- Repetition -->
 	<article>
-		<h3>Exempel på whilelopp i wordpress</h3>
-		<p>Som ser lite annorlunda ut</p>
+		<h3>DEMO</h3>
+	
+		<h3>Olika sätt att skriva samma kod!</h3>
 		<p class="c">
-			<img src="images/get_bloggs.png" />
+			<img src="images/demo.png" />			
 		</p>
+	
+	
 	</article>
+		
+	
+	
 	
 	<!-- Att spara en lottorad -->
 	<article>
-		<h3>Att spara en kenorad</h3>
+		<h3>Att spara en keno-rad</h3>
 		<pre>
 $nr1 = 4;
 $nr2 = 14;
 $nr3 = 3;
 $nr4 = 44;
-...			
+...	
+$nr20 = 54		
 		</pre>
 		
 		<p>
@@ -283,15 +264,16 @@ $arr = array("Hej", 12, 176, True, "Lisa", 87, 148);</pre>
 				<li>Arrayer är listor</li> 
 				<li>Oftast vet man inte hur många element (värden) listan har<li>
 				<li>Antal blogposter, antal kommentarer e.c.t.</li>
+				<li>Antalsökresultat</li>
 			</ul>
 			<p class="c">
-				<img src="images/array_lab2.png" style="height: 55%"/>
+				<img src="images/array_lab2.png" style="height: 300px"/>
 			</p>
 	</article>
 
 	<!-- PHP - arrayer SKAPA -->
 	<article>
-			<h3>Array - i PHP</h3>
+			<h3>Array - skapa en array i PHP</h3>
 			<pre>
 $array = array(); // skapa en tom array
 $array[0] = 13;
@@ -301,8 +283,8 @@ $array[2] = "Hejsan";</pre>
 				<img src="images/little_Arr.png" style="margin: 0px;"/>
 			</p>
 			<pre  style="margin: 4px;"/>
-echo($array[2]);
-echo($array[3]); // ???</pre>
+echo $array[2];
+echo $array[3]; // ???</pre>
 			<img class="to-build" src="images/error_mess_offset.png" />
 	</article>
 
@@ -386,15 +368,16 @@ foreach($array as $current_value) {
 				Key and value
 			</p>
 	<pre class="lefty">
-$info = array(
-  "name" => "Stina",
-  "nickname" => "stina_76",
-  "age" => 37
-);
+$info = array();
+$info["name"] = "Stina";
+$info["nickname"] = "stina_76";
+$info["age"] = 37;
+
+
 echo $info["age"]; // skriver ut 37</pre>
 		<p class="c rightly">
 			<br />
-			<img src="images/ass_array.png" style="height: 25%" />
+			<img src="images/ass_array.png" style="height: 200px" />
 		</p>
 
 	<pre style="clear: both;" class="to-build">
@@ -403,74 +386,7 @@ echo $_POST["name"];</pre>
 	</article>
 
 	
-	<!-- PHP - funktioner -->
-	<article>
-			<h3>Att strukturera upp sin kod med funktioner</h3>
-			<ul>
-				<li>Uppdelning av kod i mer översiktliga delar/kodblock</li>
-				<li>Kan anropas flera gånger = mindre kod</li>
-				<li>En funktion kan ta emot parametrar för att styra koden innanför</li>
-				<li>En funktion kan returnera ett värde (integer, string, boolean...)</li>
-				<li>Inom programmering pratar man om DRY - Don´t Repeat Yourself</li>
-			</ul>
-			<p class="c">
-				<img src="images/kodblock.png" style="width: 50%"/>
-			</p>
-	</article>
 	
-	<!-- Exempel på funktioner -->
-	<article>
-		<h3>Hur skriver man en funktion</h3>
-		<pre>
-// deklaration av funktion med parameter
-function sayHello($name) {
-   echo("Hello " .$name ."!");
-}
-
-// anrop av funktion
-sayHello("Eva"); // "Hello Eva!" skrivs ut
-sayHello("Nils"); // "Hello Nils!" skrivs ut
-$first_name = "Ellen";
-sayHello($first_name); // "Hello Ellen!" skrivs ut
-		</pre>
-		
-		<pre class="to-build">
-function sayHello($name) {
-	$str = "Hello $name!";
-	return $str;
-}
-echo sayHello("Erik"); // Skriver ut "Hello Erik"
-		</pre>
-
-	</article>
-	
-	
-	
-	<!-- DEMO - Bryt ut kod i funktioner -->
-	<article>
-		<p class="c">
-			<img src="images/demo.png" />			
-		</p>
-		<p class="c">
-			Att strukturera upp sin kod.
-		</p>
-		<p class="note">
-			Visa ett exempel på dålig kod
-			Bryt ut i funktioner
-		</p>
-	</article>
-	
-	<!-- Att ha koll på efter idag -->
-	<article>
-		<h3>Vad ska vi känna till efter idag</h3>
-		<ul>
-			<li>Logiska operatorer</li>
-			<li>for-loopar, while-loop</li>
-			<li>Arrayer</li>
-			<li>Funktioner</li>
-		</ul>
-		
-	</article>
 	
 	<!-- Slut för idag -->
 	<article>

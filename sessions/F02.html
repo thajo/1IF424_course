@@ -19,13 +19,13 @@
     <title>Föreläsning 2 - 1K424</title>
      <meta charset="utf-8" />
      <meta name="apple-mobile-web-app-capable" content="yes" />
-     <meta name="description" content="Föreläsning 1 i kursen webbramverk, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
+     
      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <script src='slides.js' media="screen"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src='slides.js'> </script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
 	<style media="print">
 	         @page {
 	            size: A4 landscape;
@@ -44,7 +44,7 @@
 				iframe {
 					display: none;
 				}
-				article img {
+				article img.no-print {
 					display: none;
 				}
 	          body {
@@ -64,7 +64,7 @@
        	<h1>
           Web Management, 1IK424
           <br />
-          <span class="small">Linnéuniversitetet, VT2013</span>
+          <span class="small">Linnéuniversitetet, VT2014</span>
         </h1>
        
 		
@@ -80,59 +80,87 @@
 		</p>
  	</article>
 
-	<!-- Kursens webbplats -->
-	<article class="fill">
-		<iframe src="https://coursepress.lnu.se/kurs/web-management"></iframe>
-	</article>
+	
 
 	<!-- Repetition -->
 	<article>
-		<h3>Repetition</h3>
+		<h3>PHP är ett serverscriptspråk</h3>
+		
 		<p>
-			PHP är ett serverscriptspråk
-		</p>
-		<p>
-				<img src="images/dynamic_request.png" class="bi"/>
+				<img src="images/dynamic_request.png" class="bi" alt=""/>
 		</p>
 	</article>
 	
 	<!-- Vad du bör ha koll på efter denna föreläsning -->
 	<article>
-		<h3>Vad du ska kunna efter denna förläsning</h3>
+		<h3>Denna föreläsning</h3>
 		<ul>
 			<li>Förstå och använda variabler i PHP</li>
-			<li>Skriva ett formulär i HTML samt ta emot data användaren "postar" via ditt PHP-skript</li>
-			<li>Programmera med if-sats i PHP</li>
+			<li>Kunna skriva ett formulär i HTML samt ta emot den data användaren "postar" i ditt PHP-skript</li>
+			<li>Programmera med if-sats i PHP med hjälp av logiska uttryck</li>
 			<li>Använda for-loopar i PHP</li>
 		</ul>
 		<p class="c">
-			
-			<img src="images/study.png" class="bi2" />
+			<img src="images/study.png" alt="" class="bi2 no-print" height="300" />
 		</p>
 	</article>
+	
+	<article>
+		
+		<h3>Vad är programmering?</h3>
+		
+		<ul>
+				<li>Att programmera är att <strong>tillverka ett recept</strong> som datorn ska följa</li>
+				<li>Ett program innehåller koder som datorn kan	förstå</li>
+				<li>Koderna innehåller <strong>instruktioner som datorn kan utföra</strong> och data(information) som 
+					datorn kan använda när den utför sina instruktioner.</li>
+			
+				<li>Genom att kunna programmera kan vi få datorn att göra det vi vill</li>
+			</ul>
+	</article>
+		
+	<!-- Grundläggande begrepp -->
+	<article>
+				<h3>12 grundläggande begrepp</h3>
+				<ul style="font-size: 0.9em">
+					<li>Variabel (Variable)</li>
+					<li>Tilldelning (Assignment)</li>
+					<li>Värde (Value)</li>
+					<li>Datatyp (Data Type)</li>
+					<li>Uttryck (Statement)</li>
+					<li>Alternativ/Selektioner - (Conditional statements)</li>
+					<li>Operatorer (Operators)</li>
+					<li>Logiska uttryck (Logical operators)</li>
+					<li>Repetitioner - (Loopar/Loops)</li>
+					<li>Array (Array)</li>
+					<li>Funktion (Function)</li>
+					<li>Parameter (Parameter)</li>
+				</ul>
+		
+			</article>
+	
 	
 	<!-- PHP - Variabel-->
 	<article>
 		<h3>
 			Vad är en variabel?
 		</h3>
-		<p>
+	
 			<ul>
 				<li>En variabel ses som en namngiven behållare för ett sparat värde</li>
 				<li>Variablerna	ges	unika namn så att man kan referera till dem senare i sin kod</li>	
-				<li>Ett variabelnamn är "casesensitive" d.v.s. message != Message</li>
+				<li>Ett variabelnamn är "casesensitive" d.v.s. "message" är inte samma ska som "Message"</li>
 			</ul>
-		</p>
 		<pre>
 // Variabel i javascript
-var age = 10;</pre>
+var tal = 10;</pre>
 		<pre class="lefty">
 // Variabel i PHP
-$age = 10;
-$age = $age + 10;
-echo($age); // Vad kommer skrivas ut?</pre>
+$tal = 10;
+$tal = $tal + 10;
+echo($tal); // Vad kommer skrivas ut?</pre>
 	
-	<img src="images/variable.png" class="righty biii" />	
+	<img src="images/variable.png" alt="" class="righty biii" />	
 	</article>
 	
 	<!-- PHP - Vad gör koden? -->
@@ -142,17 +170,17 @@ echo($age); // Vad kommer skrivas ut?</pre>
 		</h3>
 		<pre>
 // Variabel i PHP
-$tal_x = 10;
-$tal_y = $tal_x;
-$tal_z = 100;
+$talX = 10;
+$talY = $talX;
+$talZ = 100;
 
 
-$resultat = ($tal_x * $tal_y) - $tal_z;
+$resultat = ($talX * $talY) - $talZ;
 // Vilket är värdet i variablen $resultat när den skrivs ut?
 echo($resultat);
 		</pre>
 		<p class="c">
-			<img src="images/thinking_women.png" class="biii" />
+			<img src="images/thinking_women.png" class="biii no-print" />
 		</p>
 	</article>
 
@@ -163,23 +191,23 @@ echo($resultat);
 		</h3>
 		<p>
 
-			En variabel kan vara av olika <strong>datatyper</strong><br />
+			En variabel kan vara av en speciell <strong>datatyp</strong><br />
 			vilket innebär att man behandla dem på olika sätt.
-			
+		</p>	
 			<ul>
 				<li><strong>integer</strong> - heltal (1, 14, 23)</li>
 				<li><strong>double</strong> - decimaltal (1.5, 132.24323)</li>
 				<li><strong>string</strong> - text / tecken ("What ever text" , 'More text')</li>
-				<li><strong>boolean</strong> - sant eller falskt, true eller false, 1 eller 0 ($is_ready = TRUE;)</li>
+				<li><strong>boolean</strong> - sant eller falskt, true eller false, 1 eller 0 ($isReady = TRUE;)</li>
 				<li><strong>array</strong> - en lista med variabler ([1, 23, 4, 2, 32, "hej", TRUE])</li>
 				<li>...finns fler</li>
 			</ul>
 			<pre class="to-build">
-$best_football_team = "Tottenham Hotspur FC"; // variablen har datatypen string
-$numberOfPlayers = 11;	// variablen har datatypen integer
-$is_good = TRUE; // variablen är en boolean	</pre>
+$userMessage = "Ditt meddelande sparades"; // variablen har datatypen string
+$totalNumberOfMessages = 7;	// variablen har datatypen integer
+$isSaved = TRUE; // variablen är en boolean	</pre>
 				
-		</p>
+		
 	</article>
 	
 	<!-- string -->
@@ -191,16 +219,16 @@ $is_good = TRUE; // variablen är en boolean	</pre>
 		</p>
 		<pre>
 // textsträngar
-$sport = "fotboll";
-$team = "Tottenham Hotspur Football Club";
+$name = "Lisa";
 
-// I php använder man punkttecken för att slå ihop strängar
-$complete_message = $team ." är bra på " .$sport;
-echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll</pre>
+// I php använder man punkttecken för att enkelt slå ihop strängar
+$completeMessage = "Hej " .$name;
+echo($completeMessage); // Skriver ut: Hej Lisa</pre>
 		<pre class="to-build">
-// ett alternativt sätt			
-$complete_message = "$team är bra på $sport";
-echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll</pre>
+// ett alternativt sätt	
+$name = "Lisa";		
+$completeMessage = "Hej $name!";
+echo($completeMessage); // Skriver ut: Hej Lisa!</pre>
 	</article>
 		
 	<!-- Variabler exempel -->
@@ -209,8 +237,8 @@ echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll</
 		
 		<p>
 			<strong>Problem:</strong>
-			Gör ett PHP-script som med hjälp av variabler beräknar
-			pris på ett antal varor, både med och utan moms.
+			Gör ett PHP-script som med hjälp av variabler beräknar moms på ett pris och
+			presenterar detta.
 		</p>
 		<br />
 		<p class="c">
@@ -225,15 +253,15 @@ echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll</
 			<h3>
 				HTML-formulär
 			</h3>
-			<p>För att användaren ska kunna skicka in data till vår applikation behöver vi skapa HTML-formulär</p>
+			<p>För att användaren ska kunna skicka data till vår PHP-kod behöver vi skapa HTML-formulär</p>
 			<p>
-				<img src="images/form_html2.png" />
+				<img src="images/form_html2.png" height="150"/>
 			</p>
 			<p>
-				<img src="images/form_login.png"/>
+				<img src="images/form_login.png" height="150"/>
 			</p>
-			<p>
-				Hur man bygger html-formulär:<br />
+			<p class="small">
+				Hur man bygger html-formulär:
 			<a href="http://www.html-form-guide.com/html-form/html-form-input.html">
 				http://www.html-form-guide.com/html-form/html-form-input.html
 			</a>
@@ -241,12 +269,20 @@ echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll</
 
 	</article>
 	
+	<!-- Hur funkar det? -->
 	<article>
-			<h3>
+		<img src="images/form_req1.png" height="310"><br />
+		<hr />
+		<img src="images/form_req2.png" height="310">
+	</article>
+	
+	<article>
+			<h1>
 				$_POST
-			</h3>
+			</h1>
 			<p>
-				I PHP finns fördefinierade variabler som innehåller data som användaren skickar med
+				I PHP kan man enkelt komma åt data som skickas via ett formulär
+				via $_POST-variablen
 			</p>
 			<p>
 				<img src="images/form_login.png"/>
@@ -256,16 +292,16 @@ echo($complete_message); // Skriver ut: Tottenhamn Hotspur är bra på fotboll</
 			</p>
 			
 			<pre>
-$pris = $_POST["pris"];
-$antal_varor = $_POST["antal_varor"];</pre>
+$price = $_POST["price"];
+$moms = $_POST["moms"];</pre>
 	</article>
 
 	<!-- PHP - Formulär DEMO-->
 	<article>
 		<h1>DEMO</h1>
 		<p>
-			- Skapa ett HTML-formulär<br />
-			- Använd PHP för att skriva ut det användaren matar in<br />
+			- Bygg vidare på momsberäkningsapplikationen<br />
+			- Använd PHP för att beräkna på de värden användaren matar in genom att använda $_POST<br />
 		</p>
 		<br />
 		<p class="c">
@@ -281,10 +317,20 @@ $antal_varor = $_POST["antal_varor"];</pre>
 		</p>
 	</article>
 	
+	<!-- men hur - validering -->
+	<article>
+		<h1>Men OM...</h1>
+		<ul>
+			<li>...vi har ett formulär och bara vill göra något när användaren tryckt på knappen</li>
+			<li>...vi vill ha någon form av validering på det användaren skriver i formuläret</li>
+			<li>...vi vill vara säkra på att det användaren är av en speciell datatyp eller inom ett speciellt intervall</li>
+		</ul>
+	</article>
+	
 	
 	<!-- PHP - selection -->
 	<article>
-		<h1>Selektioner - PHP</h1>
+		<h1>Selektioner (if-satser) i PHP</h1>
 		<p>
 			När du behöver göra ett vägtal i din kod...
 		</p>
@@ -297,19 +343,19 @@ $antal_varor = $_POST["antal_varor"];</pre>
 			<li>OM det inte finns några bloggposter ska vi...</li>
 			<li>OM vi ska visa kommentarer till varje bloggpost...</li>
 		</ul>
-		<img src="images/traffic.png" class="righty biii" />
+		<img src="images/traffic.png" class="righty biii no-print" />
 	</article>
 	
 	<!-- IF-sats -->
 	<article>
-		<h1>IF-sats</h1>
+		<h1>if-sats</h1>
 		<p>
-			if-sats används för att kontrollera om något är sant eller falskt
+			if-sats används för att kontrollera <strong>om något är sant eller falskt</strong>
 		</p>
 		<pre>
 $price = 10;
 			
-if($price < 10) {
+if($price &lt; 10) {
   echo("Priset är mindre än tio");		
 }
 
@@ -335,7 +381,7 @@ if($price == 10) {
 		<pre>
 $tal = 50 + 50;
 
-if($tal < 100) {
+if($tal &lt; 100) {
   echo("Talet är mindre än 100");
 }
 else {
@@ -352,7 +398,7 @@ else {
 			detta är sant – gör detta, annars gör detta!”
 		</p>
 		<pre>
-$tal = 50 - 40;
+$tal = 60 - 40;
 
 if($tal > 100) {
   echo("Talet är större än 100");
@@ -364,6 +410,12 @@ else {
   echo("talet är varken större eller mindre än 100");
 }			
 		</pre>
+		<p class="small">
+			Mer information:
+			<a href="http://www.php.net/manual/en/control-structures.elseif.php">
+				http://www.php.net/manual/en/control-structures.elseif.php
+			</a>
+		</p>
 	</article>
 
 	<!-- Logiska uttryck -->
@@ -374,68 +426,60 @@ else {
 		</p>
 			<pre>
 if($tal == 10) {
-  // code goes here
+  // om talet är lika med 10 gör vi koden som står här
 }			
 
 if($tal &lt;= 10) {
-  // Code goes here	
+   // om talet är mindre än/lika med 10 gör vi koden som står här
 }		</pre>
 	</article>
 	
 	<!-- Demo - Logiska uttryck - gissa -->
 	<article>
-		<h1>Du gissar</h1>
+		<h3>Du gissar</h3>
+		<p>Vad kommer skrivas ut?</p>
 		<pre>
 $tal1 = 15;
 $tal2 = 15
 $tal3 = 10;
 
 if($tal1 &lt;= $tal2) {
-  echo("Första vilkoret stämmer");
-  if($tal2 != $tal3) {
-	echo("Andra vilkoret stämmer");
+  echo "Första vilkoret stämmer";
+  if($tal2 == $tal3) {
+    echo("Andra vilkoret stämmer");
+    if($tal1 > $tal2) {
+       echo "Tredje vilkoret stämmer";
+    }
+  }
+  else {
+     echo "Vi hamnade i else-satsen"
   }	
 }		</pre>
 	</article>
 	
-	<!-- if-sats med POST -->
-	<article>
-		<h1>$_POST och IF</h1>
-		<pre>
 
-$name = $_POST["users_name"];			
-if($name != "") {
-  // Användaren har skrivit något i formulärfältet "users_name"
-}			
-else {
- // Formuläret är tomt 
-  echo "Du måste fylla i ditt användarnamn";
-}
-		</pre>
-	</article>
-
-	<!-- Logiska operatorer -->
-	<article>
-		<h1>Logiska operatorer</h1>
-		<p>
-			När vi vill jämföra flera saker på en och samma gång 
-		</p>
-		<pre>
+		<!-- Logiska operatorer -->
+		<article>
+			<h3>Logiska operatorer</h3>
+			<p>
+				När vi vill jämföra flera saker på en och samma gång <br />
+				<strong>&amp;&amp;</strong> = Logiskt OK<br />
+				<strong>||</strong> = Logiskt ELLER<br />
+			</p>
+			<pre>
+$tal1 = 10;
+$tal2 = 100;
+$tal3 = 1000;			
+			
 // Kombinera flera vilkor
-if ($tal > $tal2 &amp;&amp; $tal &lt; $tal3) {
-  // code here
+if ($tal1 &lt; $tal2 &amp;&amp; $tal1 > $tal3) {
+   echo "Meddelande 1";
 }
-if ($tal > $tal2 || $tal  &lt; $tal3) {
-  // code here
-}		</pre>	
-		
-		<pre>
-if ($tal > $tal2) {
-  if($tal &lt; $tal3) {
-    // code here
-  }
-}</pre>
-	</article>
+if ($tal1 &lt; $tal2 || $tal1 > $tal3) {
+   echo "Meddelande 2";
+}</pre>	
+
+		</article>
 	
 	<!-- PHP - selectioner DEMO-->
 	<article>
@@ -463,11 +507,11 @@ if ($tal > $tal2) {
 	
 	<!-- Iterationer -->
 	<article class="fill">
-			<img src="images/loop.jpg" />
+			<img src="images/loop.jpg" class="no-print" />
 			<h3>Iteration<span class="small"> - om och om och om igen</span></h3>
 			<ul>
-				<li>T.ex. skapa en tabell med 10 rader och 5 kolumner</li>
-				<li>T.ex. skriva ut alla produktnamn</li>
+				<li>T.ex. skriva ut alla blogginlägg </li>
+				<li>T.ex. skapa en lista med 10 rader</li>
 				<li>T.ex. göra någonting till ett visst tillstånd uppnås</li>
 			</ul>
 			<ul>
@@ -491,7 +535,7 @@ if ($tal > $tal2) {
 // 3. För varje gång loopen går öka $i med 1
 
 
-for($i = 0; $i < 3; $i++) {
+for($i = 0; $i &lt; 3; $i++) {
   echo("Hello World!");
 }
 			</pre>
@@ -501,7 +545,8 @@ for($i = 0; $i < 3; $i++) {
 	<article>
 			<h1>DEMO</h1>
 			<p>
-				Ett enkelt exempel på for-loop
+				Ett enkelt exempel på for-loop som skriver ut 
+				ett meddelande i en lista
 			</p>
 			<br />
 		<p class="c">
@@ -510,38 +555,27 @@ for($i = 0; $i < 3; $i++) {
 		
 	</article>
 
-	<!-- While-loop -->
-	<article>
-			<h1>while-loop</h1>
-			<p>
-				while-loopen är en enklare variant av loop.
-				Du kommer stöta på den när vi börjar jobba med wordpress
-			</p>
-			<p>
-				Så länge något är sant görs koden innanför while-loopen
-			</p>
-			<pre>
-$counter = 5;
-while($counter > 0) {
-  echo $counter;
-  $counter = $counter - 1;
-}
-			</pre>
-	</article>
+	
 	
 	<!-- Vad du bör ha koll på efter denna föreläsning -->
 	<article>
-		<h3>Vad du ska kunna efter denna förläsning</h3>
+		<h3>Självstudier</h3>
 		<ul>
 			<li>Använda variabler i PHP</li>
-			<li>Skriva ett formulär i HTML samt ta emot det användaren skriver i ditt PHP-skript</li>
+			<li>Använda dig av HTML-formulär och ta hand om den data som användaren där skriver</li>
 			<li>Programmera med selektionssatser i PHP</li>
 			<li>Använda for-loopar i PHP</li>
 		</ul>
 		<p class="c">
 			
-			<img src="images/study.png" class="bi2" />
+			<img src="images/study.png" class="no-print" height="150"/>
 		</p>
+		<p>
+			
+			- Åtminstone första tre delarna i <a href="http://www.codecademy.com/tracks/php">http://www.codecademy.com/tracks/php</a><br />
+			- Kapitel 1- 3 + 6 i "learning PHP 5" (gör övningarna)
+		</p>
+			
 	</article>
 		
 
@@ -551,4 +585,3 @@ while($counter > 0) {
   </body>
 </html>
 	
-
