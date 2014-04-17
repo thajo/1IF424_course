@@ -88,16 +88,16 @@
 			<h3>Vad skrivs ut?</h3>
 			<pre>
 $has_posts = true;
-$nr_of_posts = 5;
-$show_comments = true;
+$nr_of_posts = 15;
+$show_comments = false;
 $is_single = true;
 $show_posts = true;
 
 if($has_posts &amp;&amp; $show_posts) {
-  if($is_single &amp;&amp; !$show_comments) {
+  if($is_single &amp;&amp; $show_comments) {
 	echo "Show information in single page";   
   }
-  elseif($nr_of_posts > 10 || $show_comments) {	
+  elseif($show_comments || $nr_of_posts > 10) {	
 	echo "Showing information in many pages";
   }
   else {
@@ -122,12 +122,13 @@ if($has_posts &amp;&amp; $show_posts) {
 	
 		<!-- Iterationer -->
 		<article class="fill">
-				<img src="images/loop.jpg" />
-				<h3>Iteration<span class="small"> - om och om och om igen</span></h3>
+				<img src="images/loop.jpg" class="no-print" />
+				<h3>Repetition<span class="small"> - om och om och om igen</span></h3>
 				<ul>
-					<li>T.ex. skapa en tabell med 10 rader och 5 kolumner</li>
-					<li>T.ex. skriva ut alla produktnamn</li>
-					<li>T.ex. göra någonting till ett visst tillstånd uppnås</li>
+					<li>Ett antal upprepningar - Förbestämt eller dynamiskt satt</li>
+					<li>Skriv ut de senaste 10 resultaten</li>
+					<li>Skriv ut alla blogginlägg</li>
+					<li>göra någonting till ett visst tillstånd uppnås</li>
 				</ul>
 				<ul>
 					<li>for-loop</li>
@@ -144,11 +145,10 @@ if($has_posts &amp;&amp; $show_posts) {
 				<p>Vi vill skriva ut "Hello World!" 10 ggr</p>
 				<pre>
 // for-loop
-// loopen körs lika många gånger
+// 
 // 1. Vi skapar en variabel $i och sätter den till 0
 // 2. Vi skapar ett vilkor (så läng $i är mindre än 3)
 // 3. För varje gång loopen går öka $i med 1
-
 
 for($i = 0; $i &lt; 3; $i++) {
   echo("Hello World!");
@@ -171,13 +171,6 @@ while($counter > 0) {
   echo $counter;
   $counter = $counter - 1;
 }</pre>
-
-				<pre>
-$counter = 5;
-while($counter > 0) {
-  echo $counter;
-  $counter--;
-}</pre>
 		</article>
 	
 		<!-- Repetition -->
@@ -188,8 +181,13 @@ while($counter > 0) {
 			<p>
 				Skapa en varaibel som ges ett numeriskt värde.
 				Skriv ut "Hello world" lika många gånger
-    
+    		</p>
+			<p>	
 				Gör samma sak med en whileloop
+			</p>
+			<p>
+				Skapa en tabell med konvertering mellan fahrenheit och celsius
+				med hjälp av en loop
 			</p>
 			<p class="c">
 				<img src="images/demo.png" />			
@@ -201,7 +199,7 @@ while($counter > 0) {
 	
 		<!-- wordpress - whilelopp -->
 		<article>
-			<h3>Exempel på whilelopp i wordpress</h3>
+			<h3>Exempel på while-loop i wordpress</h3>
 			<p>Som ser lite annorlunda ut</p>
 			<p class="c">
 				<img src="images/get_bloggs.png" />
@@ -209,18 +207,6 @@ while($counter > 0) {
 		</article>
 	
 	
-	<!-- Repetition -->
-	<article>
-		<h3>DEMO</h3>
-	
-		<h3>Olika sätt att skriva samma kod!</h3>
-		<p class="c">
-			<img src="images/demo.png" />			
-		</p>
-	
-	
-	</article>
-		
 	
 	
 	
@@ -250,6 +236,7 @@ $nr20 = 54
 			</ul>
 			
 			<pre>
+$lottoRad = array(6, 7, 11, 17, 26, 27, 35);
 $arr = array("Hej", 12, 176, True, "Lisa", 87, 148);</pre>
 			<p class="c to-build">
 				<img src="images/array.png" />
@@ -264,7 +251,7 @@ $arr = array("Hej", 12, 176, True, "Lisa", 87, 148);</pre>
 				<li>Arrayer är listor</li> 
 				<li>Oftast vet man inte hur många element (värden) listan har<li>
 				<li>Antal blogposter, antal kommentarer e.c.t.</li>
-				<li>Antalsökresultat</li>
+				<li>Antal sökresultat</li>
 			</ul>
 			<p class="c">
 				<img src="images/array_lab2.png" style="height: 300px"/>
@@ -318,12 +305,12 @@ echo $array[2] ."&lt;br />"; // o.s.v.
 $array = array(1, 4, 23, 43, 23, 78);
 
 // Hur många element/lådor finns det i arrayen
-$nr_of_elements = count($array);
+$nrOfElements = count($array);
 
 // loopen körs lika många gånger
-for($i = 0; $i &lt; $nr_of_elements; $i++) {
-  $current_value = $array[$i];
-  echo($current_value ."&lt;br />");
+for($i = 0; $i &lt; $nrOfElements; $i++) {
+  $currentValue = $array[$i];
+  echo($currentValue ."&lt;br />");
 }
 			</pre>		
 	</article>
@@ -390,9 +377,14 @@ echo $_POST["name"];</pre>
 	
 	<!-- Slut för idag -->
 	<article>
-		<h1>Slut för idag</h1>
-		<p class="c">
-			<img src="images/slut.jpg" />
+		<h1>Slut för idag - Självstudier</h1>
+		<ul>
+			<li><a href="http://www.codecademy.com/tracks/php">http://www.codecademy.com/tracks/php</a>, avdelning 4-6</li>
+			<li>I boken "Learning PHP5", Kap 3 och 4</li>
+		</ul>
+		
+		<p>
+			Nästa gång...avancerade arrayer, funktioner... 	
 		</p>
 	</article>
 	</section>
