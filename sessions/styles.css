@@ -116,8 +116,8 @@ font-family: 'Open Sans', sans-serif;
 }
 
 .slides.template-default > article:not(.nobackground) {
-  background: 	url(images/colorbar.png) 0 200px repeat-x,
-	           	url(images/logo.png) -200px 650px  no-repeat;  
+ /* background: 	url(images/colorbar.png) 0 200px repeat-x,
+	           	url(images/logo.png) -200px 650px  no-repeat;  */
 
   background-size: 230px, 230px;		
   background-color: white;  
@@ -801,6 +801,22 @@ article.fill ul {
 background: rgba(255, 255, 255, .95);
 padding: 40px;
 color: black;
+}
+
+article p.cc, article.fill p.cc {
+  position: absolute;
+  right: 20px;
+  top: 642px;
+  
+  
+  font-size: 12px;
+  letter-spacing: 0;  
+  line-height: 14px;
+}
+
+.reference {
+  font-size: 17px;
+  color: red;
 }
 
 
