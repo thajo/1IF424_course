@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+
+<head>
+    <title>Föreläsning 4 - 1IF424</title>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src='slides.js' media="screen"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style media="print">
+	         @page {
+	            size: A4 landscape;
+	             @top-right {
+	                content: "Page " counter(page);
+	             }
+	         }
+	          article {
+	            page-break-after: always;
+	            margin: auto;
+	          }
+	          article.next, article.past {
+	            display: block;    
+	          }
+	
+				iframe {
+					display: none;
+				}
+				article img {
+					display: none;
+				}
+	          body {
+	              display: block !important;
+	              font-family: 'Open Sans', Arial, sans-serif;
+	              font-size: 1.5em;
+	          }
+	</style>
+</head>
+  
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-default'>
+      
+	<!-- Första sidan -->
+    <article>
+       	<h1>
+          Web Management, 1IK424
+          <br />
+          <span class="small">Linnéuniversitetet, VT2014</span>
+        </h1>
+       
+		
+		<br /><br />
+		<h1 class="c">Öppna data &amp; Mashup</h1>
+	
+		
+		<p class="small_footer">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
+					<img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>&nbsp;&nbsp;Detta verk är licensierat under en 
+					
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">Creative Commons Erkännande-IckeKommersiell-DelaLika 3.0 Unported Licens</a>.<br />
+		</p>
+ 	</article>
+	
+	<!-- Introduktion -->
+	<article class="fill">
+		<img src="https://farm8.staticflickr.com/7032/6498619601_53486a46be_b.jpg" />
+		<ul>
+			<li>Vad är öppna data?</li>
+			<li>Vad är öppen offentlig data?</li>
+			<li>Varför öppna data?</li>
+			<li>Exempel på öppna data</li>
+			<li>Vad är mashups?</li>
+			<li>Vad är öppna API:er?</li>
+			<li>Exempel på mashup-applikationer</li>
+			
+		</ul>
+		<p class="cc">
+			CC By: <a href="https://www.flickr.com/photos/kulturarvsprojektet/">https://www.flickr.com/photos/kulturarvsprojektet/</a>
+		</p>
+	</article>
+
+	<!-- Vad är öppen data-->
+	<article class="fill">
+		<h3>Vad är öppna data?</h3>
+		<h2 style="font-size: 18pt">och varför ska vi prata om det?</h2>
+	</article>
+		
+	<!-- Vad menas med data -->
+	<article>
+		<h3>Data</h3>
+		<ul>
+			<li>Råmaterial för information i t.ex. digitala tjänster</li>
+			<li>Struktur i form av bilder, text, siffror där man kan se samband</li>
+		</ul>
+		<p class="c">
+			<img src="images/data_raw.png" height="500"/>
+		</p>
+		
+	</article>
+	<article>
+		<h3>Öppna data?</h3>
+		<p>
+			Digital information som är fritt tillgänglig utan inskränkningar (t.ex. i form av immaterialrättsliga hinder såsom upphovsrätt och patent).
+		</p>
+		<p class="small">Definition från: <a href="http://www.opengov.se/blogg/2011/oppen-data-definition/">http://www.opengov.se/blogg/2011/oppen-data-definition/</a></p>
+		<p class="note">
+
+			<p class="c">
+				<img src="images/open_data_logo.jpg" alt="open data">
+			</p>
+			
+		</p>
+	</article>
+	
+	<!-- Exempel på öppen data -->
+	<article class="fill">
+		<img src="https://farm4.staticflickr.com/3758/9990024683_a37089e13d_b.jpg" alt="data" />
+		<h3>Exempel på öppna data</h3>
+		<ul>
+			<li>Geodata</li>
+			<li>Data om tågavgångar, lokaltrafik</li>
+			<li>Befolkningsstatistik</li>
+			<li>Miljödata, vattenkvalité</li>
+			<li>Data om ekonomiska transaktioner</li>
+			<li>Väderdata</li>
+			<li>Data från företag</li>
+		</ul>
+		<p class="cc">
+			CC By: <a href="https://www.flickr.com/photos/rh2ox/">https://www.flickr.com/photos/rh2ox/</a>
+		</p>
+	</article>
+
+	<!--  Definition Open Goverment Working group -->
+
+	<article>
+		<h3>Principer för öppna data</h3>
+		<ul>
+			<li><strong>Tillgänglig</strong> - Information görs tillgänglig för så många användare som möjligt för så många ändamål som möjligt.</li>
+			<li><strong>Maskinläsbar</strong>- Informationen är strukturerad på ett sätt som möjliggör maskinell bearbetning och samkörning med andra register.</li>
+			<li><strong>Fri</strong> - Informationen är tillgänglig för alla utan krav på betalning, eller inskränkningar i form av licensvillkor och registreringsförfaranden.
+I ett öppet format: Det format informationen lämnas i följer en öppen standard, alternativt är dokumentationen till fomatet fritt tillgänglig och fri från patentlicensvillkor.</li>
+		</ul>
+		<p class="small">
+			<a href="http://opengovdata.org/">http://opengovdata.org/</a>
+		</p>
+		
+	</article>
+
+	<article>
+		<h3>Principer för öppna data</h3>
+		<ul>
+			<li><strong>Komplett</strong> - Information som inte innehåller personuppgifter eller lyder under sekretess görs tillgänglig i så stor omfattning som möjligt. Detta gäller särskilt databaser med material som skulle kunna vidareförädlas.</li>
+			<li><strong>Primär</strong> - Information skall så långt det är möjligt tillhandahållas i originalformatet. Bild- och videomaterial skall tillhandahållas i högsta möjliga upplösning för att möjliggöra vidareförädling.</li>
+			<li><strong>Aktuell</strong> - Information skall tillgängliggöras så snabbt som möjligt så att värdet av den inte försvinner. Det bör finnas mekanismer för att automatiskt kunna få information om uppdateringar.</li>
+		</ul>
+		<p class="small">
+			<a href="http://opengovdata.org/">http://opengovdata.org/</a>
+		</p>
+	</article>
+	
+
+	
+
+	
+
+	<article>
+		<h3>Vad är öppna offentliga data?</h3>
+		<p class="c">
+			<img style="margin-top: 100px;" src="images/open_data.png" height="400px"/>
+		</p>
+		<p style="font-style: italic;">
+			 "Till främjande av ett fritt meningsutbyte och en allsidig upplysning skall varje svensk medborgare ha rätt att taga del av allmänna handlingar" 
+		</p>
+		
+	</article>
+
+	
+
+	<article>
+			<h1>Kan man ta betalt för öppna data?</h1>
+			<h1>Är all data i offentlig sektor öppen?</h1>
+	</article>
+
+
+	<!-- Varför öppen data?-->
+	<article class="fill">
+		<h1>Varför öppna data?</h1>
+		<!--
+		<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/San_Francisco_Hackathon_2012-1-11.jpg/1024px-San_Francisco_Hackathon_2012-1-11.jpg" alt="hackatom">
+
+		<p class="cc">
+			<a href="http://commons.wikimedia.org/wiki/User:Victorgrigas">CC By: http://commons.wikimedia.org/wiki/User:Victorgrigas</a>
+		</p>
+	-->
+	</article>
+	
+	<!-- Varför öppen data?-->
+	<article class="fill">
+		<h3>Samhällsnyttiga tjänster</h3>
+		<ul>
+			<li>Öppen data för utvecklare ger nya tjänster/applikationer</li>
+			<li>Kombinera olika datakällor</li>
+			<li>Tillväxt och innovation</li>
+			<li>Kommersiella möjligheter - vidareförädling</li>
+		</ul>
+		<img src="https://farm8.staticflickr.com/7050/8689540520_59a1a9d3dd_z.jpg" height="400px">
+		
+		<p class="cc">
+			CC By: https://www.flickr.com/photos/techcrunch/
+		</p>
+	</article>
+
+	<!-- Varför öppen data?-->
+	<article class="fill">
+		<h3>Demokrati och delaktighet</h3>
+		<img src="http://datadrivenjournalism.net/uploads/jelle_kamsma_pic.jpg" />
+		<ul>
+			<li>Insyn - "Vad händer med mina pengar?"</li>
+			<li>Datajournalistik</li>
+
+			<li>Förtroende</li>
+			<li>Delaktighet - Förbättra data</li>
+			
+			<li>Maximera förutsättningar för kunskap</li>
+			<li>Samarbete - <a href="http://www.galaxyzoo.org/">Galaxy Zoo</a></li>
+		</ul>
+	</article>
+
+	<article>
+		<h3>Övrigt</h3>
+
+		<ul>
+			<li>Struktur och informationskvalité</li>
+			<li>PSI-direktivet, PSI-lagen</li>
+			<li>Fler fördelar med öppna data?</li>
+		</ul>
+	</article>
+	
+	<article>
+		<h1>Risker med öppna data?</h1>
+
+		<p class="note">
+			Personlig integritet
+			Lagliga hinder
+		</p>
+	</article>		
+
+	<article>
+		<h3>Exempel - Öppna offentlig data i Sverige</h3>
+		<ul>
+			<li> <a href="http://open.stockholm.se/">http://open.stockholm.se/</a></li>
+			<li><a href="http://www.orebro.se/12784.html">http://www.orebro.se/12784.html</a></li>
+			<li><a href="https://oppna.helsingborg.se/">https://oppna.helsingborg.se/</a></li>
+		</ul>
+		<p>
+			<a href="http://www.psidatakollen.se/">http://www.psidatakollen.se/</a>
+		</p>
+	</article>
+
+	
+
+	<article>
+		<h3>Exempel på "app:ar"</h3>
+		
+		<p>
+			<img src="images/euval.png" width="600" alt="tågtider" />
+			
+			<img src="images/tagtider.jpeg" height="500" alt="tågtider" />
+		</p>
+		<p>
+			<a href="http://www.myvote2014.eu/sv/Om/oss">http://www.myvote2014.eu/sv/Om/oss</a>
+		</p>
+	</article>
+
+	<article class="fill">
+		<img src="images/jsondata.png" alt="">
+		<h3>Hur nyttjas öppna data?</h3>
+		<ul>
+			
+			<li>Vad är mashups?</li>
+			<li>Vad är öppna API:er?</li>
+		</ul>
+	</article>
+
+	
+	<!-- HTML-taggar 
+	<article>
+		<h3 class="medium c">HTML-taggen &lt;iframe&gt;</h3>
+		<p>
+			<br />
+			Används för att öppna en annan sida inne i din html-sida<br />
+		</p>
+	
+		<p class="to-build">
+			<pre>
+&lt;iframe src="http://www.kalmar.se"&gt;&lt;/iframe></pre>
+
+			<iframe src="http://www.kalmar.se" width="80%" height="400"></iframe>
+		</p>
+	</article>-->
+	
+	<!-- data från andra tjänster 
+	<article>
+		<p class="c">
+		<img src="images/thinking.png" width="40%" />
+		</p>
+		<span class="righty">Om man skulle kunna kombinera ihop data från olika tjänster till en ny, egen tjänst?</span>
+	</article>-->
+	
+	<!-- Mashup -->
+	<article>
+		<h1 class="c medium">Mashup</h1>
+		
+		<q>
+			Mashup är en typ av webbapplikation som sammanställer information och funktionalitet från fler av varandra oberoende källor.
+		</q>
+		<p class="small l">
+			<a href="http://sv.wikipedia.org/wiki/Mashup">http://sv.wikipedia.org/wiki/Mashup</a>
+		</p>
+	</article>
+
+	<!-- Mashup -->
+	<article>
+		<h3>Mashup</h3>
+		<p class="c">
+			<img src="images/mashup_app.png" />
+		</p>
+		<p>
+			<a href="http://panic.com/statusboard/">Status Board</a>
+	</article>
+	
+	<!-- Mashup -->
+	<article>
+		<h3 class="medium c">Mashup - webbtjänster</h3>
+		<h2>
+		<img src="images/mashup_1.png" />
+		</h2>
+	</article>
+	
+	<!-- Mashup 2 -->
+	<article>
+		<h3 class="medium c">Mashup - API:er</h3>
+		<p style="margin-top: 40px">
+			API - Application Programming Interface<br />
+			Enkelt för programmerare att komma åt data, oftast i JSON- eller XML-format.<br />
+			Behöver inte vara gratis<br />
+			
+			
+		</p>
+		<h2>
+		<img src="images/mashup_2.png" />
+		</h2>
+	</article>
+
+	<!-- API code -->
+	<article>
+		<img src="images/api_code.png" height="550"/>
+		<a class="small" href="http://sv.wikipedia.org/w/api.php?action=query&list=search&srwhat=text&format=xml&srsearch=kalmar">
+			http://sv.wikipedia.org/w/api.php?action=query&amp;list=search&amp;srwhat=text&amp;format=xml&amp;srsearch=kalmar
+		</a>
+	</article>
+	<!-- Mashup 3 -->
+	<article>
+		<p class="c">
+		<img src="images/mashup_3.png"  height="99%"/>
+		</p>
+	</article>
+	
+	<!-- Exempel på mashups -->
+	<!-- Exempel 1 -->
+	<article>
+		<h1 class="c">Exempel</h1>
+		<ul>
+		<!--<li><a href="http://www.superlokal.se">http://www.superlokal.se</a></li>-->
+		<li>
+			<a href="http://www.annonskartan.se">http://www.annonskartan.se</a> - <span class="small">Blocket, google maps, tradera m.fl. annonstorg</span>
+		</li>
+		<li>
+			<a href="http://www.flightradar24.com">http://www.flightradar24.com</a>
+			- <span class="small">Google Maps, airport locations, broadcast air traffic data o.s.v. </span>
+		</li>
+		<li><a href="http://www.vackertvader.se">http://www.vackertvader.se</a>
+		 - <span class="small">Yr.no, google maps, m.fl.</span>	
+		</li>
+		
+		<li><a href="http://linuskarlsson.se/hjts">http://linuskarlsson.se/hjts</a>
+				- <span class="small">Systembolagets API</span>
+			</li>
+		</ul>
+	</article>
+	
+	
+	<!-- bild över hur det funkar -->
+	<article>
+		<h3 class="c">I laborationen</h3>
+		<img src="images/lab2_rch.png" />
+	</article>
+	
+	<!-- Problem med "andras data" 
+	<article>
+		<h3 class="medium c">Problem man kan stöta på</h3>
+		<ul>
+			<li>Beroende av någon annans data/server</li>
+			<li>Begränsningar på antal anrop</li>
+			<li>Få/köpa en API-nyckel</li>
+			<li>Dålig dokumentation</li>
+		</ul>
+		<p class="c">
+			<img src="images/confused.jpg" />
+		</p>
+	</article>
+	-->
+	<!-- API, att dela data 
+	<article>
+		<h3 class="c medium">Varför delar man data?</h3>
+		
+		
+		<ul>
+			<li>API:er kostar att utveckla<li>
+			<li>Vår data är vår affärsidé<li>
+			<li>Många anrop, mer trafik, mer kostnad för servrar</li>	
+		</ul>
+		<br />
+		<ul class="to-build">
+			<li>Få din tjänst att användas</li>
+			<li>Konkurensfördel</li>
+			<li>Informationen är betald med skattemedel</li>
+			<li>Knyta utvecklare som skapar tjänster</li>
+			<li>Företagets interna system kan kräva detta</li>
+		</ul>
+	</article>
+	-->
+	
+	
+	<!-- Open data international
+	<article class="fill">
+		<img src="images/open_data.png" width="70%" height="70%" />
+		<h3>Öppen offentlig data</h3>
+		<ul>
+			<li>Datamängder från offentlig sektor som människor kan ladda ner och bearbeta själva</li>
+			<li>Skattefinansierat</li>
+			<li>Demokrati, minska kostnader, innovation till samhällets gagn</li>
+			<li>Statistik från hela samhället, geografisk data, ekonomiska uppgifter</li>
+			<li>PSI-direktivet, EU-kommissionen</li> 
+		</ul>
+	</article>
+	-->
+	<!-- Wordpress-->
+	<article class="fill">
+		<img src="images/wp-blue.png" />
+		<h3>WordPress</h3>
+	</article>
+	
+	<!-- Vad är wordpress -->
+	<article>
+		<h3>Vad är WordPress?</h3>
+		<ul>
+			<li>Startade 2003 som ett "blogging system"</li>
+			<li>Används som ett CMS (Content Management System)</li>
+			<li>Skrivet i PHP och använder en mySQL-databas</li> 
+			<li>Fritt och "open source"</li>
+			<li>Utbyggningsbart med hjälp av teman, plugins, widgets</li> 
+		</ul>
+		
+	</article>
+	
+	<!-- Varför använda wordpress -->
+	<article>
+		<h3>Varför använda WordPress?</h3>
+		<ul>
+			<li>Enkelhet</li>
+			<li>Fritt att använda</li>
+			<li>"It´s more than just a blogging system"</li>
+			<li>Teman (och plugin)</li>
+			<li>SEO - Search engine optimization</li>
+			<li>The Community</li>
+	</article>
+	
+	<!-- Exempel på Wordpress -->
+	<article>
+		<h1>Exempel</h1>
+		<ul>
+			<li><a href="http://briansmith.com/">http://briansmith.com/</a></li>
+			<li><a href="http://kartellstorela.com/">http://kartellstorela.com/</a></li>
+			<li><a href="http://www.smashingmagazine.com/">http://www.smashingmagazine.com/</a></li>
+		</ul>
+			<p class="small">
+			source: <a href="http://wordpress.org/showcase/">http://wordpress.org/showcase/</a>
+		</p>
+		<p>
+			<a href="https://coursepress.lnu.se/kurs/web-management/">https://coursepress.lnu.se/kurs/web-management/</a></li>
+		</p>
+		
+	</article>
+	
+	<!-- Hur börjar jag 
+	<article>
+		<h3>Att komma igång...</h3>
+		<p class="c">
+			<br /><br />
+			<img src="images/demo.png" />			
+		</p>
+	</article>
+	-->
+	
+	</section>
+  </body>
+</html>
