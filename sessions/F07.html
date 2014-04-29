@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+
+  <head>
+    <title>Föreläsning 6 - 1IF424</title>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Föreläsning 1 i kursen webbramverk, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src='slides.js' media="screen"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style media="print">
+	         @page {
+	            size: A4 landscape;
+	             @top-right {
+	                content: "Page " counter(page);
+	             }
+	         }
+	          article {
+	            page-break-after: always;
+	            margin: auto;
+	          }
+	          article.next, article.past {
+	            display: block;    
+	          }
+	
+				iframe {
+					display: none;
+				}
+				article img {
+					display: none;
+				}
+	          body {
+	              display: block !important;
+	              font-family: 'Open Sans', Arial, sans-serif;
+	              font-size: 1.5em;
+	          }
+	</style>
+  </head>
+  
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-default'>
+      
+	<!-- Första sidan -->
+    <article>
+       	<h1>
+          Web Management, 1IK424
+          <br />
+          <span class="small">Linnéuniversitetet, VT2013</span>
+        </h1>
+       
+		
+		<br /><br />
+		<h1 class="c red">Wordpress part II</h1>
+	
+		
+		<p class="small_footer">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
+					<img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>&nbsp;&nbsp;Detta verk är licensierat under en 
+					
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">Creative Commons Erkännande-IckeKommersiell-DelaLika 3.0 Unported Licens</a>.<br />
+		</p>
+ 	</article>
+
+	<!-- Agenda -->
+	<article>
+		<h3>Agenda</h3>
+		<ul>
+			<li>The Loop - repetition</li>
+			<li>Hur visar jag en post på olika sätt beroende på sammanhang?</li>
+			<li>Vad är get_template_part()? Och varför finns den?</li>
+			<li>Hur gör jag om jag har fler poster än jag vill visa på en sida</li>
+			<li>Hur visar man kommentarer till bloggposten</li>
+			<li>Hur visar jag en resultatsida från en sökning?</li>
+			<li>Hur kan jag använda widgets för att förenkla?</li>
+			<li>Hur skapar jag en dynamisk meny?</li>
+		</ul>
+	</article>
+
+
+	<!-- The loop -->
+	<article>
+		<h1>The Loop</h1>
+		<br /><br />
+		<p class="c spaced">
+			<img src="images/the_loop.png" />
+		</p>
+		
+	</article>
+	
+	<!-- WPQuery -->
+	<article>
+		<h3>Några ord om WPQuery</h3>
+		<p>
+			"The Loop" använder sig av WPQuery.<br />
+			Man kan skriva kod som talar om precis vad loopen ska hämta eller ifall
+			man vill ha fler "loopar"
+		</p>
+		<br /><br />
+		<p class="c">
+			<img src="images/wp_query.png" />
+		</p>
+	</article>
+	
+
+	<!-- Att bryta ut loopen -->
+	<article>
+		<h3>Olika utseende, olika loopar</h3>
+		<p>
+			<img src="images/diffrent_loops.png" style="height:98%"/>
+		</p>
+	</article>
+
+	<!-- Template heirarky -->
+	<article>
+		<h1>Template Hierarchy</h1>
+		<p class="c">
+			<a href="images/Template_Hierarchy.png" target="_blank"><img src="images/Template_Hierarchy.png" height="80%"/></a>
+		</p>
+	</article>
+
+	<!-- single.php -->
+	<article>
+		<h3>Att visa en enskild post i en egen sida</h3>
+		<p>
+			single.php
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+	</article>
+
+	<!-- Att bryta ut loopen -->
+	<article>
+		<h3>Olika utseende, olika loopar</h3>
+		<p>
+			<img src="images/diffrent_loops.png" style="height:98%"/>
+		</p>
+	</article>
+
+	
+	<!-- get_template_part() -->
+	<article>
+			<h3>get_template_part()</h3>
+			<p>
+				Vi vill ha möjligheten att ladda in olika filer beroende på hur vi vill att loopen ska köras.
+				(WP 3.0)
+			</p>
+			<p class="c">
+				<img src="images/get_template_part.png" />
+			</p>
+	</article>
+	
+	<!-- Conditional tags -->
+	<article>
+		<h3 class="c">Conditional Tags</h3>
+		<p>
+			Används t.ex. för att avgöra vad för typ av sida som efterfrågats!
+			<ul>
+			<li>Startsidan? - <strong>is_home()</strong></li>
+			<li>Är det en enskild post? - <strong>is_single()</strong></li>
+			<li>Vill man lista kategorier? - <strong>is_category()</strong></li>
+			<li> Med många fler....</li>
+			</ul>
+		</p>
+		
+		<p>
+			Enda sättet att veta vad man kan göra är att läsa på:
+			<a href="http://codex.wordpress.org/Conditional_Tags">
+				http://codex.wordpress.org/Conditional_Tags
+			</a>
+		</p>
+		<p class="c">
+			<img src="images/besserwisser.jpg" />
+		</p>
+	</article>
+	
+	<!-- Demo get_template_part -->
+	<article>
+		<h3>Att via en post på olika sätt</h3>
+		<p class="c">
+			<img src="images/demo.png" /><br />
+			<img src="images/diffrent_loops.png" style="height:80%"/>
+		</p>
+	</article>
+	
+	<!-- Paging -->
+	<article>
+		<h3>När antalet poster blir för lång</h3>
+		<p>
+			Vad händer när jag har 100 inlägg?
+		</p>
+		<p class="c">
+			<img src="images/confused.jpg" />
+		</p>
+		<p>
+			Som default hämtar Wordpress max 10 poster åt gången i loopen<br />
+			Hur ändrar jag det?	Hur visar jag de andra?
+		</p>
+		<p class="to-build">
+			<a href="http://codex.wordpress.org/Function_Reference/next_posts_link">
+				http://codex.wordpress.org/Function_Reference/next_posts_link
+			</a>
+		</p>
+	</article>
+	
+	
+	<!-- Att lista ut kategorier -->
+	<article>
+		<h3>Hantera kategorier</h3>
+		<p>
+			Vi vill ge användaren möjlighet att sortera våra inlägg per kategori.<br />
+			Detta är en typisk uppgift där vi får använda Wordpress codex för att söka vårt svar
+		</p>
+		<p>
+		<a href="http://codex.wordpress.org/" target="blank">http://codex.wordpress.org/</a>
+		</p>
+		<p class="c">
+			<img src="images/category.png" />
+		</p>
+	</article>
+	
+	<!-- DEMO - kategorier -->
+	<article>
+		<h3>Att implementera en lista med kategorier</h3>
+		<p>
+			Vi vill i vår "sidebar" inkludera en lista med kategorier så att användaren kan lista endast poster som hör till en viss kategori.
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+		
+		<p class="note">
+			
+		</p>
+	</article>
+	
+	<!-- kommentarer -->
+	<article>
+		<h1>Att låta användaren tycka till</h1>
+		<p>
+			Då wordpress har sina rötter som bloggverktyg finns såklart inbyggt stöd för
+			kommentarer.
+		</p>
+		<p>
+			<a href="http://wp.tutsplus.com/tutorials/creative-coding/customizing-comments-in-wordpress-functionality-and-appearance/">
+				http://wp.tutsplus.com/tutorials/creative-coding/customizing-comments-in-wordpress-functionality-and-appearance/
+			</a>
+		<p class="c">
+		<img src="images/comments.png" style="height: 50%"/>
+		<img src="images/demo.png" />
+		</p>
+	</article>
+	
+	<!-- Enklaste sättet att få svenska språk -->
+	<article>
+		<h3>Hur byter man språk på wordpress?</h3>
+		<p>
+			<a style="font-size: 14pt" href="http://codex.wordpress.org/Installing_WordPress_in_Your_Language#Manually_Installing_Language_Files">
+				http://codex.wordpress.org/Installing_WordPress_in_Your_Language#Manually_Installing_Language_Files
+			</a>
+		</p>
+		
+		<ul>
+			<li>Ladda mer en språkfil <span class="small">(http://svn.automattic.com/wordpress-i18n/sv_SE/tags/3.3.2/messages/sv_SE.mo)</span></li>
+			<li>Skapa katalogen "languages" i mappen wp-content</li>
+			<li>Lägg filen i denna katalog</li>
+			<li>Öppna filen "wp-config.php" - leta rade på raden define('WPLANG', '');</li>
+			<li>Ändra till define('WPLANG', 'sv_SE');</li>
+		</ul>
+		<p class="c">
+			<img src="images/flag_sweden.png" />
+		</p>
+	</article>
+		
+	<!-- Hur gör vi en sökruta -->
+	<article>
+		<h3>Att implementera en sökruta</h3>
+		<p>
+			Även här finns det inbyggd hjälp i wordpress
+		</p>
+		<pre>
+get_search_form(); // Ett standard formulär kommer renderas ut</pre>
+				
+		<p>
+			<a href="http://codex.wordpress.org/Function_Reference/get_search_form">
+				http://codex.wordpress.org/Function_Reference/get_search_form
+			</a>
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+	</article>
+	
+	<!-- Widgets -->
+	<article>
+		<h3>Att använda widgets</h3>
+		<p>
+			Det finns enklare (?) sätt att få viss funktion<br />
+		</p>
+		<p>
+			För att inkludera widgets i ditt tema behöver du skriva kod i functions.php
+			för att skapa en "widget area"
+		</p> 
+		<p>
+			Fördelar är att det är enkelt för en administratör att dra och släppa 
+			widgets i sidan.<br />
+		</p>
+		
+		<p>
+			För att få en yta att lägga till widgets i behöver vi registrera den i <strong>functions.php</strong>
+		</p>
+		<p>
+			<img src="images/widget.png" width="75%"/>
+		</p>
+		
+	</article>
+		
+	<!-- Demo - Article -->
+	<article>
+		<h3>Att skapa en widget area och lägga in widgets</h3>
+		<p class="c spaced">
+			<img src="images/demo.png" />
+		</p>
+	</article>
+	
+	<!-- Menyer -->
+	<article>
+		<h3>Att fixa en dynamisk meny</h3>
+		<p>
+			På liknande sätt som widgets registreras menyer
+		</p>
+		<p class="c spaced">
+			<img src="images/demo.png" />
+		</p>
+	</article>
+	
+	
+	</section>
+  </body>
+</html>

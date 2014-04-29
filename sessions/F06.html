@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+
+  <head>
+    <title>Föreläsning 6 - 1IF424</title>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Föreläsning 1 i kursen webbramverk, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script src='slides.js' media="screen"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<style media="print">
+	         @page {
+	            size: A4 landscape;
+	             @top-right {
+	                content: "Page " counter(page);
+	             }
+	         }
+	          article {
+	            page-break-after: always;
+	            margin: auto;
+	          }
+	          article.next, article.past {
+	            display: block;    
+	          }
+	
+				iframe {
+					display: none;
+				}
+				article img {
+					display: none;
+				}
+	          body {
+	              display: block !important;
+	              font-family: 'Open Sans', Arial, sans-serif;
+	              font-size: 1.5em;
+	          }
+	</style>
+  </head>
+  
+
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen template-default'>
+      
+	<!-- Första sidan -->
+    <article>
+       	<h1>
+          Web Management, 1IK424
+          <br />
+          <span class="small">Linnéuniversitetet, VT2014</span>
+        </h1>
+       
+		
+		<br /><br />
+		<h1 class="c">Wordpress part I</h1>
+	
+		
+		<p class="small_footer">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">
+					<img alt="Creative Commons-licens" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>&nbsp;&nbsp;Detta verk är licensierat under en 
+					
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.sv">Creative Commons Erkännande-IckeKommersiell-DelaLika 3.0 Unported Licens</a>.<br />
+		</p>
+ 	</article>
+	
+
+	<!-- Wordpress-->
+	<article class="fill">
+		<img src="images/wp-blue.png" />
+		<h3>WordPress</h3>
+	</article>
+	
+	<!-- Wordpress Intro -->
+	<article class="fill">
+		<img src="images/wp-blue.png" />
+		<h1>Vad är WordPress?</h1>
+		<ul>
+			<li>Från början ett "blogging system"</li>
+			<li>wordpress.org vs. wordpress.com</li>
+			<li>Ett CMS (Content Management System)</li>
+			
+			<li>Fritt att använda (GNU General Public License), kräver webbserver, PHP och databasen mySQL</li>
+			<li>En kärna (core), flera olika utseenden (teman)</li>
+			<li style="margin-top: 50px; font-style: italic;">"Today WordPress powers one of every 6 websites on the Internet, 
+					nearly 60 million in all, with 100,000 more popping up each day"<br />
+					<span class="small">http://www.forbes.com/sites/jjcolao/2012/09/05/the-internets-mother-tongue/</span>
+				
+			</li>
+		</ul>
+	</article>
+	
+	
+	<!-- Varför använda wordpress -->
+	<article>
+		<h3>Varför använda WordPress?</h3>
+		<ul>
+			<li>Fritt att använda</li>
+			<li>Enkelhet, flexibilitet</li>
+			<li>"It´s more than just a blogging system"</li>
+			<li>Teman (och plugin)</li>
+			<li>SEO - Search engine optimization</li>
+			<li>Många användare, mycket kunskap</li>
+	</article>
+	
+	<!-- Exempel på Wordpress -->
+	<article>
+		<h1>Exempel</h1>
+		<ul>
+			<li><a href="http://briansmith.com/">http://briansmith.com/</a></li>
+			<li><a href="http://kartellstorela.com/">http://kartellstorela.com/</a></li>
+			<li><a href="http://www.smashingmagazine.com/">http://www.smashingmagazine.com/</a></li>
+		</ul>
+			<p class="small">
+			source: <a href="http://wordpress.org/showcase/">http://wordpress.org/showcase/</a>
+		</p>
+		<p>
+			<a href="https://coursepress.lnu.se/kurs/web-management/">https://coursepress.lnu.se/kurs/web-management/</a></li>
+		</p>
+		
+	</article>
+	
+	<!-- Hur börjar jag 
+	<article>
+		<h3>Att komma igång...</h3>
+		<p class="c">
+			<br /><br />
+			<img src="images/demo.png" />			
+		</p>
+	</article>
+	-->
+	
+	<!-- Vårt mål -->
+	<article class="fill">
+		<img src="images/wp.jpg" />
+		<h3>Vårt mål</h3>
+		<ul>
+			<li>Kunna skapa en dynamisk webbplats med hjälp av Wordpress</li>
+			<li>Kunna skriva egna teman till Wordpress</li>
+			<li>Kunna utnyttja färdiga teman och utöka med egen funktionallitet (child theme)</li>
+		</ul>
+	</article>
+
+	<!-- Resurser -->	
+	<article>
+		<h1>Resurser</h1>
+		<p>
+			<a href="http://codex.wordpress.org/">
+				http://codex.wordpress.org/
+			</a>
+		</p>
+		<p>
+			<a href="http://www.smashingmagazine.com/tag/wordpress/">
+				http://www.smashingmagazine.com/tag/wordpress/
+			</a>
+		</p>
+		<br />
+		<p class="c">
+			<img src="http://coursepress.lnu.se/kurs/web-management/files/2013/02/smashingwp3rd-250x314.png" />
+		</p>
+	</article>
+
+	
+	<!-- Dagens agenda -->
+	<article>
+		<h1 class="c">Dagens agenda</h1>
+		<ul>
+			<li>Hur kör vi igång en Wordpress-applikation</li>
+			<li>Introducera begrepp, vårt första tema</li>
+			<li>Post, Pages, Custom Post Type</li> 
+			<li>Themes, Widgets, plugins</li> 
+			<li>Categories, Tags</li> 
+			<li>Skapa vårt första tema</li>
+			<li>Include files, "the loop", template files</li>
+		</ul>
+	</article>
+	
+	<!-- Demo som går igenom dashboard -->
+	<article>
+		<h1>Starta med Wordpress</h1>
+		<p>
+			Cloud9 vs. skolans server
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+		<p class="note">
+			Visar hur vi kan installera wordpress
+		</p>	
+	</article>
+	
+	
+	<!-- Post vs. Pages -->
+	<article>
+		<h3>Post vs. Page</h3>
+		<ul>
+			<li><strong>Post</strong> - "Att posta en artikel/inlägg" - Förstasidan på kursens webbplats</li>
+			<li class="c">
+				<img src="images/post_page.png" style="width: 90%" />
+			</li>
+			
+			<li><strong>Page</strong> - Mer statiskt innehåll, Mer sällan uppdaterade - Föreläsningssidor</li>
+			<li><strong>Custom post type</strong> - Möjlighet att skapa egna posttyper, "products", "projects"...</li>
+		</ul>
+	</article>
+	
+	<!-- taxnoomies, att märka upp informationen -->
+	<article>
+		<h3>Post - Taxonomy</h3>
+		<p>
+			Genom att gruppera och märka upp poster kan man enklare strukturera, sortera, söka och leda användaren rätt.
+			Det är också viktigt ur sökmotorsynpunkt.
+		</p>
+		<p class="to-build" >
+			<img src="images/category.png" style="vertical-align:text-top;" />
+			<img src="images/tags.png" style="vertical-align:text-top;" />
+			<br /><br />
+			<strong>Category</strong> - En post kan tillhöra flera kategorier.<br />
+			<strong>Tag (etiketter)</strong> - Ett eller flera nykelord man ger sin post.
+		</p>
+			
+	</article>
+	
+	<!-- Demo som går igenom dashboard -->
+	<article>
+		<h1>Da Dashboard</h1>
+		<p>
+			Administrationsgränssnittet i Wordpress.
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+		<p class="note">
+			Introducerar begreppen via wp-admin
+			Skapa category, tags, och posta ett antal
+			inlägg med bilder.
+		</p>	
+	</article>
+	
+	<!-- Att pimpa sin wordpress -->	
+	<article>
+		<h1>Att "pimpa" wordpress</h1>
+		
+		<p>
+			Möjligheter att skräddasy sin WordPress-applikation
+			<ul>
+				<li><strong>Themes</strong> - Layout, CSS, Hur allt ska se ut och presenteras</li>
+				<li><strong>Widgets</strong> - Små delar som kan infogas i en sida med specifik funktionalitet - Kalender, "senaste kommentarerna"...</li>
+				<li><strong>Plugins</strong> - Ren PHP-programmering som utökar WordPress grundläggande funktionallitet</li>
+			</ul>
+		</p>
+		<p>
+			<img src="images/painter.png" height="200"/>
+			<span class="pretty_small">Hämtat från: http://openclipart.org/detail/21885/comic-characters:-painter-by-nicubunu</span>
+		</p>
+		
+	</article>
+	
+	<!-- Exempel på themes -->
+	<article>
+		<h1>Exempel - Teman</h1>
+		<p>
+			Byter utseende på din WordPress-applikation.
+			Finns massor av färdiga "themes".
+			HTML, CSS och PHP
+			
+		</p>
+		<p>
+			<img src="images/themes.png" />
+		</p>
+		<p class="c">
+			<a href="http://wordpress.org/extend/themes/">
+				http://wordpress.org/extend/themes/
+			</a>
+		</p>
+	</article>
+	
+	<!-- Exempel på widgets -->
+	<article>
+		<h1>Exempel - Widgets</h1>
+		<p class="c">
+			<img src="images/widget.png" style="height: 480px"/>
+		</p>
+		<a href="https://codex.wordpress.org/WordPress_Widgets">https://codex.wordpress.org/WordPress_Widgets</a>
+	</article>
+	
+	<!-- Exempel på plugin -->
+	<article>
+		<h1>Exempel - Plugin</h1>
+		<p>
+			Möjlighet att utöka funktionallitet i Wordpress. Mer avancerade php-filer.
+			<a href="http://wordpress.org/extend/plugins/">
+				http://wordpress.org/extend/plugins/
+			</a>
+		</p>
+		<p>
+			<img src="images/plugin.png" style="height: 65%"/><br />
+			<span class="pretty_small">Bild tagen från: http://wordpress.org/extend/plugins/</span>
+		</p>
+	
+	</article>
+		
+	<!-- Demo plugin -->
+	<article>
+		<h3>Att byta ett tema och aktivera ett plugin</h3>
+		<p class="c">
+			<br /><br />
+			<img src="images/demo.png" />
+		</p>
+		<p class="note">
+			Välj ett Tema och visa att det inte går att ladda ner
+			via wordpress.
+		</p>
+	</article>
+	
+	<!-- Att tänka på vid många plugins -->
+	<article>
+		<h1>Att tänka på...</h1>
+		<p>
+			Problem med för mycket plug-in, widgets
+			och "knasiga" teman
+		</p>
+		<br /><br />
+		<div>
+		<ul class="lefty" style="width: 75%">
+			<li>Prestanda - Dåligt kodade teman/plugin</li>
+			<li>Problem, buggar - Dåligt kodade teman/plugin</li>
+			<li>Fungerar inte alltid med nyare/kommande versioner av WordPress - Versionskonflikt</li>
+			<li>Kan ge problem då vissa plugins behöver "skrivrättigheter" på webbservern</li>
+		</ul>
+		<p class="righty">
+			<img src="images/ratings.png" />
+		</p>
+		</div>
+		<br /><br />
+			
+		
+		
+	</article>
+		
+	<!-- Att skapa sitt eget tema -->
+	<article>
+		<h1>Skapa ett eget tema</h1>
+		<p class="c">
+			<img src="images/skeleton.png" style="height: 500px"/>
+		</p>
+	</article>
+	
+	<!-- Hur Kommer man igång -->
+	<article>
+		<h3>Filstruktur - Tema</h3>
+		
+		<br /><br />
+		<p>
+			<img src="images/wp_files.png" style="width: 95%"/>
+		</p>
+		<p>
+			index.php och style.css är obligatoriska<br />
+			Rör inga andra filer än ditt eget temas filer!
+		</p>
+		
+		
+	</article>
+	
+	<!-- Vad ingår i ett tema -->
+	<article>
+		<h3>Vad ingår i ett tema?</h3>
+			<ul>
+				<li><strong>style.css:</strong> 
+					Definierar utseendet på temat. Innehåller en deklaration för temat</li>
+				<li><strong>Template files:</strong> 
+					En eller flera php-filer som visar innehållet (HTML och PHP). Måste alltid finnas en index.php</li>
+				
+				<li><strong>functions.php:</strong> 
+					När du behöver skriva mer php-kod för att utöka funktionaliteten. Skapa menyer och "widget areas"</li>
+				<li><strong>Andra filer:</strong>
+					JavaScript, bilder o.s.v.</li>
+			</ul>
+		</p>
+		<p class="c">
+			<img src="images/theme_file_list.png" height="40%"/>
+		</p>
+	</article>
+		
+	<!-- Theme definition-->
+	<article>
+		<h3>The stylesheet - style.css</h3>
+		<p>
+			Alla teman ska ha en stilmall, <i>style.css</i><br />
+		</p>
+		<p>
+			<strong>Theme declaration:<br /></strong>
+			Alla teman ska ha en deklation i sin <i>style.css</i> där metainformation om temat ska ingå:<br />
+			
+		</p>
+		<pre>
+/*
+Theme Name: My great theme
+The URI: http://www.whereyoucanfind.com/mytheme
+Description: Här följer en beskrivning av mitt tema som andra kan läsa
+Author: John H
+Version: 1.0
+Tags: blue two-column responsive
+*/
+
+body {background-color: blue; }		
+		</pre>
+		
+	</article>
+	
+	<!-- Templete files and template tags -->
+	<article>
+		<h3>Template files - Template tags</h3>
+		<ul>
+			<li>För att visa innehåll i wordpress använder man template files.</li>
+			<li>Egentligen behövs bara index.php</li>
+			<li>				
+			Då vi inte vill hårdkoda värden i vårt tema kan vi använda
+			sk. template tags för att läsa ut dynamisk data.
+			</li>
+		</ul>
+		
+		<p class="spaced">
+			<ul>
+				<li>
+					<a href="https://codex.wordpress.org/Template_Tags">https://codex.wordpress.org/Template_Tags</a>
+				</li>
+				<li>
+<pre>
+&lt;head>
+  &lt;title>&lt;?php bloginfo('name'); ?>&lt;/title>
+  &lt;meta charset="utf-8" />
+  ...	
+</pre>
+					(https://codex.wordpress.org/Function_Reference/bloginfo)
+				</li>
+			</ul>
+		</p>
+	</article>
+	
+	<!-- Templete files-->
+	<article>
+		<h3>Vårt första tema!</h3>
+		<p>
+			Någonstans måste vi ju layout och innehåll (HTML och PHP)<br />
+			Vi börjar med att skapa <i>index.php</i> och göra vår layout där.
+		</p>
+		<br /><br />
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+		<p class="note">
+			Skapa en sida som skriver ut bloggens titel, bygg på sidan med en header,
+			en layout.
+			Hitta sida med layout som jag tagit from HTML Dog
+			Få in stylesheet och bilder
+		</p>
+	</article> 
+	
+	<!-- Template files - break up -->
+	<article>
+		<h3>Att dela upp din sida i delar</h3>
+		
+		<p>
+			Ska all kod ligga i index.php?
+		</p>
+		
+		<p class="c">
+			<img src="images/skeleton.png" style="height: 500px" />
+		</p>
+		
+	</article>
+	
+	<!-- Demo skapa header, footer, content, sidebar -->
+	<article>
+		<h3>Att bryta ut koden</h3>
+		<p>
+			Istället för en index.php delar vi upp kod i flera olika filer
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+	</article>
+		
+	<!-- Hur får vi ut data? -->
+	<article>
+		
+		<h3>Men all data då?</h3>
+		<p>
+			Vart hamnar våra postade inlägg?<br />
+			Hur visar jag upp all information i mitt tema?<br />
+		</p>
+		<p>
+			<img src="images/little_question.png" />
+		</p>	
+			
+	</article>
+	
+	<!-- The loop -->
+	<article class="fill">
+		<img src="images/loop.jpg" />
+		<h3>"The Loop"</h3>
+		<p>
+			Det som drar data ur databasen kallas "The Loop". Vare sig det handlar om
+			ett antal poster (while) eller en enskild Post.<br /><br />
+			<a href="http://codex.wordpress.org/The_Loop">http://codex.wordpress.org/The_Loop</a>
+		</p>
+		<pre>
+&lt;?php while ( have_posts() ) : the_post(); ?>	
+  &lt;h1>&lt;?php the_title(); ?>&lt;/h1>
+&lt;?php endwhile; ?></pre>
+	</article>
+	
+	<!-- Template tags -->
+	<article>
+		<h3>Template tags</h3>
+		<ul>
+			<li>"Template tags" är nycklen till hur vi hämtar dynamiskt innehåll när vi befinner oss i "the loop".</li>
+			<li>Det finns flertalet	tillgängliga i Wordpress, uppdelade på olika kategorier.</li>
+			<li><a href="http://codex.wordpress.org/Template_Tags">http://codex.wordpress.org/Template_Tags</a></li>
+		</ul>
+		<br />
+		<h3>Några vanliga Post template tags</h3>
+		<ul>
+			<li>the_title()</li>
+			<li>the_permalink()</li>
+			<li>the_content()</li>
+			<li>the_ID()</li>
+			<li>post_class()</li>
+		</ul>
+	</article>
+	
+	<!-- Avslut F05 -->
+	<article>
+		<h3>Att få ut lite innehåll</h3>
+		<br/>
+		<p>
+			Vi fyller på vår layout med att skriva ut blogginnehållet.
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p> 
+	</article>
+	
+	
+	</section>
+  </body>
+</html>
