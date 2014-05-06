@@ -18,8 +18,7 @@
     <title>Föreläsning 6 - 1IF424</title>
     <meta charset="utf-8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="description" content="Föreläsning 1 i kursen webbramverk, Webbprogrammerareprogrammet, Kalmar, Linnéuniversitetet" />
-    
+     
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800' rel='stylesheet' type='text/css'>
     
     <link rel="shortcut icon" href="favicon.png" />
@@ -66,12 +65,12 @@
        	<h1>
           Web Management, 1IK424
           <br />
-          <span class="small">Linnéuniversitetet, VT2013</span>
+          <span class="small">Linnéuniversitetet, VT2014</span>
         </h1>
        
 		
 		<br /><br />
-		<h1 class="c red">Wordpress part II</h1>
+		<h1 class="c">Wordpress part II</h1>
 	
 		
 		<p class="small_footer">
@@ -82,18 +81,33 @@
 		</p>
  	</article>
 
+	<!-- Förra gången -->
+	<article>
+		<h3>Förra gången</h3>
+		<ul>
+			<li>Vad är wordpress...och varför?</li>
+			<li>Post och pages</li>
+			<li>Themes, plugin, widgets</li>
+			<li>Att börja skapa sitt eget tema</li>
+			<li>Hur man skapar en widget area och använder widgets (demofilm)</li>
+			<li>Hur man implementerar en söksida för sökning av poster (demofilm)</li>
+			<li>Template hierarchy, single.php (demofilm)</li>
+
+		</ul>
+	</article>
 	<!-- Agenda -->
 	<article>
-		<h3>Agenda</h3>
+		<h3>Idag</h3>
 		<ul>
-			<li>The Loop - repetition</li>
-			<li>Hur visar jag en post på olika sätt beroende på sammanhang?</li>
+			<li>The Loop - WP Query</li>
+			<li>Template hierarchy</li>
 			<li>Vad är get_template_part()? Och varför finns den?</li>
-			<li>Hur gör jag om jag har fler poster än jag vill visa på en sida</li>
 			<li>Hur visar man kommentarer till bloggposten</li>
-			<li>Hur visar jag en resultatsida från en sökning?</li>
-			<li>Hur kan jag använda widgets för att förenkla?</li>
 			<li>Hur skapar jag en dynamisk meny?</li>
+			<li>Page, Page templates</li>
+			<li>Child Theme</li>
+			<li>Custom Post type</li>
+			<li>Några demofilmer kommer tillkomma</li>
 		</ul>
 	</article>
 
@@ -101,9 +115,12 @@
 	<!-- The loop -->
 	<article>
 		<h1>The Loop</h1>
-		<br /><br />
+		<p>I t.ex. index.php</p>
 		<p class="c spaced">
 			<img src="images/the_loop.png" />
+		</p>
+		<p>
+			Vi har ett antal poster och vill kunna hämta ut dem ur databasen
 		</p>
 		
 	</article>
@@ -111,12 +128,12 @@
 	<!-- WPQuery -->
 	<article>
 		<h3>Några ord om WPQuery</h3>
-		<p>
-			"The Loop" använder sig av WPQuery.<br />
-			Man kan skriva kod som talar om precis vad loopen ska hämta eller ifall
-			man vill ha fler "loopar"
-		</p>
-		<br /><br />
+		<ul>
+			<li>"The Loop" använder sig under huven av WPQuery, vilken ger möjlighet för utvecklaren att specificera frågan</li>
+			<li>T.ex. bara poster ur viss kategori, max antal poster som svar, använda multipla loopar</li>
+			<li>Sid 53-63 i kurslitteraturen, <a href="http://codex.wordpress.org/Class_Reference/WP_Query">WpQuery i Wordpress codex</a> </li>
+		</ul>
+		
 		<p class="c">
 			<img src="images/wp_query.png" />
 		</p>
@@ -125,9 +142,9 @@
 
 	<!-- Att bryta ut loopen -->
 	<article>
-		<h3>Olika utseende, olika loopar</h3>
+		<h3>Visa poster med olika templates, i olika sammanhang</h3>
 		<p>
-			<img src="images/diffrent_loops.png" style="height:98%"/>
+			<img src="images/diffrent_loops.png" style="height:600px"/>
 		</p>
 	</article>
 
@@ -135,76 +152,20 @@
 	<article>
 		<h1>Template Hierarchy</h1>
 		<p class="c">
-			<a href="images/Template_Hierarchy.png" target="_blank"><img src="images/Template_Hierarchy.png" height="80%"/></a>
+			<a href="http://wpcandy.com/wp-content/uploads/2008/04/wp-diagram.jpg" target="_blank"><img src="images/wp-diagram.jpg" height="400px"/></a>
 		</p>
 	</article>
 
 	<!-- single.php -->
 	<article>
-		<h3>Att visa en enskild post i en egen sida</h3>
-		<p>
-			single.php
-		</p>
+		<h3>Exempel på template hierarchy</h3>
 		<p class="c">
 			<img src="images/demo.png" />
 		</p>
-	</article>
-
-	<!-- Att bryta ut loopen -->
-	<article>
-		<h3>Olika utseende, olika loopar</h3>
-		<p>
-			<img src="images/diffrent_loops.png" style="height:98%"/>
-		</p>
-	</article>
-
-	
-	<!-- get_template_part() -->
-	<article>
-			<h3>get_template_part()</h3>
-			<p>
-				Vi vill ha möjligheten att ladda in olika filer beroende på hur vi vill att loopen ska köras.
-				(WP 3.0)
-			</p>
-			<p class="c">
-				<img src="images/get_template_part.png" />
-			</p>
-	</article>
-	
-	<!-- Conditional tags -->
-	<article>
-		<h3 class="c">Conditional Tags</h3>
-		<p>
-			Används t.ex. för att avgöra vad för typ av sida som efterfrågats!
-			<ul>
-			<li>Startsidan? - <strong>is_home()</strong></li>
-			<li>Är det en enskild post? - <strong>is_single()</strong></li>
-			<li>Vill man lista kategorier? - <strong>is_category()</strong></li>
-			<li> Med många fler....</li>
-			</ul>
-		</p>
 		
-		<p>
-			Enda sättet att veta vad man kan göra är att läsa på:
-			<a href="http://codex.wordpress.org/Conditional_Tags">
-				http://codex.wordpress.org/Conditional_Tags
-			</a>
-		</p>
-		<p class="c">
-			<img src="images/besserwisser.jpg" />
-		</p>
 	</article>
-	
-	<!-- Demo get_template_part -->
-	<article>
-		<h3>Att via en post på olika sätt</h3>
-		<p class="c">
-			<img src="images/demo.png" /><br />
-			<img src="images/diffrent_loops.png" style="height:80%"/>
-		</p>
-	</article>
-	
-	<!-- Paging -->
+
+	<!-- Paging 
 	<article>
 		<h3>När antalet poster blir för lång</h3>
 		<p>
@@ -223,38 +184,8 @@
 			</a>
 		</p>
 	</article>
-	
-	
-	<!-- Att lista ut kategorier -->
-	<article>
-		<h3>Hantera kategorier</h3>
-		<p>
-			Vi vill ge användaren möjlighet att sortera våra inlägg per kategori.<br />
-			Detta är en typisk uppgift där vi får använda Wordpress codex för att söka vårt svar
-		</p>
-		<p>
-		<a href="http://codex.wordpress.org/" target="blank">http://codex.wordpress.org/</a>
-		</p>
-		<p class="c">
-			<img src="images/category.png" />
-		</p>
-	</article>
-	
-	<!-- DEMO - kategorier -->
-	<article>
-		<h3>Att implementera en lista med kategorier</h3>
-		<p>
-			Vi vill i vår "sidebar" inkludera en lista med kategorier så att användaren kan lista endast poster som hör till en viss kategori.
-		</p>
-		<p class="c">
-			<img src="images/demo.png" />
-		</p>
-		
-		<p class="note">
-			
-		</p>
-	</article>
-	
+	-->
+
 	<!-- kommentarer -->
 	<article>
 		<h1>Att låta användaren tycka till</h1>
@@ -267,12 +198,107 @@
 				http://wp.tutsplus.com/tutorials/creative-coding/customizing-comments-in-wordpress-functionality-and-appearance/
 			</a>
 		<p class="c">
-		<img src="images/comments.png" style="height: 50%"/>
-		<img src="images/demo.png" />
+		<img src="images/comments.png" style="height: 300px"/>
+		<a href="http://codex.wordpress.org/Function_Reference/comments_template">http://codex.wordpress.org/Function_Reference/comments_template</a>
 		</p>
 	</article>
 	
-	<!-- Enklaste sättet att få svenska språk -->
+	<article>
+		<h3>Att slippa duplicera kod</h3>
+		<ul>
+			<li>Vi vill minimera användadet av likadan kod på flera ställen</li>
+			<li>single.php, comments.php o.s.v. har liknande HTML-kod i sig</li>
+			<li>På något sätt borde vi kunna ladda in kodstycken efter behag</li>
+			<li>Saker som vi märker vi skriver i flera olika filer borde man kunna bryta ut?</li>
+			<li>Kommer ni ihåg require_once?</li>
+		</ul>
+	</article>
+
+	
+	<!-- get_template_part() -->
+	<article>
+			<h3>get_template_part()</h3>
+			<p>
+				Vi vill ha möjligheten att ladda in olika filers innehåll
+				(WP 3.0)
+			</p>
+			<p class="c">
+				<img src="images/get_template_part.png" />
+			</p>
+	</article>
+	
+	<!-- Conditional tags -->
+	<article>
+		<h3 class="c">Conditional Tags</h3>
+		<p>
+			Används t.ex. för att avgöra vad för typ av sida som efterfrågats!
+			<ul>
+			<li>Startsidan? - <strong>is_home()</strong></li>
+			<li>Är det en enskild post? - <strong>is_single()</strong></li>
+			<li>Vill man lista kategorier? - <strong>is_category()</strong></li>
+			<li>Sticky post? - <strong>is_sticky()</strong></li>
+			<li> Med många fler....</li>
+			</ul>
+		</p>
+		
+		<p>
+			Enda sättet att veta vad man kan göra är att läsa på:
+			<a href="http://codex.wordpress.org/Conditional_Tags">
+				http://codex.wordpress.org/Conditional_Tags
+			</a>
+		</p>
+		<p class="c">
+			<img src="images/besserwisser.jpg" />
+		</p>
+	</article>
+	
+	<!-- Demo get_template_part -->
+	<article>
+		<h3>Att visa en post på olika sätt med get_template_part()</h3>
+		<p class="c">
+			<img src="images/demo.png" /><br />
+			<img src="images/diffrent_loops.png" style="height:500px"/>
+		</p>
+	</article>
+	
+	
+	
+	<!-- Att lista ut kategorier 
+	<article>
+		<h3>Hantera kategorier</h3>
+		<p>
+			Vi vill ge användaren möjlighet att sortera våra inlägg per kategori.<br />
+			Detta är en typisk uppgift där vi får använda Wordpress codex för att söka vårt svar
+		</p>
+		<p>
+		<a href="http://codex.wordpress.org/" target="blank">http://codex.wordpress.org/</a>
+		</p>
+		<p class="c">
+			<img src="images/category.png" />
+		</p>
+	</article>-->
+	
+	<!-- DEMO - kategorier 
+	<article>
+		<h3>Att implementera en lista med kategorier</h3>
+		<p>
+			Vi vill i vår "sidebar" inkludera en lista med kategorier så att användaren kan lista endast poster som hör till en viss kategori.
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+		<p class="c">
+			Demonstration finns till föreläsning 6
+		</p>
+		
+		<p class="note">
+			
+		</p>
+	</article>-->
+	
+	
+	
+	<!-- Enklaste sättet att få svenska språk 
 	<article>
 		<h3>Hur byter man språk på wordpress?</h3>
 		<p>
@@ -291,9 +317,9 @@
 		<p class="c">
 			<img src="images/flag_sweden.png" />
 		</p>
-	</article>
+	</article>-->
 		
-	<!-- Hur gör vi en sökruta -->
+	<!-- Hur gör vi en sökruta 
 	<article>
 		<h3>Att implementera en sökruta</h3>
 		<p>
@@ -308,11 +334,12 @@ get_search_form(); // Ett standard formulär kommer renderas ut</pre>
 			</a>
 		</p>
 		<p class="c">
-			<img src="images/demo.png" />
+			<img src="images/demo.png" /><br />
+			Demonstrationsfilm finns till föreläsning 6
 		</p>
-	</article>
+	</article>-->
 	
-	<!-- Widgets -->
+	<!-- Widgets 
 	<article>
 		<h3>Att använda widgets</h3>
 		<p>
@@ -334,24 +361,215 @@ get_search_form(); // Ett standard formulär kommer renderas ut</pre>
 			<img src="images/widget.png" width="75%"/>
 		</p>
 		
-	</article>
+	</article>-->
 		
-	<!-- Demo - Article -->
+	<!-- Demo - Article 
 	<article>
 		<h3>Att skapa en widget area och lägga in widgets</h3>
 		<p class="c spaced">
 			<img src="images/demo.png" />
 		</p>
+	</article>-->
+	
+	
+
+	<!-- Page -->
+	<article>
+		<h1>Pages</h1>
+		<ul>
+			<li>Är ämnade för mer "statiskt" innehåll (Om oss, Kontakt...)</li>
+			<li>Layouten styrs främst i page.php (se heirarkin för template files)</li>
+			<li>Vanligtvis skapar man dock en "Page Template" och det innehåll författaren/administratören skapar</li>
+			<li>Kraftfull när man bygger mer CMS-liknande applikationer, klassiska webbplatser</li>
+		</ul> 
+		<p class="c">
+			<img src="images/page_dump.png" height="300px"/>
+		</p>
 	</article>
 	
+	<!-- Page screenshot -->
+	<article class="fill">
+		<img src="images/static_pages.png" style="width: 80%"/>
+	</article>
+
+	
+			
+	<!-- Page templates -->
+	<article>
+		<h3>Pages templates</h3>
+		
+		<p>
+			Genom att skapa egna <i>Page Templates</i> är du helt fri att styra utseendet på ditt temas olika sidor.
+		</p>
+		
+		<p>
+			En page templete skapas i en egen PHP-fil i tema-mappen<br />
+		</p>
+		<p>
+			I denna fil kan du sedan jobba med designen precis som vanlig och använda
+			get_header(), get_template_part() o.s.v.
+		</p>	
+		<br /><br />
+		<p class="c">
+			<img src="images/page_template.png" />&nbsp;
+			<img src="images/template_select.png" style="height: 300px"/>
+		</p>
+	</article>
+
 	<!-- Menyer -->
 	<article>
-		<h3>Att fixa en dynamisk meny</h3>
+		<h3>Dynamiska menyer</h3>
 		<p>
-			På liknande sätt som widgets registreras menyer
+			Tack vare Wordpress kan vi på ett enkelt sätt skapa dynamiska menyer
 		</p>
-		<p class="c spaced">
+		<p>
+			Vi kan alltså lägga till flera sidor i en meny
+		</p>
+		<p class="c">
+			<img src="images/page_dump.png" height="300px"/>
+		</p>
+		<p>
+			Se demo på kurshemsidan
+		</p>
+		
+	</article>
+	
+	<!-- Demo - Hur jag ändrar startsida -->
+	<article>
+		<h3>Att skapa statiska sidor</h3>
+		<p>
+			Skapa en statisk sida och placera i en dynamisk meny<br />
+			Gör denna sida till statisk startsida och placera bloggflödet i en annan sida.		
+		</p>
+		<p class="c">
 			<img src="images/demo.png" />
+		</p>	
+		<p class="note">
+			Skapa En startsida och en nyhetssida, lägg i menyn
+			Visa hur man ändrar till en annan startsida
+			Lägg till i menyn
+			Glöm inte att settings--> reading och att sätta en startsida och en blogg.
+		</p>
+	</article>
+
+
+		
+	<!-- Att använda någon annans tema  -->
+	<article>
+		<h1>Att använda andras teman</h1>
+		<ul>
+			<li>Man lär sig genom att studera andras teman</li>
+			<li><i>twentyeleven, twentytwelve...</i> - Teman gjorda för att studera</li>
+			<li>Få design, struktur och massor av funktionalitet</li>
+			<li>Kunna manipulera de delar man vill</li>
+		</ul>
+		<p class="c">
+			<img src="images/loop_arrow.png" height="300px" />
+		</p>
+	</article> 
+		
+	<!-- När du väljer tema  -->
+	<article>
+		<h1 class="c">När du väljer ett tema</h1>
+		<ul>
+			<li>Utseende, layout, responsiv design</li>
+			<li>Licens på temat du använder</li>
+			<li>Vad tycker andra om temat? Senast uppdaterat?</li>
+			<li>Enkelhet att modifiera? Custom headers, Custom background</li>
+			<li>Hur välstrukturerat ser det ut, filmässigt och kodmässigt</li>
+			<li>Prestanda, hur snabbt laddas sidorna?</li>
+			<li>Testa i olika webbläsare! Mobila webbläsare?</li>
+			<li>Vinner man något på att utgå från ett befintligt tema?</li>
+		</ul>
+	</article> 
+	
+	<!-- Child theme -->
+	<article>
+		<h1>Taktik vid befintliga teman</h1>
+		<p>
+			Man kan såklart kopiera och ändra i det befintliga temats filer.<br />
+			Vad händer om temat uppdateras med ny funktionalitet, buggrättning, säkerhetsuppdatering?
+		</p>
+		<p>
+			<img src="images/little_question.png" height="400px"/>
+		</p>
+	</article> 
+		
+	<!-- Child theme bild -->
+	<article>
+		<h3>Child Theme</h3>
+		<p class="c">
+			<img src="images/theme_arv.png" height="70%" />
+		</p>
+		<p>
+			Man "ärver" ner egenskaper från ett befintligt "parent theme"<br />
+			Du byter ut de delar du vill förändra, egna sidor, egen css ect.<br />
+			functions.php läses in både från parent- och child theme.
+		</p>
+		<p>
+			Ett child theme skapas i en egen mapp, med egna filer
+		</p>
+	</article>	
+		
+	<!-- How to write a child theme -->
+	<article>
+		<h3 class="c">Hur!?</h3>
+		<ol>
+			<li>Ladda ner ett tema (pinboard) och lägg som vanligt i wp-content/themes</li>
+			<li>Skapa en ny mapp i wp-content/themes för ditt child-theme. Aktivera temat.</li>
+			<li>Skapa filen style.css som vanligt och lägg till raden "Template"</li>
+<pre>
+...	
+Template: pinboard	
+...
+</pre>
+			<li>Importera CSS in i ditt childtheme</li>
+			<pre>
+/* i child-themes style.css */
+@import url('../pinboard/style.css');</pre>
+			
+		</ol>
+	</article>	
+	
+	<!-- DEMO child theme -->
+	<article>
+		<h3>
+			Att skapa ett child theme...
+		</h3>
+		<p>
+			Använd ett färdig tema för att skapa ett child theme med några få modifieringar
+		</p>
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+	</article>	
+				
+	<!-- Custom post types -->
+	<article>
+		<h3 class="c">Custom post types</h3>
+		<p>
+			Du kan skapa egna "posttyper"
+		</p>
+		<p class="c">
+			<img src="images/cutsom_type.png" />
+		</p>
+		<p>
+			Du kan även skapa egna kategorier till din posttyp
+			<br />
+			Ta steget från blogg till CMS
+		</p>
+	</article>
+	
+	<!-- Custom post types - DEMO -->
+	<article>
+		<h1 class="c">Custom post types</h1>
+		<br />
+		<p class="c">
+			<img src="images/demo.png" />
+		</p>
+		<p>
+			Att skapa en egen custom post type i olika kategorier
+			och visa en sida med dessa
 		</p>
 	</article>
 	
